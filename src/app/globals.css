@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .custom-class {
+    @apply border-border; /* This requires `border-border` to exist */
+  }
+}
