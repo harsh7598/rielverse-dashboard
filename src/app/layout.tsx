@@ -1,3 +1,4 @@
+import { Header } from "@/components";
 import "./globals.css";
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Toaster />
           <Navbar />
           <AuthModal /> */}
+          <Header />
           <main
             // className={`relative overflow-hidden min-h-screen ${montserrat.variable} ${baskervville.variable}`}
             >

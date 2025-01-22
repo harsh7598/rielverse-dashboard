@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
 
 export default function Example() {
   return (
-    <Button className="bg-primary">
-      {" "}
+
       <div className="bg-background text-foreground font-montserrat">
         {/* <Hero />
         <Deals />
@@ -12,6 +10,5 @@ export default function Example() {
         <Exploration />
         <About /> */}
       </div>
-    </Button>
   );
 }

@@ -1,0 +1,179 @@
+export const NAV_LINKS = [
+    { title: "About", to: "/about" },
+    { title: "Blogs", to: "/contact" },
+];
+
+export const PERSONAL_LINKS = [
+    {
+        linkName: "Car",
+        routeUrl: "/car-brand",
+        classList: "py-3 px-2 rounded-tl-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]",
+    },
+    {
+        linkName: "Motorcycle",
+        routeUrl: "/motorcycle-insurance",
+        classList: "py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]",
+        description: "Be insured and ready to ride!",
+    },
+    {
+        linkName: 'Personal Cyber',
+        routeUrl: '/uat/personal_cyber_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "The Internet has become an integral part of daily life. Each time you reveal your personal information on the Internet, you are exposed to possible cybercrimes."
+    },
+    {
+        linkName: 'Luxury Watch',
+        routeUrl: '/uat/luxury_watch_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "Your precious watch collection deserves comprehensive protection from vulnerabilities. Wear your luxury watch each & every moment with peace of mind, knowing it’s insured against damage & loss."
+    },
+    {
+        linkName: 'Jewellery',
+        routeUrl: '/uat/jewellery_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]'
+    },
+    {
+        linkName: 'Home',
+        routeUrl: '/uat/home_insurance',
+        classList: 'py-3 px-2 rounded-bl-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]'
+    },
+    {
+        linkName: 'Handbag',
+        routeUrl: '/uat/handbag_insurance',
+        classList: 'py-3 px-2 rounded-tr-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "In the world of style, your handbag speaks volumes as a symbol of status and sophistication. Entrust its legacy to our handbag insurance, ensuring your prized possessions are safeguarded against life’s uncertainties. Carry with confidence, knowing your essentials are protected."
+    },
+    {
+        linkName: 'Pet',
+        routeUrl: '/uat/pet_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "Safeguard your most loyal companions because they are family"
+    },
+    {
+        linkName: 'Personal Accident',
+        routeUrl: '/uat/personal_accident_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "Accidents can take a toll on your finances."
+    },
+    {
+        linkName: 'Travel',
+        routeUrl: '/uat/travel_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "Don’t let unexpected events ruin a well deserved vacations."
+    },
+    {
+        linkName: 'Health and Medical',
+        routeUrl: '/uat/health_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
+        description: "When illness strikes, we can take your mind off hospital bills and outpatient fees so that you can concentrate on getting better."
+    },
+    {
+        linkName: 'Life',
+        routeUrl: '/uat/life_insurance',
+        classList: 'py-3 px-2 rounded-br-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]'
+    },  
+];
+
+export const BUSINESS_LINKS = [
+    {
+        linkName: "Architects and Surveyors",
+        routeUrl: "/architect-and-surveyors-insurance",
+        classList: "py-3 px-2 rounded-tl-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium",
+        description: "We offer tailored policies for architects, planners, and surveyors.",
+    },
+    {
+        linkName: 'Engineers',
+        routeUrl: '/uat/engineer_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description:"Engineering work is deeply rewarding, but also fraught with certain risks. Liability risks are always on the minds of engineers, along with the ever-present risk of injuries.       "
+    },
+    {
+        linkName: 'IT/Technology Services',
+        routeUrl: '/uat/Technology_Services_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "A sprawling fast-paced industry like technology requires innovative products that are highly responsive.   Risk management is a critical tool in the technology industry, because the stakes are so high. "
+    },
+    {
+        linkName: 'Consulting',
+        routeUrl: '/uat/Consulting_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Comprehensive consultants insurance to protect you from lawsuits, and much more.Whether you provide management consulting, IT consulting, or any other kind of consulting, you’ll need  insurance to protect your business. For consultants, the most critical protection you need is Professional Indemnity Insurance, so that you’re protected from business lawsuits related to the advice you provide. "
+    },
+    {
+        linkName: 'Retail',
+        routeUrl: '/uat/retail_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Whether you run a physical shop or an online e-commerce store, you’ll need retail insurance to protect your business. "
+    },
+    {
+        linkName: 'Professional Services',
+        routeUrl: '/uat/Professional_Services_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Commercial insurance  starts with property insurance, so that your premises and inventory are well-protected. You’ll also want to cover yourself against staff injuries, public liability, and employee theft. If you ship goods, consider protecting them with shipping insurance."
+    },
+    {
+        linkName: 'Food and Beverage',
+        routeUrl: '/uat/food_And_Beverage_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "As consumers become more health, social, and environmentally conscious, food and beverage companies around the world are evolving their business models to meet these needs."
+    },
+    {
+        linkName: 'Interior Design and Renovation',
+        routeUrl: '/uat/Interior_Design_And_Renovation_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium'
+    },
+    {
+        linkName: 'Construction',
+        routeUrl: '/uat/Construction_insurance',
+        description: "Construction is an essential industry for the global economy and activity in the sector is constant. There will always be a need for the renewal of existing and the creation of new infrastructure. But as the build cycle is often driven by socio-economic factors, it can be quite volatile. Construction companies need to have an acute awareness of current and emerging risk issues and be able to respond quickly to changing circumstances.",
+        classList: 'py-3 px-2 rounded-bl-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium'
+    },
+    {
+        linkName: 'Logistics',
+        routeUrl: '/uat/Logistics_insurance',
+        description: "Whether you’re an international freight forwarder, or a home moving company, logistics companies need insurance to protect themselves.",
+        classList: 'py-3 px-2 rounded-tr-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium'
+    },
+    {
+        linkName: 'Manufacturing and Storage',
+        routeUrl: '/uat/Manufacturing_and_Storage_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "The manufacturing landscape has become increasingly globalized as a result of digitization and the adoption of a more customer-centric mindset.We know that the manufacturing industry faces a host of common and emerging risk exposures daily."
+    },
+    {
+        linkName: 'Wellness and Fitness',
+        routeUrl: '/uat/Wellness_And_Fitness_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Whether you run a gym, yoga/pilates studio, martial arts centre, or a sports coaching business, it’s important to have insurance to protect yourself. If you have a physical premises, you’ll need to ensure your capital investment is protected against major risks like fire or vandalism. If you have wellness/fitness employees, they can be prone to injuries, so you’ll to cover them for their medical expenses."
+    },
+    {
+        linkName: 'Healthcare Services',
+        routeUrl: '/uat/Health_Care_Services_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Healthcare organizations are challenged by risk on many fronts."
+    },
+    {
+        linkName: 'Education',
+        routeUrl: '/uat/education_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Education nurtures our future generations of leaders, engineers, scientists and artists. As today’s educational institutions face increasingly complex and diverse challenges, educators insurance programs must adapt to support these institutions. From kindergarten to university, we help education institutions of all levels create customised educators insurance solutions to safeguard your balance sheets, attract and retain your talent, and protect your students."
+    },
+    {
+        linkName: 'Charity',
+        routeUrl: '/uat/Charity_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Management is a key element of governance.We offer tailored policies for non-profit organisations like charities, NGOs, and more."
+    },
+    {
+        linkName: 'Real Estate',
+        routeUrl: '/uat/RealState_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "Property owners, operators, managers, and developers need to stay competitive in the dynamic world of real estate."
+    },
+    {
+        linkName: 'Entertainment',
+        routeUrl: '/uat/entertainment_insurance',
+        classList: 'py-3 px-2 hover:text-[#000] flex font-semibold text-[12px] tracking-[1px] font-medium',
+        description: "In an age of changing media consumption habits and options, We can structure  risk management strategies to help entertainment organizations and promotors balance taking bold chances with minimizing and mitigating risk"
+    },
+];

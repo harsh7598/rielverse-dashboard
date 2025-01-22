@@ -1,0 +1,22 @@
+@import url('https://fonts.cdnfonts.com/css/litsans');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1c7f14203d028f1c6f8914508f469cb9?family=Arboria-Book');
+
+
+.nav_links_mob {
+    @apply flex flex-col items-start gap-8 mb-4;
+}
+
+
+:global(ul) {
+    @apply w-full;
+}
+
+:global(ul li) {
+    @apply w-full flex gap-4 items-center mt-2 mb-2;
+}
+
+.loginModal {
+    /* width: 620px !important; */
+    width: 700px !important;
+}
