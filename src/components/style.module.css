@@ -3,10 +3,6 @@
 @import url('https://db.onlinewebfonts.com/c/1c7f14203d028f1c6f8914508f469cb9?family=Arboria-Book');
 
 
-.nav_links_mob {
-    @apply flex flex-col items-start gap-8 mb-4;
-}
-
 
 :global(ul) {
     @apply w-full;
