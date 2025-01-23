@@ -15,18 +15,15 @@ const RemarkSection: React.FC = () => {
       >
         Remark
         <br />
-        <br />
         Please answer all the above questions truthfully. If the insured
         conceals the truth or makes a false statement, it will result in the
         voiding of this insurance contract. The insurance company has the right
         to terminate the insurance contract under Section 865 of the Civil and
         Commercial Code and may refuse to pay compensation.
         <br />
-        <br />
         The Company does not contact customers through other (communication)
         channels apart from the Company’s official channels under any
         circumstances.
-        <br />
         <br />
         Please note that under no circumstances shall the Company be held
         liable or responsible for any claims, losses, damages, expenses, or
@@ -35,7 +32,7 @@ const RemarkSection: React.FC = () => {
         <br />
         <span>Copyright 2024 Rielverse All Rights Reserved. | Privacy Policy</span>
         <br />
-        <span>Designed by Konax Technologies Pvt Ltd</span>
+        <span>Designed by</span><span className="font-sans text-sm font-normal leading-[36px] text-left decoration-slice text-secondary"> Konax Technologies Pvt Ltd </span>
       </p>
     </div>
   );

@@ -55,7 +55,7 @@ const Header: React.FC = () => {
   const [unHide, setUnHide] = useState(false);
   const [unHideMsg, setUnHideMsg] = useState(false);
 
-  function unHideHandleMsg() {
+  function unHideHandleMsg(value: boolean) {
     setUnHideMsg(true);
   }
   const showLoginModal = () => {
@@ -86,8 +86,7 @@ const Header: React.FC = () => {
   return (
     <div className='w-full  h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
       <div className='w-full h-72 flex flex-col items-center relative bg-gradient-to-b from-white to-transparent'>
-        <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-6'>
-          {/* Logo */}
+        <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-4'>
           <div className="relative w-fit h-fit max-w-[300px] max-[500px]:h-16 flex flex-col items-center justify-center px-5 rounded-lg bg-[#fff] after:content-[''] after:block after:absolute after:border-l-[2px] after:border-greyborder after:h-10 after:w-[1px] after:right-[-6px] after:top-[-6px] after:z-0">
             <Link href='/uat'>
               <Image
@@ -100,9 +99,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Navigation Links */}
           <div className='flex uppercase flex-row text-primary items-center max-[1150px]:hidden gap-16 min-[1600px]:mx-12 mx-3'>
-            {/* Personal Dropdown */}
             <div>
               <Link
                 onMouseEnter={dropdownOpenHandler}
@@ -122,7 +119,7 @@ const Header: React.FC = () => {
                       ? 'bg-white flex absolute rounded-xl'
                       : 'bg-white hidden absolute rounded-xl'
                   }`}>
-                  <div className='flex justify-center gap-3 shadow-lg px-14 py-5 backdrop-blur-2xl rounded-xl'>
+                  <div className='flex justify-center gap-3 shadow-2xl border-t px-14 py-5 backdrop-blur-2xl rounded-xl'>
                     <div>
                       {PERSONAL_LINKS.slice(0, 6).map((item, index) => (
                         <span
@@ -152,19 +149,18 @@ const Header: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Business Dropdown */}
             <div>
               <Link
                 onMouseEnter={dropdownOpenHandler2}
                 onMouseLeave={dropdownCloseHandler2}
                 onClick={() => window.scrollTo(0, 0)}
                 href='/uat/health_insurance'
-                className='pb-2 font-semibold text-[14px] tracking-[1px] font-medium flex items-center gap-2'>
+                className='pb-2 text-[14px] tracking-[1px] font-medium flex items-center gap-2'>
                 Business
                 <Image className='w-5' src={arrow} alt='arrow-icon' />
               </Link>
-              <div className='w-full flex justify-center'>
-                <div
+              <div className="w-full flex justify-center shadow-2xl">
+              <div
                   onMouseEnter={dropdownOpenHandler2}
                   onMouseLeave={dropdownCloseHandler2}
                   className={`${
@@ -172,7 +168,7 @@ const Header: React.FC = () => {
                       ? 'bg-white flex absolute rounded-2xl'
                       : 'bg-white hidden absolute rounded-2xl'
                   }`}>
-                  <div className='flex justify-center gap-4 shadow-lg px-14 py-5 backdrop-blur-2xl rounded-2xl'>
+                  <div className='flex justify-center gap-4 shadow-2xl border-t px-14 py-5 backdrop-blur-2xl rounded-2xl'>
                     <div>
                       {BUSINESS_LINKS.slice(0, 9).map((item, index) => (
                         <span
@@ -207,7 +203,7 @@ const Header: React.FC = () => {
                 onClick={() => window.scrollTo(0, 0)}
                 key={index}
                 href={value.to}
-                className='font-semibold text-[14px] pb-2 tracking-[1px] font-medium'>
+                className=' text-[14px] pb-2 tracking-[1px] font-medium'>
                 {value.title}
               </Link>
             ))}
@@ -217,16 +213,16 @@ const Header: React.FC = () => {
             <div onMouseLeave={() => setUnHideMsg(false)}>
               <Image
                 onMouseMove={() => unHideHandleMsg(true)}
-                className='cursor-pointer w-16'
+                className='cursor-pointer w-16 '
                 src={msg}
                 alt='msg-icon'
               />
             </div>
-            <div onMouseLeave={() => setUnHide(false)}>
+            <div onMouseLeave={() => setUnHide(false)} >
               <Link
                 onMouseEnter={() => setUnHide(true)}
                 href='#'
-                className='flex items-center gap-1 text-[14px] tracking-[1px] font-semibold text-primary bg-white px-7 py-3 uppercase w-fit rounded-xl'>
+                className="flex items-center gap-1 text-[14px] tracking-[1px] font-semibold text-primary bg-white px-7 py-3 uppercase w-fit rounded-xl shadow-md border-2">
                 <Image className='w-8' src={userIcon} alt='user-icon' />
                 My account
               </Link>
@@ -236,7 +232,6 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile View */}
           <div className='flex items-center min-[1150px]:hidden gap-8'>
             <div className='p-2 rounded-full bg-primary 80 max-[500px]:hidden'>
               <FiSearch className='text-3xl' />
@@ -252,42 +247,38 @@ const Header: React.FC = () => {
             className={`${
               isOpen ? 'top-[-24px]' : 'top-[-250vh]'
             } min-[1150px]:hidden pt-28 px-10 w-full h-screen bg-white absolute left-0 duration-700 ease-in-out -z-10 flex flex-col items-end max-[500px]:items-start`}>
-            {/* Search Icon */}
             <div className='p-2 min-[500px]:hidden self-start rounded-full bg-white mb-3'>
               <FiSearch className='text-3xl' />
             </div>
 
-            {/* Navigation Links */}
             <div className='flex flex-col items-start gap-8 mb-4'>
               <span className='cursor-pointer text-[16px] flex items-center gap-2 relative min-[600px]:hidden text-gray-700 font-semibold'>
-                Contact Us <FaArrowRight className='text-indigo-700' />
+                Contact Us <FaArrowRight className='text-primary' />
               </span>
               <span className='text-[16px] flex items-center gap-2 min-[600px]:hidden text-gray-700 font-semibold'>
-                Login <FaArrowRight className='text-indigo-700' />
+                Login <FaArrowRight className='text-primary' />
               </span>
               <span className='text-[16px] min-[600px]:hidden flex items-center gap-2 text-gray-700 font-semibold'>
-                About Us <FaArrowRight className='text-indigo-700' />
+                About Us <FaArrowRight className='text-primary' />
               </span>
               <Link
                 onClick={() => window.scrollTo(0, 0)}
                 href=''
                 className='text-[16px] tracking-[1px] flex items-center gap-2 text-gray-700 font-semibold'>
-                Products <FaArrowRight className='text-indigo-700' />
+                Products <FaArrowRight className='text-primary' />
               </Link>
 
-              {/* Mapping NAV_LINKS */}
               {NAV_LINKS.map((value, index) => (
                 <Link
                   key={index}
                   href={value.to}
                   className='flex text-[16px] items-center tracking-[1px] font-semibold gap-1 text-gray-700'>
                   {value.title}
-                  <FaArrowRight className='text-indigo-700' />
+                  <FaArrowRight className='text-primary' />
                 </Link>
               ))}
             </div>
 
-            {/* Contact Info and Quote */}
             <div className='w-auto flex max-[500px]:flex-col max-[500px]:gap-4 items-center'>
               <div className='w-auto h-16 rounded-xl border-2 border-green-950 flex items-center px-4 py-0'>
                 <MdOutlinePhoneInTalk className='text-3xl' />
@@ -322,8 +313,7 @@ const Header: React.FC = () => {
         <div
           onMouseMove={() => setUnHide(true)}
           onMouseLeave={() => setUnHide(false)}
-          className='bg-white flex gap-2 pr-8 py-8 w-[40%] rounded-xl'>
-          {/* Account Image Section */}
+          className='bg-white flex gap-2 pr-8 py-8 w-[40%] rounded-xl shadow-2xl border-t'>
           <div className='w-[30%] flex items-center overflow-hidden'>
             <Image
               className='scale-125 w-[300px] ml-[-20%]'
@@ -334,8 +324,7 @@ const Header: React.FC = () => {
             />
           </div>
 
-          {/* Customer Login Section */}
-          <div className='w-[35%]'>
+          <div className='w-[35%] '>
             <Image
               className='w-full'
               src={myAccountImg2}
@@ -357,8 +346,6 @@ const Header: React.FC = () => {
               <IoIosArrowForward className='text-[50px] absolute right-0 opacity-40' />
             </div>
           </div>
-
-          {/* Agent Login Section */}
           <div className='w-[35%]'>
             <Image
               className='w-full'
@@ -394,8 +381,7 @@ const Header: React.FC = () => {
         <div
           onMouseEnter={() => setUnHideMsg(true)}
           onMouseLeave={() => setUnHideMsg(false)}
-          className='bg-white gap-2 p-4 w-[45%] rounded-xl'>
-          {/* Header Section */}
+          className='bg-white gap-2 p-4 w-[45%] rounded-xl shadow-2xl border-t'>
           <div className='text-left w-full'>
             <p className='text-[#000] text-[14px] font-semibold'>
               How can we help you?
@@ -406,7 +392,6 @@ const Header: React.FC = () => {
             <hr className='w-[90%] mt-3' />
           </div>
 
-          {/* Contact Options - Row 1 */}
           <div className='w-[85%] mt-3 flex justify-between'>
             <div className='flex items-center gap-1 justify-start'>
               <div>
@@ -444,7 +429,6 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Contact Options - Row 2 */}
           <div className='w-[83.5%] mt-7 flex justify-between'>
             <div className='flex items-center gap-1 justify-start'>
               <div>

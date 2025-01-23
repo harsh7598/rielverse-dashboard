@@ -73,9 +73,15 @@ const config = {
           to: { height: "0" },
         },
       },
+      boxShadow: {
+        'box-inset': '0px 4px 4px 0px #B9B9B940 inset',
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(180deg, rgba(117, 215, 255, 0) 27.37%, rgba(117, 215, 255, 0.2) 100%)',
       },
     },
   },
