@@ -73,13 +73,13 @@ const ReviewsSection = () => {
           {/* Swiper Component */}
           <Swiper
             className='w-full h-full'
-            style={{
-              '--swiper-pagination-color': '#2983d3',
-              '--swiper-pagination-bullet-inactive-color': '#2983D3',
-              '--swiper-pagination-bullet-inactive-opacity': '1',
-              '--swiper-pagination-bullet-size': '12px',
-              '--swiper-pagination-bullet-horizontal-gap': '6px',
-            }}
+            // style={{
+            //   '--swiper-pagination-color': '#2983d3',
+            //   '--swiper-pagination-bullet-inactive-color': '#2983D3',
+            //   '--swiper-pagination-bullet-inactive-opacity': '1',
+            //   '--swiper-pagination-bullet-size': '12px',
+            //   '--swiper-pagination-bullet-horizontal-gap': '6px',
+            // }}
             modules={[Navigation, Autoplay, Pagination]}
             loop={true}
             pagination={{

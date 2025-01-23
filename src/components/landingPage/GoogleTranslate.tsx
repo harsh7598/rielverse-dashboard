@@ -4,7 +4,7 @@ import dropdown from '../../../public/Icons/Reilverse_Assets/dropdown.svg';
 import Image from 'next/image';
 
 const GoogleTranslate = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('ENGLISH'); 
+  const [selectedLanguage, setSelectedLanguage] = useState('ENGLISH');
 
   useEffect(() => {
     const addGoogleTranslateScript = () => {
@@ -16,16 +16,18 @@ const GoogleTranslate = () => {
     };
 
     window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          autoDisplay: true,
-          includedLanguages: 'en,zh-CN,km',
-          layout:
-            window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-        },
-        'google_translate_element',
-      );
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: 'en',
+            autoDisplay: true,
+            includedLanguages: 'en,zh-CN,km',
+            layout:
+              window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+          },
+          'google_translate_element'
+        );
+      }
     };
 
     addGoogleTranslateScript();

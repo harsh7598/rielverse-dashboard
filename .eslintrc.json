@@ -4,12 +4,13 @@
     "es2021": true
   },
   "extends": [
-    "eslint:recommended",
+    // "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "prettier",
+    "next/core-web-vitals"
   ],
   "ignorePatterns": ["build", ".eslintrc.cjs", "dist", "out"],
   "overrides": [
