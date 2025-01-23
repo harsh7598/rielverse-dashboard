@@ -3,6 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import { Toaster } from '@/components/ui/sonner';
+import Footer from '@/components/landingPage/Footer';
+import LandingPage from '@/components/landingPage/LandingPage';
 
 const outfit = Outfit({
   subsets: ['latin', 'latin-ext'],
@@ -21,9 +23,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${outfit.className} antialiased`}>
-        {/* <Header /> */}
-        {children}
-        <Toaster />
+        <Header />
+        <main
+        // className={`relative overflow-hidden min-h-screen ${montserrat.variable} ${baskervville.variable}`}
+        >
+          <LandingPage />
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

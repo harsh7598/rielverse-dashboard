@@ -1,3 +1,18 @@
+import customer from "../../public/Icons/Reilverse_Assets/personal-accident-cover-for-passengers 1.svg";
+import satisfy from "../../public/Icons/Reilverse_Assets/success_great_approved_congrats 1.svg";
+import award from "../../public/Icons/Reilverse_Assets/award 1.svg";
+import waranty from "../../public/Icons/Reilverse_Assets/Guaran.svg";
+import saving from "../../public/Icons/Reilverse_Assets/savings 1.svg";
+import comparing from "../../public/Icons/Reilverse_Assets/comparison 1.svg";
+import user from "../../public/Icons/Reilverse_Assets/pointer-right 1.svg";
+import support from "../../public/Icons/Reilverse_Assets/support.svg";
+import notice from "../../public/Icons/Reilverse_Assets/notice-assistance 1.svg";
+import globe from "../../public/Icons/Reilverse_Assets/connected-globe 1.svg";
+import avatar from "../../public/Icons/Reilverse_Assets/Ellipse 117.svg";
+
+
+
+
 export const NAV_LINKS = [
     { title: "About", to: "/about" },
     { title: "Blogs", to: "/contact" },
@@ -177,3 +192,97 @@ export const BUSINESS_LINKS = [
         description: "In an age of changing media consumption habits and options, We can structure  risk management strategies to help entertainment organizations and promotors balance taking bold chances with minimizing and mitigating risk"
     },
 ];
+
+export const BENEFITS = [
+  {
+    image: customer,
+    title: "Customer Ist",
+    description: "Customer Ist Approach",
+  },
+  {
+    image: satisfy,
+    title: "Satisfied",
+    description: "Policy Holders",
+  },
+  {
+    image: award,
+    title: "Top",
+    description: "Insurance Partners",
+  },
+  {
+    image: waranty,
+    title: "Guaranteed",
+    description: "Claims Assistance",
+  },
+];
+
+export const CARDS = [
+  {
+    image: saving,
+    title: "Save Big on Your Policies",
+    description:
+      "We provide competitive rates with all other perks & benefits of online insurance",
+  },
+  {
+    image: comparing,
+    title: "Comparing Quotes is Verse",
+    description:
+      "We provide you with simple yet effective tools & calculators to find the best plan",
+  },
+  {
+    image: user,
+    title: "User Experience",
+    description:
+      "An awesome insurance experience which is User-friendly, Quick & Joyful",
+  },
+];
+
+export const OFFERS = [
+  {
+    image: support,
+    title: "GUIDANCE",
+    subtitle: "Transparent Comparisons",
+    description:
+      "Rielverse have a team of unbiased insurance experts that is dedicated to helping you buy best insurance",
+  },
+  {
+    image: notice,
+    title: "ASSISTANCE",
+    subtitle: "Application to Issuance",
+    description:
+      "From short-simple forms and a hassle free process to a Dedicated Operations Team for a smooth experience",
+  },
+  {
+    image: globe,
+    title: "SUPPORT",
+    subtitle: "Dedicated Claim Desk",
+    description:
+      "We have a team of professionals that is dedicated to helping our users in the event of a claim.",
+  },
+];
+
+export const REVIEWS = [
+    {
+      image: avatar,
+      name: "Justin Watt",
+      position: "Doctor",
+      quote:
+        "Here you will find a comparison between every health insurance cover proven to have provided world-class services to their customers.",
+    },
+    {
+      image: avatar,
+      name: "Sarah Collins",
+      position: "Engineer",
+      quote:
+        "The team has been exceptional in guiding me through the process of finding the right plan. Great service!",
+    },
+    {
+      image: avatar,
+      name: "Emily Jones",
+      position: "Teacher",
+      quote:
+        "I am so grateful for their support. They made buying insurance so simple and stress-free.",
+    },
+  ];
+
+
