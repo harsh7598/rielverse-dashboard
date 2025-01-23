@@ -1,8 +1,7 @@
-
-export default function Example() {
+export default function Page() {
   return (
-      <div className="bg-background text-foreground font-montserrat">
-
-      </div>
+    <div className='bg-background text-foreground font-montserrat'>
+      Main page
+    </div>
   );
 }

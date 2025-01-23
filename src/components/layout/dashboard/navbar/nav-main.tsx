@@ -9,7 +9,7 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import React from "react";
 import {
   Collapsible,
@@ -33,7 +33,7 @@ export function NavMain({
     }[];
   }[];
 }) {
-  const pathName = usePathname();
+  // const pathName = usePathname();
 
   return (
     <SidebarGroup>
@@ -49,8 +49,9 @@ export function NavMain({
                 <Link href={item.url}>
                   <SidebarMenuButton
                     tooltip={item.title}
-                    isActive={pathName === item.url}
-                    className={`${pathName === item.url && "bg-gray-50"}`}>
+                    // isActive={pathName === item.url}
+                    // className={`${pathName === item.url && "bg-gray-50"}`}
+                    >
                     <Image
                       src={item.icon!}
                       alt={item.title!}
