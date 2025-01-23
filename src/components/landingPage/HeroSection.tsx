@@ -20,13 +20,6 @@ export default function HeroSection() {
   const router = useRouter();
   const [currentVariant, setCurrentVariant] = useState<number>(0);
 
-  const getCategories = (): Category[] => {
-    if (width <= 575) return [];
-    return CATEGORIES.slice(
-      window.innerWidth <= 800 && window.innerWidth >= 500 ? 4 : 5,
-      window.innerWidth <= 800 && window.innerWidth >= 500 ? 8 : 7,
-    );
-  };
   const [width, setWidth] = useState(0);
   const VARIANTS = ['PERSONAL', 'BUSINESS'];
 
