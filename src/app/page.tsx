@@ -1,7 +1,13 @@
+import { Header } from '@/components';
+import Footer from '@/components/landingPage/Footer';
+import LandingPage from '@/components/landingPage/LandingPage';
+
 export default function Page() {
   return (
-    <div className='bg-background text-foreground font-montserrat'>
-      Main page
-    </div>
+    <>
+      <Header />
+      <LandingPage />
+      <Footer />
+    </>
   );
 }

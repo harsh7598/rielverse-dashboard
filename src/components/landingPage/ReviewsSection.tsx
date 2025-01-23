@@ -56,7 +56,7 @@ const ReviewsSection = () => {
           style={{ fontWeight: '400', fontFamily: 'Arboria-Book' }}
           className='text-[21px] max-[800px]:text-lg max-[800px]:mt-4 tracking-[1px] leading-[40px] mt-12'>
           We're honoured to have helped these begin a{' '}
-          <span className='text-[#13519C]'>SMILING FACES</span> new life abroad
+          <span className='text-primary'>SMILING FACES</span> new life abroad
         </p>
 
         {/* Swiper Component */}

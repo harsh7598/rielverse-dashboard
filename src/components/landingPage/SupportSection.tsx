@@ -31,11 +31,11 @@ const SupportSection: React.FC = () => {
             <div
               style={{ fontWeight: '400', fontFamily: 'Arboria-Book' }}
               className={
-                'flex flex-col items-center ml-7 max-[500px]:ml-2 max-[500px]:items-start text-[16px] max-[500px]:text-start font-semibold opacity-50 gap-2'
+                'flex flex-col items-center ml-7 max-[500px]:ml-2 max-[500px]:items-start text-[16px] max-[500px]:text-start font-semibold gap-2'
               }>
               <span style={{ fontWeight: '500' }}>CUSTOMER SERVICE</span>
-              <span className={'text-[18px] text-[#13519C]'}>
-                1800 2333 533
+              <span className={'text-[16px] font-medium text-secondary'}>
+              +65 6287 7537
               </span>
             </div>
           </div>
@@ -55,7 +55,7 @@ const SupportSection: React.FC = () => {
             />
             <div className='flex flex-col text-[18px] font-bold'>
               <span className='font-normal'>Secured &</span>
-              <span className=' text-[#13519C]'>Encrypted</span>
+              <span className=' text-primary'>Encrypted</span>
             </div>
             <Image
               className={'w-fit object-contain'}
@@ -64,7 +64,7 @@ const SupportSection: React.FC = () => {
             />
             <div className='flex flex-col text-[18px] font-bold'>
               <span className='font-normal'>35000+</span>
-              <span className=' text-[#13519C]'>Trust us</span>
+              <span className=' text-primary'>Trust us</span>
             </div>
           </div>
         </div>

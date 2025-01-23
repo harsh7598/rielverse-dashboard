@@ -24,8 +24,6 @@ import { IoClose } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
-import { Modal } from 'antd';
-import { LOGO, DOWNLOAD_ICON } from '@/constants/assets';
 
 interface NavLink {
   to: string;
@@ -46,19 +44,6 @@ interface Props {
   helpIcons: string[];
   myAccountImgs: string[];
 }
-
-// const Header: React.FC<Props> = ({
-//   NAV_LINKS,
-//   personalLinks,
-//   businessLinks,
-//   logo,
-//   arrow,
-//   girl,
-//   msg,
-//   userIcon,
-//   helpIcons,
-//   myAccountImgs,
-// }) => {
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -99,7 +84,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className='w-full bg-slate-400 h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
+    <div className='w-full  h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
       <div className='w-full h-72 flex flex-col items-center relative bg-gradient-to-b from-white to-transparent'>
         <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-6'>
           {/* Logo */}
@@ -116,7 +101,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className='flex uppercase flex-row text-[#13519C] items-center max-[1150px]:hidden gap-16 min-[1600px]:mx-12 mx-3'>
+          <div className='flex uppercase flex-row text-primary items-center max-[1150px]:hidden gap-16 min-[1600px]:mx-12 mx-3'>
             {/* Personal Dropdown */}
             <div>
               <Link
@@ -241,11 +226,11 @@ const Header: React.FC = () => {
               <Link
                 onMouseEnter={() => setUnHide(true)}
                 href='#'
-                className='flex items-center gap-1 text-[14px] tracking-[1px] font-semibold text-[#13519C] bg-white px-7 py-3 uppercase w-fit rounded-xl'>
+                className='flex items-center gap-1 text-[14px] tracking-[1px] font-semibold text-primary bg-white px-7 py-3 uppercase w-fit rounded-xl'>
                 <Image className='w-8' src={userIcon} alt='user-icon' />
                 My account
               </Link>
-              <span className='text-[#13519C] font-medium text-[12px]'>
+              <span className='text-primary font-medium text-[12px]'>
                 Claim, renew, manage & more
               </span>
             </div>
@@ -253,13 +238,13 @@ const Header: React.FC = () => {
 
           {/* Mobile View */}
           <div className='flex items-center min-[1150px]:hidden gap-8'>
-            <div className='p-2 rounded-full bg-[#13519C86]/80 max-[500px]:hidden'>
+            <div className='p-2 rounded-full bg-primary 80 max-[500px]:hidden'>
               <FiSearch className='text-3xl' />
             </div>
 
             <div
               onClick={() => setOpen(!isOpen)}
-              className='text-4xl text-[#13519c] max-[500px]:translate-y-1'>
+              className='text-4xl text-primary max-[500px]:translate-y-1'>
               {!isOpen ? <LuMenu /> : <IoClose />}
             </div>
           </div>
@@ -320,7 +305,7 @@ const Header: React.FC = () => {
                   src={download}
                   alt='Download'
                 />
-                <span className='text-[14px] font-semibold text-[#13519C]'>
+                <span className='text-[14px] font-semibold text-primary'>
                   Get Quote
                 </span>
               </div>
@@ -359,7 +344,7 @@ const Header: React.FC = () => {
               height={200}
             />
             <div className='flex items-start justify-start flex-col'>
-              <p className='text-[#13519C] text-[16px] font-semibold mt-1'>
+              <p className='text-primary text-[16px] font-semibold mt-1'>
                 Customer Login
               </p>
               <p className='text-left text-[13px] text-[#000] font-medium mt-1 mb-4'>
@@ -367,7 +352,7 @@ const Header: React.FC = () => {
                 Portal
               </p>
             </div>
-            <div className='overflow-hidden cursor-pointer z-0 w-28 h-7 flex pl-7 max-[630px]:text-start items-center rounded-md text-white font-semibold bg-[#13519C] bg-gradient-to-tl from-[#13519C] to-[#13519C86] relative'>
+            <div className='overflow-hidden cursor-pointer z-0 w-28 h-7 flex pl-7 max-[630px]:text-start items-center rounded-md text-white font-semibold bg-primary bg-gradient-to-tl from-primary to-[#1E96FC86] relative'>
               <span className='font-[400] text-[14px]'>LOGIN</span>
               <IoIosArrowForward className='text-[50px] absolute right-0 opacity-40' />
             </div>
@@ -383,7 +368,7 @@ const Header: React.FC = () => {
               height={200}
             />
             <div className='flex items-start justify-start flex-col'>
-              <p className='text-[#13519C] text-[16px] font-semibold mt-1'>
+              <p className='text-primary text-[16px] font-semibold mt-1'>
                 Agent Login
               </p>
               <p className='text-left text-[13px] text-[#000] font-medium mt-1 mb-4'>
@@ -393,7 +378,7 @@ const Header: React.FC = () => {
             </div>
             <div
               onClick={showLoginModal}
-              className='overflow-hidden cursor-pointer z-0 w-28 h-7 flex pl-7 max-[630px]:text-start items-center rounded-md text-white font-semibold bg-[#13519C] bg-gradient-to-tl from-[#13519C] to-[#13519C86] relative'>
+              className='overflow-hidden cursor-pointer z-0 w-28 h-7 flex pl-7 max-[630px]:text-start items-center rounded-md text-white font-semibold bg-primary bg-gradient-to-tl from-primary to-[#1E96FC86] relative'>
               <span className='font-[400] text-[14px]'>LOGIN</span>
               <IoIosArrowForward className='text-[50px] absolute right-0 opacity-40' />
             </div>
@@ -435,7 +420,7 @@ const Header: React.FC = () => {
               </div>
               <div className='text-left'>
                 <p className='text-[#000] text-[10px]'>Call Center</p>
-                <p className='text-[#13519C] text-[12px] font-semibold'>
+                <p className='text-primary text-[12px] font-semibold'>
                   +65 6287 7537
                 </p>
               </div>
@@ -452,7 +437,7 @@ const Header: React.FC = () => {
               </div>
               <div className='text-left'>
                 <p className='text-[#000] text-[10px]'>Email</p>
-                <p className='text-[#13519C] text-[12px] font-semibold'>
+                <p className='text-primary text-[12px] font-semibold'>
                   support@rielverse.com
                 </p>
               </div>
@@ -473,7 +458,7 @@ const Header: React.FC = () => {
               </div>
               <div className='text-left'>
                 <p className='text-[#000] text-[10px]'>Open a support ticket</p>
-                <p className='text-[#13519C] text-[12px] font-semibold'>
+                <p className='text-primary text-[12px] font-semibold'>
                   Submit a request
                 </p>
                 <p className='text-[#000] text-[10px]'>Anytime 24/7</p>
@@ -491,7 +476,7 @@ const Header: React.FC = () => {
               </div>
               <div className='text-left'>
                 <p className='text-[#000] text-[10px]'>WhatsApp</p>
-                <p className='text-[#13519C] text-[12px] font-semibold'>
+                <p className='text-primary text-[12px] font-semibold'>
                   9999 19999
                 </p>
                 <p className='text-[#000] text-[10px]'>

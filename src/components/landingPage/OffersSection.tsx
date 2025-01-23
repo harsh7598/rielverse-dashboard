@@ -36,7 +36,7 @@ const OffersSection = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="w-full min-[1800px]:max-w-[1440px] max-w-[1200px] px-[3px] pt-[3px] rounded-xl h-auto bg-gradient-to-t from-transparent to-[#13519C] mt-12 max-[800px]:mt-6">
+      <div className="w-full min-[1800px]:max-w-[1440px] max-w-[1200px] px-[3px] pt-[3px] rounded-xl h-auto bg-gradient-to-t from-transparent to-primary mt-12 max-[800px]:mt-6">
         <div className="w-full h-auto bg-white flex max-[650px]:flex-col max-[650px]:items-center max-[650px]:gap-3 items-start max-[800px]:pt-3 pt-7 rounded-xl">
           {OFFERS.map((value, index) => (
             <div
@@ -57,7 +57,7 @@ const OffersSection = () => {
                   src={value.image}
                   alt={value.title}
                 />
-                <span className="text-[20px] max-[800px]:text-[18px] text-[#13519C] font-[500] mt-2">
+                <span className="text-[20px] max-[800px]:text-[18px] text-primary font-[500] mt-2">
                   {value.subtitle}
                 </span>
                 <span
@@ -71,7 +71,7 @@ const OffersSection = () => {
               <div
                 className={`${
                   index === 2 ? "opacity-0" : ""
-                } w-0.5 max-[650px]:hidden h-52 bg-gradient-to-b from-[#13519C] to-transparent`}
+                } w-0.5 max-[650px]:hidden h-52 bg-gradient-to-b from-primary to-transparent`}
               ></div>
             </div>
           ))}

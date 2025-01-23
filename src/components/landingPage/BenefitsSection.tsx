@@ -7,7 +7,7 @@ const BenefitsSection: React.FC = () => {
     <div
       data-aos="zoom-in"
       className={
-        "w-full max-w-[1000px] px-[3px] pt-[3px] rounded-3xl h-auto bg-gradient-to-t from-transparent to-[#13519C] mt-12"
+        "w-full max-w-[1000px] px-[3px] pt-[3px] rounded-3xl h-auto bg-gradient-to-t from-transparent to-primary mt-12"
       }
     >
       <div
@@ -25,7 +25,7 @@ const BenefitsSection: React.FC = () => {
             <div
               className={`${
                 index === 2 || index === 0 ? `opacity-0` : ``
-              } min-[650px]:hidden w-0.5 h-32 bg-[#13519C]`}
+              } min-[650px]:hidden w-0.5 h-32 bg-primary`}
             ></div>
             <div
               className={
