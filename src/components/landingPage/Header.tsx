@@ -1,21 +1,21 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import msg from '../../public/Icons/Reilverse_Assets/msg.svg';
-import userIcon from '../../public/Icons/Reilverse_Assets/userIcon.svg';
+import msg from '../../../public/Icons/Reilverse_Assets/msg.svg';
+import userIcon from '../../../public/Icons/Reilverse_Assets/userIcon.svg';
 import Link from 'next/link';
 import Image from 'next/image';
-import download from '../../public/Icons/Reilverse_Assets/export-file 3.svg';
-import logo from '../../public/Icons/Reilverse_Assets/Logo.svg';
-import arrow from '../../public/Icons/Reilverse_Assets/ArrowDown.svg';
-import girl from '../../public/Icons/Reilverse_Assets/image 20.svg';
-import myAccountImg from '../../public/Icons/Reilverse_Assets/vectorMyAccount.svg';
-import myAccountImg2 from '../../public/Icons/Reilverse_Assets/vectorMyAccount2.svg';
-import myAccountImg3 from '../../public/Icons/Reilverse_Assets/vectorMyAccount3.svg';
-import helpIcon1 from '../../public/Icons/Reilverse_Assets/helpIcon1.svg';
-import helpIcon2 from '../../public/Icons/Reilverse_Assets/helpIcon2.svg';
-import helpIcon3 from '../../public/Icons/Reilverse_Assets/helpIcon3.svg';
-import helpIcon4 from '../../public/Icons/Reilverse_Assets/helpIcon4.svg';
+import download from '../../../public/Icons/Reilverse_Assets/export-file 3.svg';
+import logo from '../../../public/Icons/Reilverse_Assets/Logo.svg';
+import arrow from '../../../public/Icons/Reilverse_Assets/ArrowDown.svg';
+import girl from '../../../public/Icons/Reilverse_Assets/image 20.svg';
+import myAccountImg from '../../../public/Icons/Reilverse_Assets/vectorMyAccount.svg';
+import myAccountImg2 from '../../../public/Icons/Reilverse_Assets/vectorMyAccount2.svg';
+import myAccountImg3 from '../../../public/Icons/Reilverse_Assets/vectorMyAccount3.svg';
+import helpIcon1 from '../../../public/Icons/Reilverse_Assets/helpIcon1.svg';
+import helpIcon2 from '../../../public/Icons/Reilverse_Assets/helpIcon2.svg';
+import helpIcon3 from '../../../public/Icons/Reilverse_Assets/helpIcon3.svg';
+import helpIcon4 from '../../../public/Icons/Reilverse_Assets/helpIcon4.svg';
 import { NAV_LINKS, BUSINESS_LINKS, PERSONAL_LINKS } from '@/utils/constants';
 import GoogleTranslate from './GoogleTranslate';
 import { FiSearch } from 'react-icons/fi';
@@ -24,8 +24,8 @@ import { IoClose } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
-import { Modal } from "antd";
-import { LOGO, DOWNLOAD_ICON } from "@/constants/assets";
+import { Modal } from 'antd';
+import { LOGO, DOWNLOAD_ICON } from '@/constants/assets';
 
 interface NavLink {
   to: string;
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className='w-full bg-pink-500 h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
+    <div className='w-full bg-slate-400 h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
       <div className='w-full h-72 flex flex-col items-center relative bg-gradient-to-b from-white to-transparent'>
         <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-6'>
           {/* Logo */}
@@ -226,6 +226,7 @@ const Header: React.FC = () => {
                 {value.title}
               </Link>
             ))}
+            <GoogleTranslate/>
           </div>
           <div className='w-auto flex items-center max-[1150px]:hidden gap-5'>
             <div onMouseLeave={() => setUnHideMsg(false)}>
