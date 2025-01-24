@@ -80,6 +80,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      border:{
+        'about-border-gradient':
+        'linear-gradient(180deg, #1A45D6 0%, rgba(0, 127, 255, 0) 100%)'
+      },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(180deg, rgba(117, 215, 255, 0) 27.37%, rgba(117, 215, 255, 0.2) 100%)',
       },
