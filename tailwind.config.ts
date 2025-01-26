@@ -53,6 +53,14 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        lightGray: "hsl(var(--lightGray))",
+        darkBlack:"hsl(var(--darkBlack))",
+        lightSecondary:"hsl(var(--lightSecondary))",
+        lightContent: "hsla(var(--lightContent))",
+        success:"hsla(var(--success))",
+        successBorder:"hsla(var(--successBorder))",
+        successBg:"hsla(var(--successBg))"
+        
       },
       fontFamily: {
         baskerville: ["baskervville"],

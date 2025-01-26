@@ -3,11 +3,32 @@
 import React from 'react';
 import TableLayout from '@/components/table/TableLayout';
 
-const PoliciesPage = () => {
-  const columns = ['Name', 'Email', 'Model & Make', 'Issued Date', 'Status', 'Action'];
+const ClaimsPage = () => {
+  const columns = [
+    'Name',
+    'Email',
+    'Created Date',
+    'Phone',
+    'ID Number',
+    'Action',
+  ];
   const rows = [
-    { name: 'Ivy Pink', email: 'ivy@example.com', model: 'Ford Focus', issued: '2025-01-20', status: 'Issued', action: ['Details', 'Edit', 'Receipt'] },
-    { name: 'Jack Cyan', email: 'jack@example.com', model: 'Chevy Bolt', issued: '2024-06-15', status: 'Issued', action: ['Details', 'Edit', 'Receipt'] },
+    {
+      name: 'Eve Black',
+      email: 'eve@example.com',
+      created: '2023-12-12',
+      phone: '1234567890',
+      id: 'ID001',
+      action: ['Details', 'Form'],
+    },
+    {
+      name: 'Frank Red',
+      email: 'frank@example.com',
+      created: '2024-01-15',
+      phone: '0987654321',
+      id: 'ID002',
+      action: ['Details', 'Form'],
+    },
   ];
 
   const handleFilter = () => alert('Filter action triggered');
@@ -15,8 +36,9 @@ const PoliciesPage = () => {
   const handleExport = () => alert('Export action triggered');
   return (
     <div>
-      <h1>Policies</h1>
-      <TableLayout  pageTitle='Agent'
+      <h1>Claims</h1>
+      <TableLayout
+        pageTitle='Agent'
         columns={columns}
         rows={rows}
         onFilter={handleFilter}
@@ -29,9 +51,10 @@ const PoliciesPage = () => {
             );
           }
           return value;
-        }} />
+        }}
+      />
     </div>
   );
 };
 
-export default PoliciesPage;
+export default ClaimsPage;

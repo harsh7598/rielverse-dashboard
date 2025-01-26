@@ -33,7 +33,9 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --success: 142.1 76.2% 36.3%;
+    --success: 160, 78%, 47%, 1;
+    --successBorder:160, 78%, 47%, 0.4;
+    --successBg: 160, 78%, 47%, 0.1;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -42,9 +44,12 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --greyborder: #C6C6C6;
+    --greyBorder: #C6C6C6;
     --ring: 222.2 84% 4.9%;
-
+    --darkBlack: 220, 6%, 10%;
+    --lightGray: 200, 27%, 96%;
+    --lightSecondary: 207, 28%, 69%;
+    --lightContent: 206, 23%, 88%, 1;
     --radius: 0.5rem;
   }
 
