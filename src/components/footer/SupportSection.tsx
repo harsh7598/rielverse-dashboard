@@ -45,11 +45,11 @@ const SupportSection: React.FC = () => {
         <div
           data-aos='fade-left'
           className={
-            'max-[350px]:w-[304px] w-[315px] h-[75px] px-4 bg-white flex items-center justify-center rounded-2xl shadow-lg'
+            'max-[370px]:w-[304px] w-[350px] h-[85px] px-4 bg-white flex items-center justify-center rounded-2xl shadow-lg'
           }>
           <div className={'w-full justify-around flex items-center gap-2'}>
             <Image
-              className={'w-fit h-9 object-contain'}
+              className={'w-fit h-16 object-contain'}
               src={secure}
               alt='Secure'
             />
@@ -58,7 +58,7 @@ const SupportSection: React.FC = () => {
               <span className=' text-primary'>Encrypted</span>
             </div>
             <Image
-              className={'w-fit object-contain'}
+              className={'w-fit h-16 object-contain'}
               src={trustus}
               alt='trustus'
             />

@@ -21,9 +21,11 @@ const RemarkSection: React.FC = () => {
         to terminate the insurance contract under Section 865 of the Civil and
         Commercial Code and may refuse to pay compensation.
         <br />
+        <br/>
         The Company does not contact customers through other (communication)
         channels apart from the Company’s official channels under any
         circumstances.
+        <br />
         <br />
         Please note that under no circumstances shall the Company be held
         liable or responsible for any claims, losses, damages, expenses, or

@@ -6,15 +6,16 @@ import layer from "../../../public/Icons/Reilverse_Assets/about_layer.png";
 
 const FirstSection: React.FC = () => {
   return (
+    <div className="max-[520px]:px-4 max-[1200px]:px-10 ">
     <div
       className={
-        "w-full max-[520px]:px-4 max-[1200px]:px-10 max-[1300px]:max-w-[1150px] max-w-[1200px] min-[1600px]:max-w-[1400px] min-[1800px]:max-w-[1600px] h-auto flex flex-col items-center"
+        "w-full max-[1300px]:max-w-[1150px] max-w-[1200px] min-[1600px]:max-w-[1400px] min-[1800px]:max-w-[1600px] h-auto flex flex-col items-center bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]"
       }
     >
-      <div className={"w-full h-auto p-[1px] rounded-t-xl"}>
+      <div className={"w-full h-auto p-[1px] bg-white z-10 rounded-[11px]"}>
         <div
           className={
-            "w-full h-auto flex flex-col items-start bg-gradient-to-b from-white/90 to-white/30 rounded-t-xl gap-10 px-10 pt-8 pb-20"
+            "w-full h-auto flex flex-col items-start rounded-t-xl gap-10 px-10 pt-8 pb-20"
           }
         >
           <div
@@ -169,6 +170,7 @@ const FirstSection: React.FC = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
