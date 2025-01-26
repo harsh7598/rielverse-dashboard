@@ -118,7 +118,7 @@ export default function page() {
   };
 
   return (
-    <div>
+    <div className='w-full'>
       <Image
         className='absolute right-0 top-0'
         src={righthead}
@@ -321,7 +321,7 @@ export default function page() {
                         <label
                           htmlFor='sum-insured'
                           className='block text-2xl font-medium text-gray-800 mb-2'>
-                          What is the Suminsured ?
+                          What is the Sum Insured ?
                         </label>
                         <h6 className='text-[10px] pb-6'>Need Help ?</h6>
                         <div className='relative'>
