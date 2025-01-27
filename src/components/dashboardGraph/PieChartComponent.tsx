@@ -43,7 +43,7 @@ export function PieChartComponent() {
     return { ...item, change };
   });
   return (
-    <div className='w-full max-w-full border-lightContent rounded-lg border-[1px] shadow-none h-[250px] flex justify-between items-center p-4'>
+    <div className='w-full max-w-full border-lightContent rounded-lg border-[1px] shadow-none h-[250px] flex justify-between items-center p-4 pt-0'>
       <div className='h-full flex-1 items-center justify-center'>
         <CardHeader className='pb-2'>
           <CardTitle>Monthly Performance</CardTitle>
