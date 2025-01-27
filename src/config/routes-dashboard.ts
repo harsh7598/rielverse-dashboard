@@ -126,7 +126,7 @@ const SUPERUSER_NAVMAINITEMS = [
   },
   {
     title: 'Claims',
-    url: '#',
+    url: ROUTES.DASHBOARD.CLAIMS,
     icon: Claims.src,
   },
   {

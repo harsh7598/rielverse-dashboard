@@ -24,6 +24,8 @@ export const ROUTES = {
     //   QUOTES: `${ROOTS.DASHBOARD}/quotes`,
     QUOTES: (role?: "Agent" | "User") =>
       `${ROOTS.DASHBOARD}/quotes`,
+    CLAIMS: `${ROOTS.DASHBOARD}/claims`,
+
   },
   API: {
     AUTH: {
