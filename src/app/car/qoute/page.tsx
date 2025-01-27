@@ -9,7 +9,7 @@ import arrow from '../../../../public/Icons/Reilverse_Assets/arrowdownblue.svg';
 
 export default function page() {
   return (
-    <div>
+    <div className='bg-gradient-to-b from-[#BCCEE4] to-transparent h-90 to bg-white'>
       <Image
         className='absolute right-0 top-0'
         src={righthead}

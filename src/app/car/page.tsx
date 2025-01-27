@@ -118,7 +118,7 @@ export default function page() {
   };
 
   return (
-    <div className='w-full'>
+    <div className='w-full bg-gradient-to-b from-[#98bae3] to-transparent h-60 to bg-white'>
       <Image
         className='absolute right-0 top-0'
         src={righthead}
