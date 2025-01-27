@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Header } from '@/components';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import searchicon from '../../../public/Icons/Reilverse_Assets/searchicon.svg';
 import audi from '../../../public/Images/carLogos/audi.webp';
 import baic from '../../../public/Images/carLogos/baic.jpeg';
@@ -18,10 +18,14 @@ import righthead from '../../../public/Icons/Reilverse_Assets/bg_right.svg';
 import vectorarrow from '../../../public/Icons/Reilverse_Assets/Vectorarrow.svg';
 import { IoIosArrowForward } from 'react-icons/io';
 import CarFooter from '@/components/footer/CarFooter';
-
+type Brand = {
+  name: string;
+  logo: StaticImageData;
+  models: string[];
+};
 export default function page() {
-  const [selectedBrand, setSelectedBrand] = useState(null);
-  const [carModels, setCarModels] = useState([]);
+  const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
+  const [carModels, setCarModels] = useState<string[]>([]);
 
   const brands = [
     {
@@ -112,7 +116,7 @@ export default function page() {
     },
   ];
 
-  const handleBrandClick = (brand) => {
+  const handleBrandClick = (brand: Brand) => {
     setSelectedBrand(brand.name);
     setCarModels(brand.models);
   };
@@ -201,29 +205,26 @@ export default function page() {
                 <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 md:grid-cols-4 md:gap-6 lg:grid-cols-5 lg:gap-8'>
                   {brands.map((brand) => (
                     <div
-                    key={brand.name}
-                    className={`w-[150px] h-[100px] rounded-[10px] p-[1px] flex items-center justify-center ${
-                      selectedBrand === brand.name
-                        ? 'bg-gradient-to-b from-[#96aeff] to-white'
-                        : 'bg-gradient-to-b from-[#1A45D6] to-white'
-                    }`}
-                  >
-                    <button
-                      onClick={() => handleBrandClick(brand)}
-                      className={`flex flex-col items-center justify-center w-full h-full p-[1px] rounded-[11px] ${
+                      key={brand.name}
+                      className={`w-[150px] h-[100px] rounded-[10px] p-[1px] flex items-center justify-center ${
                         selectedBrand === brand.name
                           ? 'bg-gradient-to-b from-[#96aeff] to-white'
-                          : 'bg-white hover:bg-gradient-to-b hover:from-[#96aeff] hover:to-white'
-                      }`}
-                    >
-                      <Image
-                        src={brand.logo}
-                        alt={brand.name}
-                        className='w-[80px] h-[40px] p-[1px]'
-                      />
-                    </button>
-                  </div>
-                  
+                          : 'bg-gradient-to-b from-[#1A45D6] to-white'
+                      }`}>
+                      <button
+                        onClick={() => handleBrandClick(brand)}
+                        className={`flex flex-col items-center justify-center w-full h-full p-[1px] rounded-[11px] ${
+                          selectedBrand === brand.name
+                            ? 'bg-gradient-to-b from-[#96aeff] to-white'
+                            : 'bg-white hover:bg-gradient-to-b hover:from-[#96aeff] hover:to-white'
+                        }`}>
+                        <Image
+                          src={brand.logo}
+                          alt={brand.name}
+                          className='w-[80px] h-[40px] p-[1px]'
+                        />
+                      </button>
+                    </div>
                   ))}
                 </div>
               </div>
