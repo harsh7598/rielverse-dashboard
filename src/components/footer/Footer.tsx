@@ -6,7 +6,7 @@ import LogoSection from './LogoSection';
 
 const Footer: React.FC = () => {
   return (
-    <div className='w-full h-auto min-h-[500px] flex flex-col relative overflow-x-clip pb-10'>
+    <div className='w-full h-auto min-h-[499px] flex flex-col relative overflow-x-clip pb-10'>
       <LogoSection />
       <SupportSection />
       <RemarkSection />
