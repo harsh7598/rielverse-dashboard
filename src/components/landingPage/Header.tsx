@@ -87,7 +87,7 @@ const Header: React.FC = () => {
     <div className='w-full  h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
       <div className='w-full h-72 flex flex-col items-center relative bg-gradient-to-b from-white to-transparent'>
         <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-4'>
-          <div className="relative w-fit h-fit max-w-[300px] max-[500px]:h-16 flex flex-col items-center justify-center px-5 rounded-lg bg-[#fff] after:content-[''] after:block after:absolute after:border-l-[2px] after:border-greyborder after:h-10 after:w-[1px] after:right-[-6px] after:top-[-6px] after:z-0">
+          <div className="relative w-fit h-fit max-w-[300px] max-[500px]:h-16 flex flex-col items-center justify-center px-5 rounded-lg after:content-[''] after:block after:absolute after:border-l-[2px] after:border-greyborder after:h-10 after:w-[1px] after:right-[-6px] after:top-[-6px] after:z-0">
             <Link href='/uat'>
               <Image
                 src={logo}

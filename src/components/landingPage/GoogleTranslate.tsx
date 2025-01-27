@@ -53,7 +53,7 @@ const GoogleTranslate = () => {
     <div>
       <div className='relative -mt-2'>
         <button
-          className='flex items-center px-3 border-none rounded-md bg-white text-sm text-primary'
+          className='flex items-center px-3 border-none rounded-md text-sm text-primary'
           onClick={() =>
             document
               .getElementById('custom-language-dropdown')
