@@ -41,7 +41,6 @@ export default function LoginForm() {
   const params = useSearchParams();
   const router = useRouter();
 
-  // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,7 +49,6 @@ export default function LoginForm() {
     },
   });
 
-  // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const [res, error] = await LoginAction(values);
 
@@ -113,18 +111,18 @@ export default function LoginForm() {
         <Button
           type="submit"
           disabled={form.formState.isSubmitting}
-          className="w-full">
+          className="w-full bg-[#003780]">
           {form.formState.isSubmitting && (
             <Icons.spinner className="mr-2 h-4 w-4 animate-spin group-hover:text-gray-500" />
           )}
-          Submit
+          Login
         </Button>
       </form>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}
         <Link
           href={ROUTES.AUTH.SIGNUP}
-          className="underline underline-offset-4">
+          className="underline underline-offset-4 text-[#003780] font-semibold cursor-pointer">
           Sign up
         </Link>
       </div>

@@ -7,9 +7,9 @@ export const ROOTS = {
 
 export const ROUTES = {
   AUTH: {
-    SIGNUP: `/signup`,
-    LOGIN: `/login`,
-    FORGOT: `/forgot`,
+    SIGNUP: '/signup',
+    LOGIN: '/login',
+    FORGOT: '/forgot',
   },
   DASHBOARD: {
     ROOT: ROOTS.DASHBOARD,
@@ -23,7 +23,7 @@ export const ROUTES = {
     },
     //   QUOTES: `${ROOTS.DASHBOARD}/quotes`,
     QUOTES: (role?: "Agent" | "User") =>
-      `${ROOTS.DASHBOARD}/quotes${role && `?role=${role}`}`,
+      `${ROOTS.DASHBOARD}/quotes`,
   },
   API: {
     AUTH: {

@@ -73,7 +73,7 @@ export default function ForgotForm() {
         <Button
           type="submit"
           disabled={form.formState.isSubmitting}
-          className="w-full">
+          className="w-full bg-[#003780]">
           {form.formState.isSubmitting && (
             <Icons.spinner className="mr-2 h-4 w-4 animate-spin group-hover:text-gray-500" />
           )}
@@ -82,7 +82,7 @@ export default function ForgotForm() {
       </form>
       <div className="text-center text-sm">
         Remember password of your account?{" "}
-        <Link href={ROUTES.AUTH.LOGIN} className="underline underline-offset-4">
+        <Link href={ROUTES.AUTH.LOGIN}   className="underline underline-offset-4 text-[#003780] font-semibold cursor-pointer">
           Log In
         </Link>
       </div>

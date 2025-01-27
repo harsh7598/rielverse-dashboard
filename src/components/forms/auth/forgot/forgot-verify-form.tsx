@@ -55,7 +55,6 @@ export default function ForgotVerifyForm() {
   const router = useRouter();
 
   const params = useSearchParams();
-  // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -64,7 +63,6 @@ export default function ForgotVerifyForm() {
     },
   });
 
-  // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const email = params.get("email")!;
     const token = params.get("code")!;
@@ -115,7 +113,7 @@ export default function ForgotVerifyForm() {
         <Button
           type="submit"
           disabled={form.formState.isSubmitting}
-          className="w-full">
+          className="w-full bg-[#003780]">
           {form.formState.isSubmitting && (
             <Icons.spinner className="mr-2 h-4 w-4 animate-spin group-hover:text-gray-500" />
           )}
@@ -124,7 +122,7 @@ export default function ForgotVerifyForm() {
       </form>
       <div className="text-center text-sm">
         Remember password of your account?{" "}
-        <Link href={ROUTES.AUTH.LOGIN} className="underline underline-offset-4">
+        <Link href={ROUTES.AUTH.LOGIN} className="underline underline-offset-4 text-[#003780] font-semibold cursor-pointer">
           Log In
         </Link>
       </div>

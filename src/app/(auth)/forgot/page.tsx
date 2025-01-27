@@ -5,14 +5,16 @@ import ForgotForm from '@/components/forms/auth/forgot/forgot-form';
 
 const ForgotPage: React.FC = () => {
   return (
-    <AuthCardLayout
-      imgSrc={PlaceHolder}
-      imgAlt='Forgot password'
-      title='Forgot your password?'
-      description='Enter your email below to reset your password'
-      noImg>
-      <ForgotForm />
-    </AuthCardLayout>
+    <div className='h-screen w-screen flex items-center justify-center'>
+      <AuthCardLayout
+        imgSrc={PlaceHolder}
+        imgAlt='Forgot password'
+        title='Forgot your password?'
+        description='Enter your email below to reset your password'
+        noImg>
+        <ForgotForm />
+      </AuthCardLayout>
+    </div>
   );
 };
 

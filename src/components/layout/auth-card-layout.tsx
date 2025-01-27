@@ -26,12 +26,12 @@ export default async function AuthCardLayout({
 }>) {
   return (
     <div className={cn("flex flex-col gap-6" , noImg && "items-center")}>
-      <Card className={cn("overflow-hidden" , noImg &&  "w-1/2")}>
+      <Card className={cn("overflow-hidden" , noImg &&  "w-1/2 min-w-[280px]")}>
         <CardContent className={cn("grid p-0", !noImg && "md:grid-cols-2")}>
           <section className="p-6 md:p-8 flex flex-col gap-8">
             <CardHeader className="items-center text-center p-0">
-              <CardTitle className="">{title}</CardTitle>
-              <CardDescription className="">{description}</CardDescription>
+              <CardTitle className="text-[#003780] font-semibold text-lg">{title}</CardTitle>
+              <CardDescription className="text-[#71717A]">{description}</CardDescription>
             </CardHeader>
             {children}
           </section>
@@ -48,10 +48,10 @@ export default async function AuthCardLayout({
           )}
         </CardContent>
       </Card>
-      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary">
+      <div className="text-balance text-center text-xs text-[#71717A] font-semibold [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary">
         By clicking continue, you agree to our{" "}
-        <Link href="#">Terms of Service</Link> and{" "}
-        <Link href="#">Privacy Policy</Link>.
+        <Link href="#" className="text-[#003780] font-semibold">Terms of Service</Link> &{" "}
+        <Link href="#" className="text-[#003780] font-semibold">Privacy Policy</Link>.
       </div>
     </div>
   );
