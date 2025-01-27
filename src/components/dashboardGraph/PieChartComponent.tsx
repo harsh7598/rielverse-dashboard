@@ -70,7 +70,8 @@ export function PieChartComponent() {
                 ))}
                 <Label
                   content={({ viewBox }) => {
-                    const { cx , cy } = viewBox;
+                    if (!viewBox) return null; 
+                    const { cx, cy } = viewBox as { cx: number; cy: number }; 
                     return (
                       <g>
                         <text
