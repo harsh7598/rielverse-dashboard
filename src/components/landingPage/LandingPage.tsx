@@ -10,7 +10,7 @@ import HeroSection from './HeroSection';
 
 const LandingPage: React.FC = () => {
   return (
-    <div className='py-[100px] w-full h-auto flex flex-col items-center max-[1400px]:px-4 '>
+    <div className='py-[100px] w-[98vw] h-auto flex flex-col items-center max-[1400px]:px-4 '>
       <HeroSection />
       <BenefitsSection />
       <WhoWeAre />
