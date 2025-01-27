@@ -308,7 +308,7 @@ export const NAV_LINKS = [
 export const PERSONAL_LINKS = [
   {
     linkName: 'Car',
-    routeUrl: '/car-brand',
+    routeUrl: '/car',
     classList:
       'py-3 px-2 rounded-tl-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
   },

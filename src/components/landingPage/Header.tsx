@@ -88,7 +88,7 @@ const Header: React.FC = () => {
       <div className='w-full h-72 flex flex-col items-center relative bg-gradient-to-b from-white to-transparent'>
         <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-4'>
           <div className="relative w-fit h-fit max-w-[300px] max-[500px]:h-16 flex flex-col items-center justify-center px-5 rounded-lg after:content-[''] after:block after:absolute after:border-l-[2px] after:border-greyborder after:h-10 after:w-[1px] after:right-[-6px] after:top-[-6px] after:z-0">
-            <Link href='/uat'>
+            <Link href='/'>
               <Image
                 src={logo}
                 alt='Railverse Logo'
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                 onMouseEnter={dropdownOpenHandler}
                 onMouseLeave={dropdownCloseHandler}
                 onClick={() => window.scrollTo(0, 0)}
-                href='/uat/car_brand'
+                href='/car'
                 className='pb-2 text-[14px] tracking-[1px] font-semibold flex items-center gap-2'>
                 Personal
                 <Image className='w-5' src={arrow} alt='arrow-icon' />

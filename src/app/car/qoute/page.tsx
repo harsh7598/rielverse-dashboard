@@ -3,7 +3,7 @@ import { Header } from '@/components';
 import Image from 'next/image';
 import React from 'react';
 import righthead from '../../../../public/Icons/Reilverse_Assets/bg_right.svg';
-import maruti from '../../../../public/Icons/Reilverse_Assets/Car.svg';
+import maruti from '../../../../public/Icons/Reilverse_Assets/maruticar.svg';
 import edit from '../../../../public/Icons/Reilverse_Assets/edit (6) 1.svg';
 import arrow from '../../../../public/Icons/Reilverse_Assets/arrowdownblue.svg';
 
