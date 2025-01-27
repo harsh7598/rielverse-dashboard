@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import React from 'react';
 import TableLayout from '@/components/table/TableLayout';
@@ -12,30 +12,44 @@ import { Button } from '@/components/ui/button';
 import { CalendarIcon } from 'lucide-react';
 import { DateRange } from 'react-day-picker';
 import { addDays, format } from 'date-fns';
-
+import { ColumnRenderers } from '@/utils/tableRenderers';
+import Avatar2 from '../../../assets/icons/icon_avatar2.svg';
+import Avatar3 from '../../../assets/icons/icon_avatar3.svg';
 const QuotesPage = () => {
   const columns = [
     'Name',
     'Email',
-    'Model & Make',
+    'Model and Make',
     'Created Date',
     'Status',
     'Action',
   ];
   const rows = [
     {
-      name: 'Kate Lime',
+      name: { text: 'Alice Johnson', avatar: Avatar3, otherData: '@username' },
       email: 'kate@example.com',
-      model: 'Tesla Model 3',
-      created: '2023-03-25',
+      modelandmake: {
+        name: 'Ford Fiesta',
+        modelCode: '450F',
+        engineSize: '1.6',
+        series: 'ST',
+        additionalInfo: '(D)',
+      },
+      createddate: '2023-03-25',
       status: 'Pending',
       action: ['Details', 'Edit', 'Receipt'],
     },
     {
-      name: 'Leo Amber',
+      name: { text: 'Jane Smith', avatar: Avatar2, otherData: '@username' },
       email: 'leo@example.com',
-      model: 'BMW X5',
-      created: '2023-08-14',
+      modelandmake: {
+        name: 'Chevrolet Malibu',
+        modelCode: '750C',
+        engineSize: '2.0',
+        series: 'LT',
+        additionalInfo: '(Z)',
+      },
+      createddate: '2023-08-14',
       status: 'Pending',
       action: ['Details', 'Edit', 'Receipt'],
     },
@@ -44,13 +58,14 @@ const QuotesPage = () => {
     from: new Date(2022, 0, 20),
     to: addDays(new Date(2022, 0, 20), 20),
   });
-
+  const handleActionClick = (action: string) => {
+    console.log(action);
+  };
   const handleFilter = () => alert('Filter action triggered');
   const handleSort = () => alert('Sort action triggered');
   const handleExport = () => alert('Export action triggered');
   return (
-    <div>
-      <h1>Quotes</h1>
+    <>
       {/* <div className={cn("grid gap-2")}>
       <Popover>
         <PopoverTrigger asChild>
@@ -89,21 +104,31 @@ const QuotesPage = () => {
         </PopoverContent>
       </Popover>
     </div> */}
-      <TableLayout  pageTitle='Agent'
+      <TableLayout
+        pageTitle='Customer List'
         columns={columns}
         rows={rows}
         onFilter={handleFilter}
         onSort={handleSort}
         onExport={handleExport}
-        renderCell={(column, value) => {
+        renderCell={(column, value, row) => {
           if (column === 'Action') {
-            return (
-              <button className='text-blue-500 hover:underline'>{value}</button>
-            );
+            return ColumnRenderers.Action(value, row, handleActionClick);
+          } else if (column === 'Name') {
+            return ColumnRenderers.Name(value);
+          } else if (column === 'Email') {
+            return ColumnRenderers.Email(value);
+          } else if (column === 'Model and Make') {
+            return ColumnRenderers.ModelAndMake(value);
+          } else if (column === 'Created Date') {
+            return ColumnRenderers.CreatedDate(value);
+          } else if (column === 'Status') {
+            return ColumnRenderers.Status(value);
           }
-          return value;
-        }} />
-    </div>
+          return ColumnRenderers.Common(value);
+        }}
+      />
+    </>
   );
 };
 

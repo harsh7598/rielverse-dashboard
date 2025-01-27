@@ -7,20 +7,19 @@ export const ROOTS = {
 
 export const ROUTES = {
   AUTH: {
-    SIGNUP: `${ROOTS.AUTH}/signup`,
-    LOGIN: `${ROOTS.AUTH}/login`,
-    FORGOT: `${ROOTS.AUTH}/forgot`,
+    SIGNUP: `/signup`,
+    LOGIN: `/login`,
+    FORGOT: `/forgot`,
   },
   DASHBOARD: {
     ROOT: ROOTS.DASHBOARD,
     TASKS: `${ROOTS.DASHBOARD}/tasks`,
     // POLICIES: `${ROOTS.DASHBOARD}/policies`,
     POLICIES: (role?: "Agent" | "User") =>
-      `${ROOTS.DASHBOARD}/policies${role && `?role=${role}`}`,
+      `${ROOTS.DASHBOARD}/policies`,
 
     QUOTATION: {
-      ROOT: (form: string) => `${ROOTS.DASHBOARD}/quotation?form=${form}`,
-      PAYMENT: `${ROOTS.DASHBOARD}/quotation/payment`,
+      ROOT: (form: string) => `${ROOTS.DASHBOARD}/quotation`,
     },
     //   QUOTES: `${ROOTS.DASHBOARD}/quotes`,
     QUOTES: (role?: "Agent" | "User") =>

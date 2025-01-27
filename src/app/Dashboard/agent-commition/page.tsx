@@ -1,8 +1,10 @@
-"use client"
+'use client';
 
 import React from 'react';
 import TableLayout from '@/components/table/TableLayout';
-
+import { ColumnRenderers } from '@/utils/tableRenderers';
+import Avatar1 from '../../../assets/icons/icon_avatar1.svg';
+import Avatar2 from '../../../assets/icons/icon_avatar2.svg';
 const AgentCommitionPage = () => {
   const columns = [
     'Agent Name',
@@ -16,9 +18,9 @@ const AgentCommitionPage = () => {
   ];
   const rows = [
     {
-      name: 'George White',
+      agentname: { text: 'John Doe', avatar: Avatar1, otherData: 'mail@gmail.com' },
       rate: '10%',
-      joining: '2020-01-01',
+      joiningdate: '2020-01-01',
       status: 'Active',
       policies: 5,
       quotes: 12,
@@ -26,9 +28,13 @@ const AgentCommitionPage = () => {
       action: ['Delete', 'Edit', 'Attach'],
     },
     {
-      name: 'Helen Gray',
+      agentname: {
+        text: 'Jane Smith',
+        avatar: Avatar2,
+        otherData: 'mail@gmail.com',
+      },
       rate: '15%',
-      joining: '2019-05-10',
+      joiningdate: '2019-05-10',
       status: 'Inactive',
       policies: 8,
       quotes: 20,
@@ -41,25 +47,26 @@ const AgentCommitionPage = () => {
   const handleSort = () => alert('Sort action triggered');
   const handleExport = () => alert('Export action triggered');
   return (
-    <div>
-      <h1>Agent Commition</h1>
+    <>
       <TableLayout
-        pageTitle='Agent'
+        pageTitle='Agent Commission'
         columns={columns}
         rows={rows}
         onFilter={handleFilter}
         onSort={handleSort}
         onExport={handleExport}
-        renderCell={(column, value) => {
+        renderCell={(column, value, row) => {
           if (column === 'Action') {
-            return (
-              <button className='text-blue-500 hover:underline'>{value}</button>
-            );
+            return ColumnRenderers.Action(value, row, () => {});
+          } else if (column === 'Agent Name') {
+            return ColumnRenderers.Name(value);
+          } else if (column === 'Joining Date') {
+            return ColumnRenderers.JoiningDate(value);
           }
-          return value;
+          return ColumnRenderers.Common(value);
         }}
       />
-    </div>
+    </>
   );
 };
 

@@ -39,7 +39,6 @@ const TableLayout: React.FC<TableLayoutProps> = ({
   onSort,
   onExport,
 }) => {
-  // Map column names to row keys
   const columnKeys = columns.map((col) =>
     col.toLowerCase().replace(/[^a-z0-9]/g, ''),
   );

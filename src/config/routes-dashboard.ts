@@ -26,14 +26,19 @@ const AGENT_NAVMAINITEMS = [
     isActive: true,
     items: [
       {
+        title: 'Quotes',
+        url: ROUTES.DASHBOARD.QUOTES('User'),
+        icon: Quotes.src,
+      },
+      {
         title: 'Policies',
         url: ROUTES.DASHBOARD.POLICIES('User'),
         icon: Policies.src,
       },
       {
-        title: 'Quotes',
-        url: ROUTES.DASHBOARD.QUOTES('User'),
-        icon: Quotes.src,
+        title: 'Policy Renewal',
+        url: ROUTES.DASHBOARD.POLICIES('User'),
+        icon: Policies.src,
       },
     ],
   },
@@ -53,18 +58,23 @@ const SUPERUSER_NAVMAINITEMS = [
   {
     title: 'Agent',
     url: ROUTES.DASHBOARD.ROOT,
-    icon: Customer.src,
+    icon: Claims.src,
     isActive: true,
     items: [
+      {
+        title: 'Quotes',
+        url: ROUTES.DASHBOARD.QUOTES('Agent'),
+        icon: Quotes.src,
+      },
       {
         title: 'Policies',
         url: ROUTES.DASHBOARD.POLICIES('Agent'),
         icon: Policies.src,
       },
       {
-        title: 'Quotes',
-        url: ROUTES.DASHBOARD.QUOTES('Agent'),
-        icon: Quotes.src,
+        title: 'Policy Renewal',
+        url: ROUTES.DASHBOARD.POLICIES('User'),
+        icon: Policies.src,
       },
     ],
   },
@@ -75,21 +85,26 @@ const SUPERUSER_NAVMAINITEMS = [
     isActive: true,
     items: [
       {
+        title: 'Quotes',
+        url: ROUTES.DASHBOARD.QUOTES('User'),
+        icon: Quotes.src,
+      },
+      {
         title: 'Policies',
         url: ROUTES.DASHBOARD.POLICIES('User'),
         icon: Policies.src,
       },
       {
-        title: 'Quotes',
-        url: ROUTES.DASHBOARD.QUOTES('User'),
-        icon: Quotes.src,
+        title: 'Policy Renewal',
+        url: ROUTES.DASHBOARD.POLICIES('User'),
+        icon: Policies.src,
       },
     ],
   },
   {
     title: 'User Management',
     url: ROUTES.DASHBOARD.ROOT,
-    icon: Customer.src,
+    icon: Policies.src,
     isActive: true,
     items: [
       {
@@ -101,6 +116,11 @@ const SUPERUSER_NAVMAINITEMS = [
         title: 'Employees',
         url: '#',
         icon: Quotes.src,
+      },
+      {
+        title: 'Customers',
+        url: '#',
+        icon: Customer.src,
       },
     ],
   },
@@ -152,11 +172,6 @@ export const COMMON_NAVMAINITEMS = [
     title: 'Home',
     url: ROUTES.DASHBOARD.ROOT,
     icon: Home.src,
-  },
-  {
-    title: 'Quotation',
-    url: ROUTES.DASHBOARD.QUOTATION.ROOT('coverage-selection'),
-    icon: Quotation.src,
   },
 ];
 

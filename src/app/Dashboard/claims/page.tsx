@@ -2,7 +2,9 @@
 
 import React from 'react';
 import TableLayout from '@/components/table/TableLayout';
-
+import Avatar1 from '../../../assets/icons/icon_avatar1.svg';
+import Avatar2 from '../../../assets/icons/icon_avatar2.svg';
+import { ColumnRenderers } from '@/utils/tableRenderers';
 const ClaimsPage = () => {
   const columns = [
     'Name',
@@ -14,46 +16,51 @@ const ClaimsPage = () => {
   ];
   const rows = [
     {
-      name: 'Eve Black',
+      name: { text: 'John Doe', avatar: Avatar1, otherData: "@username" },
       email: 'eve@example.com',
-      created: '2023-12-12',
+      createddate: '2023-12-12',
       phone: '1234567890',
-      id: 'ID001',
+      idnumber: 'ID001',
       action: ['Details', 'Form'],
     },
     {
-      name: 'Frank Red',
+      name: { text: 'Jane Smith', avatar: Avatar2, otherData: "@username" },
       email: 'frank@example.com',
-      created: '2024-01-15',
+      createddate: '2024-01-15',
       phone: '0987654321',
-      id: 'ID002',
+      idnumber: 'ID002',
       action: ['Details', 'Form'],
     },
   ];
-
+  const handleActionClick = (action: string) => {
+    console.log(action);
+  };
   const handleFilter = () => alert('Filter action triggered');
   const handleSort = () => alert('Sort action triggered');
   const handleExport = () => alert('Export action triggered');
   return (
-    <div>
-      <h1>Claims</h1>
-      <TableLayout
-        pageTitle='Agent'
+    <>
+        <TableLayout
+        pageTitle='Caims Form'
         columns={columns}
         rows={rows}
         onFilter={handleFilter}
         onSort={handleSort}
         onExport={handleExport}
-        renderCell={(column, value) => {
+        renderCell={(column, value, row) => {
           if (column === 'Action') {
-            return (
-              <button className='text-blue-500 hover:underline'>{value}</button>
-            );
+            return ColumnRenderers.Action(value, row, handleActionClick);
+          } else if (column === 'Name') {
+            return ColumnRenderers.Name(value);
+          } else if (column === 'Email') {
+            return ColumnRenderers.Email(value);
+          } else if (column === 'Created Date') {
+            return ColumnRenderers.CreatedDate(value);
           }
-          return value;
+          return ColumnRenderers.Common(value);
         }}
       />
-    </div>
+      </>
   );
 };
 

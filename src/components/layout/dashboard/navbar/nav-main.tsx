@@ -68,7 +68,7 @@ export function NavMain({
               </CollapsibleTrigger>
               {item.items && item.items.length > 0 && (
                 <CollapsibleContent>
-                  <SidebarMenuSub className="border-l-2 border-l-orange-500 ml-9">
+                  <SidebarMenuSub className="border-l-2 border-l-[#003780] ml-9">
                     {item.items.map((subItem, key) => (
                       <Link
                         href={subItem.url}
