@@ -129,42 +129,7 @@ export default function page() {
         alt='righthead'
       />
       <Header />
-      <div className='w-full flex flex-col md:flex-row items-center md:items-start justify-center pt-40 px-4 md:px-8 lg:px-16 min-h-screen'>
-        {/* Left Section */}
-        <div className='w-full md:w-1/4 h-screen flex flex-col items-start p-2'>
-          <div className='space-y-8'>
-            {/* Step Item */}
-            <div className='flex items-center space-x-6'>
-              <div className='w-4 h-4 bg-blue-500 border-2 border-gray-400 rounded-full'></div>
-              <div className=' bg-gradient-to-l from-[#1A45D6] to-white rounded-[10px] p-[1px]'>
-                <div className='w-[140px] h-[55px] text-blue-600 flex justify-center items-center text-[20px] font-semibold p-[1px] bg-gradient-to-l from-[#C2D1F1] to-white z-10 rounded-[11px]'>
-                  Car
-                </div>
-              </div>
-            </div>
-            <div className='flex flex-col space-y-10'>
-              {/* Step Items */}
-              <div className='flex items-center space-x-4'>
-                <div className='w-4 h-4 border-2 border-gray-400 rounded-full'></div>
-                <div className=' bg-gradient-to-l from-[#7E7E7E] to-white rounded-[10px] p-[1px]'>
-                  <div className='w-[200px] h-[55px] text-gray-600 flex justify-center items-center text-[18px] font-medium p-[1px] bg-white z-10 rounded-[11px]'>
-                    Quote
-                  </div>
-                </div>
-              </div>
-              <div className='flex items-center space-x-4'>
-                <div className='w-4 h-4 border-2 border-gray-400 rounded-full'></div>
-                <div className=' bg-gradient-to-l from-[#7E7E7E] to-white rounded-[10px] p-[1px]'>
-                  <div className='w-[180px] h-[55px] text-gray-600 flex justify-center items-center text-[18px] font-medium p-[1px] bg-white z-10 rounded-[11px]'>
-                    Quote Summary
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Section */}
+      <div className='w-full flex justify-center pt-40 px-4 md:px-8 sm:px-1 lg:px-16 min-h-screen'>
         <div className='w-full md:w-3/4 flex flex-col z-10'>
           <h1 className='text-3xl font-bold text-gray mb-6 pl-28'>Car</h1>
           <div className='bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px] mx-20'>
