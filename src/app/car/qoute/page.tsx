@@ -6,6 +6,12 @@ import righthead from '../../../../public/Icons/Reilverse_Assets/bg_right.svg';
 import maruti from '../../../../public/Icons/Reilverse_Assets/maruticar.svg';
 import edit from '../../../../public/Icons/Reilverse_Assets/edit (6) 1.svg';
 import arrow from '../../../../public/Icons/Reilverse_Assets/arrowdownblue.svg';
+import fortegeneral from '../../../../public/Icons/Reilverse_Assets/fortegeneral.svg';
+import instant from '../../../../public/Icons/Reilverse_Assets/instantlogo.svg';
+import claim from '../../../../public/Icons/Reilverse_Assets/claimlogo.svg';
+import transparent from '../../../../public/Icons/Reilverse_Assets/transparentlogo.svg';
+import application from '../../../../public/Icons/Reilverse_Assets/applicationlogo.svg';
+
 
 export default function page() {
   return (
@@ -18,7 +24,7 @@ export default function page() {
       <Header />
       <div className='w-full min-h-screen p-8'>
         {/* Main Container */}
-        <div className='max-w-6xl mx-auto mt-40'>
+        <div className='w-full mt-40 px-40'>
           {/* Vehicle Information */}
           <div className='flex items-center gap-4 mb-8'>
             <Image src={maruti} alt='Car Icon' className='w-12 h-12' />
@@ -137,50 +143,89 @@ export default function page() {
             </div>
           </div>
 
-          {/* Insurance Card */}
-          <div className='bg-gray-50 p-6 rounded-lg shadow-md flex justify-between items-center mb-8'>
-            <div>
-              <h3 className='text-lg font-semibold'>Forte General Insurance</h3>
-              <p className='text-gray-600'>
-                SUM INSURED: <span className='font-medium'>$74,000</span>
-              </p>
-              <p className='text-gray-600'>
-                PLAN TYPE:{' '}
-                <span className='font-medium'>Third Party Liability Only</span>
-              </p>
+          <div className='w-full flex flex-row'>
+            {/* Insurance Card */}
+            <div className='w-full h-fit bg-white p-6 rounded-lg shadow-md flex justify-between pb-8'>
+              <div className='flex flex-row gap-4 p-2'>
+                <div className='bg-gradient-to-t from-[#1A45D6] to-white rounded-[13px] p-[1px]'>
+                  <div className='p-3 bg-white z-10 rounded-[14px]'>
+                    <Image
+                      src={fortegeneral}
+                      alt='Forte General insurance'
+                      className='w-[160px] h-[50px]'
+                    />
+                  </div>
+                </div>
+                <div className='flex flex-col gap-2 '>
+                  <div>
+                    <p className='text-gray-800 text-[10px] font-semibold'>
+                      SUM INSURED
+                    </p>
+                    <p className='text-[11px] text-[#1A45D6] font-medium'>
+                      $74,000
+                    </p>
+                  </div>
+                  <div>
+                    <p className='text-gray-800 text-[10px] font-semibold'>
+                      PLAN TYPE:{' '}
+                    </p>
+                    <p className='text-[11px] text-[#1A45D6] font-medium'>
+                      Third Party Liability Only
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+              <div className='flex flex-col items-start gap-2'>
+                <div className='flex flex-row gap-2'>
+                  <p className='text-[10px] text-gray-700'>
+                    Policy Start Date :
+                  </p>
+                  <p className='text-[10px] text-gray-800'>07 Feb 2025</p>
+                </div>
+                <button className='flex items-center justify-between w-[125px] h-[30px] px-4 py-2 bg-[#1A45D6] text-white text-[13px] rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2'>
+                  <span>$290 USD</span>
+                  <span>&gt;</span>
+                </button>
+                <button className='text-blue-800 font-semibold text-[11px] hover:underline'>
+                  View Benefits & Breakup
+                </button>
+              </div>
             </div>
-            <div className='text-right'>
-              <p className='text-xl font-bold text-blue-600'>$290 USD</p>
-              <button className='mt-2 text-blue-500 hover:underline'>
-                View Benefits & Breakup
-              </button>
+            {/* Why Rielverse Section */}
+            <div className='bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]'>
+              <div className='p-6 bg-white z-10 rounded-[11px]'>
+                <h3 className='text-lg text-[#13519C] font-semibold mb-4'>
+                  Why Rielverse?
+                </h3>
+                <ul className='space-y-4 text-[12px] font-medium py-2'>
+                  <li className='flex items-center gap-2'>
+                    <div className='flex justify-center w-[25px] h-[25px] bg-[#13519C26] rounded-md'>
+                      <Image src={instant} alt='instant' />
+                    </div>
+                    <p>Instant Policy Insurance</p>
+                  </li>
+                  <li className='flex items-center gap-2'>
+                  <div className='flex justify-center w-[25px] h-[25px] bg-[#13519C26] rounded-md'>
+                <Image src={claim} alt='claim'/>
+                </div>
+                    <p>24×7 Claim Assistance</p>
+                  </li>
+                  <li className='flex items-center gap-2'>
+                  <div className='flex justify-center w-[25px] h-[25px] bg-[#13519C26] rounded-md'>
+                <Image src={transparent} alt='transparent'/>
+                </div>
+                    <p>Transparent Comparisons</p>
+                  </li>
+                  <li className='flex items-center gap-2'>
+                  <div className='flex justify-center w-[25px] h-[25px] bg-[#13519C26] rounded-md'>
+                <Image src={application} alt='application'/>
+                </div>
+                    <p>Application to Issuance</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-
-          {/* Why Rielverse Section */}
-          <div className='bg-white p-6 rounded-lg shadow-md'>
-            <h3 className='text-lg font-semibold mb-4'>Why Rielverse?</h3>
-            <ul className='space-y-2'>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-500'>✔</span>
-                <p>Instant Policy Insurance</p>
-              </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-500'>✔</span>
-                <p>
-                  24×7 Claim Assistance (10am to 7pm excluding national
-                  holidays)
-                </p>
-              </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-500'>✔</span>
-                <p>Transparent Comparisons</p>
-              </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-500'>✔</span>
-                <p>Application to Issuance</p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
