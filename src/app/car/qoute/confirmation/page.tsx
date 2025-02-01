@@ -14,8 +14,8 @@ const ConfirmationPage = () => {
         src={righthead}
         alt='righthead'
       />
-      {/* <Header /> */}
-      <div className='w-full h-auto max-w-[1300px] p-8 flex flex-col md:flex-row gap-4 mx-auto mt-20 md:mt-40'>
+      <Header />
+      <div className='w-full h-auto max-w-[1300px] px-8 flex flex-col md:flex-row gap-4 mx-auto pt-20 md:pt-40'>
         {/* Left Section - Form */}
         <div className='w-full md:w-3/4 bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px] flex flex-col '>
           <div className='bg-white z-10 rounded-[11px] p-6 md:p-12'>
