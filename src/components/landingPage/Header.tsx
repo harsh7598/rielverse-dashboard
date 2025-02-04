@@ -84,29 +84,26 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className='w-full  h-32 flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
-      <div className='w-full h-72 flex flex-col items-center relative bg-gradient-to-b from-white to-transparent'>
-        <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10 mt-4'>
-          <div className="relative w-fit h-fit max-w-[300px] max-[500px]:h-16 flex flex-col items-center justify-center px-5 rounded-lg after:content-[''] after:block after:absolute after:border-l-[2px] after:border-greyborder after:h-10 after:w-[1px] after:right-[-6px] after:top-[-6px] after:z-0">
+    <div className='w-full flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
+      <div className='w-full flex flex-col items-center justify-center relative bg-gradient-to-b p-4 from-white to-transparent'>
+        <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10'>
+          <div className="border-r-2 border-[#C6C6C6] pr-8">
             <Link href='/'>
               <Image
                 src={logo}
                 alt='Railverse Logo'
-                className='w-fit max-w-[300px] h-7 object-contain'
-                width={300}
-                height={50}
+                className='w-auto h-5 md:h-7 object-contain'
               />
             </Link>
           </div>
-
-          <div className='flex uppercase flex-row text-primary items-center max-[1150px]:hidden gap-16 min-[1600px]:mx-12 mx-3'>
+          <div className='flex uppercase flex-row text-primary items-center justify-center max-[1150px]:hidden gap-16 min-[1600px]:mx-12 mx-3'>
             <div>
               <Link
                 onMouseEnter={dropdownOpenHandler}
                 onMouseLeave={dropdownCloseHandler}
                 onClick={() => window.scrollTo(0, 0)}
                 href='/car'
-                className='pb-2 text-[14px] tracking-[1px] font-semibold flex items-center gap-2'>
+                className='text-[14px] tracking-[1px] font-semibold flex items-center gap-2'>
                 Personal
                 <Image className='w-5' src={arrow} alt='arrow-icon' />
               </Link>
@@ -155,7 +152,7 @@ const Header: React.FC = () => {
                 onMouseLeave={dropdownCloseHandler2}
                 onClick={() => window.scrollTo(0, 0)}
                 href='/uat/health_insurance'
-                className='pb-2 text-[14px] tracking-[1px] font-medium flex items-center gap-2'>
+                className='text-[14px] tracking-[1px] font-medium flex items-center gap-2'>
                 Business
                 <Image className='w-5' src={arrow} alt='arrow-icon' />
               </Link>
@@ -203,7 +200,7 @@ const Header: React.FC = () => {
                 onClick={() => window.scrollTo(0, 0)}
                 key={index}
                 href={value.to}
-                className=' text-[14px] pb-2 tracking-[1px] font-medium'>
+                className=' text-[14px] tracking-[1px] font-medium'>
                 {value.title}
               </Link>
             ))}
@@ -218,47 +215,47 @@ const Header: React.FC = () => {
                 alt='msg-icon'
               />
             </div>
-            <div onMouseLeave={() => setUnHide(false)} >
+            <div onMouseLeave={() => setUnHide(false)} className='text-center'>
               <Link
                 onMouseEnter={() => setUnHide(true)}
                 href='#'
-                className="flex items-center gap-1 text-[14px] tracking-[1px] font-semibold text-primary bg-white px-7 py-3 uppercase w-fit rounded-xl shadow-md border-2">
+                className="flex items-center justify-center gap-1 text-[14px] tracking-[1px] font-semibold text-primary bg-white px-7 py-3 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap">
                 <Image className='w-8' src={userIcon} alt='user-icon' />
                 My account
               </Link>
-              <span className='text-primary font-medium text-[12px]'>
+              <span className='text-primary font-medium text-[10px]'>
                 Claim, renew, manage & more
               </span>
             </div>
           </div>
 
-          <div className='flex items-center min-[1150px]:hidden gap-8'>
-            <div className='p-2 rounded-full bg-primary 80 max-[500px]:hidden'>
-              <FiSearch className='text-3xl' />
+          <div className='flex items-center justify-center min-[1150px]:hidden gap-8'>
+            <div className='p-2 rounded-full bg-primary max-[500px]:hidden'>
+              <FiSearch className='text-xl' />
             </div>
 
             <div
               onClick={() => setOpen(!isOpen)}
-              className='text-4xl text-primary max-[500px]:translate-y-1'>
+              className='text-xl md:text-2xl text-primary '>
               {!isOpen ? <LuMenu /> : <IoClose />}
             </div>
           </div>
           <div
             className={`${
               isOpen ? 'top-[-24px]' : 'top-[-250vh]'
-            } min-[1150px]:hidden pt-28 px-10 w-full h-screen bg-white absolute left-0 duration-700 ease-in-out -z-10 flex flex-col items-end max-[500px]:items-start`}>
-            <div className='p-2 min-[500px]:hidden self-start rounded-full bg-white mb-3'>
+            } min-[1150px]:hidden pt-28 px-10 w-full pb-4 bg-white absolute left-0 duration-700 ease-in-out -z-10 flex flex-col items-end max-[500px]:items-start`}>
+            {/* <div className='p-2 min-[500px]:hidden self-start rounded-full bg-white mb-3'>
               <FiSearch className='text-3xl' />
-            </div>
+            </div> */}
 
             <div className='flex flex-col items-start gap-8 mb-4'>
-              <span className='cursor-pointer text-[16px] flex items-center gap-2 relative min-[600px]:hidden text-gray-700 font-semibold'>
+              <span className='cursor-pointer text-[16px] flex items-center gap-2 relative text-gray-700 font-semibold'>
                 Contact Us <FaArrowRight className='text-primary' />
               </span>
-              <span className='text-[16px] flex items-center gap-2 min-[600px]:hidden text-gray-700 font-semibold'>
+              <span className='text-[16px] flex items-center gap-2  text-gray-700 font-semibold'>
                 Login <FaArrowRight className='text-primary' />
               </span>
-              <span className='text-[16px] min-[600px]:hidden flex items-center gap-2 text-gray-700 font-semibold'>
+              <span className='text-[16px] flex items-center gap-2 text-gray-700 font-semibold'>
                 About Us <FaArrowRight className='text-primary' />
               </span>
               <Link
@@ -279,7 +276,7 @@ const Header: React.FC = () => {
               ))}
             </div>
 
-            <div className='w-auto flex max-[500px]:flex-col max-[500px]:gap-4 items-center'>
+            <div className='w-auto flex flex-col md:flex-row max-[500px]:gap-4 items-center'>
               <div className='w-auto h-16 rounded-xl border-2 border-green-950 flex items-center px-4 py-0'>
                 <MdOutlinePhoneInTalk className='text-3xl' />
                 <div className='flex flex-col items-end leading-4'>

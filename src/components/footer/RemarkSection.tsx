@@ -4,7 +4,7 @@ const RemarkSection: React.FC = () => {
   return (
     <div
       className={
-        "w-full max-[800px]:px-2 max-[1440px]:px-6 max-w-[1190px] min-[1800px]:max-w-[1600px] flex flex-col items-center px-20"
+        "w-full flex flex-col items-center py-10 px-6 md:px-14 lg:px-20"
       }
     >
       <p

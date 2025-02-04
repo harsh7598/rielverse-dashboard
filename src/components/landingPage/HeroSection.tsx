@@ -42,34 +42,34 @@ export default function HeroSection() {
     router.push(href);
   };
   return (
-    <div className='bg-hero-gradient w-[100vw] pb-20'>
+    <div className='bg-hero-gradient w-full pt-14 pb-20'>
       <div
         className={
-          'w-full max-[1440px]:px-4 max-[500px]:px-2 flex max-[1150px]:flex-col justify-center relative mt-0'
+          'w-full  px-2 md:px-4 flex flex-col lg:flex-row items-center justify-center  mt-0 relative top-14 '
         }>
         <Image
           data-aos='zoom-in'
           src={couple}
           className={
-            'w-[500px] max-[800px]:w-[300px] max-[1350px]:w-[400px] max-w-[500px] h-fit  object-contain mr-3 mt-40'
+            'w-auto h-25 md:h-35 object-contain mt-0 lg:mt-auto mr-0 lg:mr-3 '
           }
           alt=''
         />
         <div
           className={
-            'w-full max-[500px]:w-auto max-w-[800px] max-[500px]:max-w-[450px] flex flex-col items-end text-start relative top-14 '
+            'w-full max-[500px]:w-auto max-w-[800px] max-[500px]:max-w-[450px] flex flex-col items-end text-start relative'
           }>
           <span
             data-aos='fade-left'
             className={
-              'max-[1150px]:self-center self-start max-[1150px]:text-center min-[1800px]:text-[40px] max-[500px]:text-[17px] text-[36px] font-[400] text-primary tracking-[-1px]'
+              'max-[1150px]:self-center mt-4 md:mt-0 self-start max-[1150px]:text-center text-[26px] lg:text-[40px] md:text-[34px] font-[600] text-primary tracking-[-1px]'
             }>
             The #1 Trusted Platform For Your Insurance Needs
           </span>
           <span
             data-aos='fade-left'
             className={
-              'mb-2 max-[1150px]:self-center self-start text-[18px] font-[400] text-[#000000]'
+              'mb-2 max-[1150px]:self-center self-start text-[14px] md:text-[16px] lg:text-[18px] font-[400] text-[#000000]'
             }>
             Your financial literacy journey starts here
           </span>
@@ -126,7 +126,7 @@ export default function HeroSection() {
                           alt='Car logo'
                         />
                         <span
-                          className={`text-[14px] sm:text-[16px] font-[400] ${
+                          className={`text-[12px] md:text-[14px] font-[500] ${
                             index === 0 ? 'translate-y-3' : ''
                           }`}>
                           {value.card_title}
@@ -160,7 +160,7 @@ export default function HeroSection() {
                           alt='Car logo'
                         />
                         <span
-                          className={`text-[14px] sm:text-[16px] font-[400] ${
+                          className={`text-[12px] md:text-[14px] font-[500] ${
                             index === 0 ? 'translate-y-3' : ''
                           }`}>
                           {value.card_title}

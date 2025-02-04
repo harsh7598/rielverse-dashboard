@@ -46,10 +46,10 @@ const ContactUs = () => {
       />
       <Header />
       <div className='w-full flex justify-center pt-40 px-4 md:px-8 sm:px-2 lg:px-16 min-h-screen mb-44'>
-        <div className='w-10/12 bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]'>
-          <div className='flex w-full justify-between h-full overflow-hidden p-6 bg-white z-10 rounded-[11px]'>
+        <div className='w-full max-w-[1200px] bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]'>
+          <div className='flex w-full justify-between  flex-col gap-3 lg:flex-row h-full overflow-hidden p-6 bg-white z-10 rounded-[11px]'>
             {/* {Left Section} */}
-            <div className='w-[50%] flex flex-col items-start'>
+            <div className='flex-3 min-w-[250px] flex flex-col items-start'>
               <p className='text-[#13519C] text-[24px] font-semibold'>
                 Contact Us
               </p>
@@ -139,7 +139,7 @@ const ContactUs = () => {
                 <input
                   type='checkbox'
                   id='authorize'
-                  className='w-6 h-6 appearance-none bg-blue-200 rounded border border-gray-300 checked:bg-blue-600 checked:border-blue-600'
+                  className='w-6 min-w-4  md:min-w-6 h-4 md:h-6 appearance-none bg-blue-200 rounded border border-gray-300 checked:bg-blue-600 checked:border-blue-600'
                 />
                 <p className='text-[12px]'>
                   I hereby authorize Universal Sompo General Insurance to
@@ -149,12 +149,12 @@ const ContactUs = () => {
             </div>
             {/* {Right Section} */}
             <div
-              className='w-[42%] p-4 h-fit border-l-[3px] border-transparent'
+              className='flex-2 min-w-[250px] p-4 h-fit border-l-[3px] border-transparent'
               style={{
                 borderImage:
                   'linear-gradient(to bottom, #2983D3, transparent) 1',
               }}>
-              <div className='flex flex-col w-full items-start h-full bg-white overflow-hidden p-6'>
+              <div className='flex flex-col w-full items-start h-full bg-white overflow-hidden py-3'>
                 <p className='text-[#3B3B3B] text-[24px] font-semibold'>
                   Need help ?
                 </p>
@@ -162,27 +162,27 @@ const ContactUs = () => {
                   Choose how you like to connect with us
                 </p>
                 <div className='mt-6 w-full flex flex-col gap-8'>
-                  <div className='flex justify-between w-5/6'>
+                  <div className='flex justify-between w-full max-w-[250px]'>
                     <div className='flex gap-5 items-center'>
-                      <Image src={contactIcon1} alt='contactIcon1' />
-                      <p className='text-[#000] font-semibold text-[16px]'>
+                      <Image src={contactIcon1} className='h-8 w-auto' alt='contactIcon1' />
+                      <p className='text-[#000] font-semibold text-[14px] md:text-[16px]'>
                         Request a call back
                       </p>
                     </div>
                     <Image src={contactIcon6} alt='contactIcon' />
                   </div>
-                  <div className='flex justify-between w-5/6'>
+                  <div className='flex justify-between w-full max-w-[250px]'>
                     <div className='flex gap-5 items-center'>
-                      <Image src={contactIcon2} alt='contactIcon2' />
-                      <p className='text-[#000] font-semibold text-[16px]'>
+                      <Image src={contactIcon2} className='h-8 w-auto' alt='contactIcon2' />
+                      <p className='text-[#000] font-semibold text-[14px] md:text-[16px]'>
                         Chat with us
                       </p>
                     </div>
                     <Image src={contactIcon6} alt='contactIcon' />
                   </div>
-                  <div className='flex justify-between w-5/6'>
+                  <div className='flex justify-between w-full max-w-[250px]'>
                     <div className='flex gap-5 items-center'>
-                      <Image src={contactIcon3} alt='contactIcon1' />
+                      <Image src={contactIcon3} className='h-8 w-auto' alt='contactIcon1' />
                       <div className='flex flex-col items-start'>
                         <p className='text-[#000] font-medium text-[10px]'>
                           Connect on Whatsapp at
@@ -194,8 +194,8 @@ const ContactUs = () => {
                     </div>
                   </div>
                 </div>
-                <div className='w-full bg-gradient-to-b from-[#13519C26] to-[#74B5FF00] px-5 py-3 mt-10 rounded-xl'>
-                  <div className='flex w-5/6'>
+                <div className='w-full max-w-[300px] bg-gradient-to-b from-[#13519C26] to-[#74B5FF00] px-3 md:px-5 py-3 mt-10 rounded-xl'>
+                  <div className='flex w-full '>
                     <div className='flex gap-5 items-center'>
                       <Image
                         src={contactIcon5}

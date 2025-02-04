@@ -37,12 +37,11 @@ const ReviewsSection = () => {
       <div
         data-aos='zoom-out-left'
         className='w-full max-[1150px]:w-full max-[1200px]:w-[400px] max-[1300px]:w-[500px] max-[1400px]:w-[600px] max-w-[900px] flex flex-col items-start max-[1400px]:ml-0 ml-16 mt-8 text-start'>
-        <span className='text-[18px] underline font-[500]'>Reviews</span>
-        <div className='flex flex-col text-[32px] max-[800px]:text-3xl leading-[25px] font-[700] mt-5'>
+        <span className='text-[14px] md:text-[18px] underline font-[500]'>Reviews</span>
+        <div className='flex flex-col text-xl md:text-2xl lg:text-3xl font-[700] py-5'>
           <span className=' bg-clip-text'>
             What they say
           </span>
-          <br />
           <span className='relative'>
             About us
             <Image
@@ -54,7 +53,7 @@ const ReviewsSection = () => {
         </div>
         <p
           style={{ fontWeight: '400', fontFamily: 'Arboria-Book' }}
-          className='text-[21px] max-[800px]:text-lg max-[800px]:mt-4 tracking-[1px] leading-[40px] mt-12'>
+          className='text-[18px] md:text-[21px] max-[800px]:text-lg max-[800px]:mt-4 tracking-[1px] leading-[40px] mt-12'>
           We're honoured to have helped these begin a{' '}
           <span className='text-primary'>SMILING FACES</span> new life abroad
         </p>

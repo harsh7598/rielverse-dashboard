@@ -51,7 +51,7 @@ const GoogleTranslate = () => {
 
   return (
     <div>
-      <div className='relative -mt-2'>
+      <div className='relative '>
         <button
           className='flex items-center px-3 border-none rounded-md text-sm text-primary'
           onClick={() =>

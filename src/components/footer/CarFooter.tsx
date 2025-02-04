@@ -10,7 +10,7 @@ const CarFooter: React.FC = () => {
       <div className="container mx-auto flex flex-col justify-end items-end gap-4 px-4 py-10">
         {/* Security Section */}
         <div
-          className='w-full md:w-auto flex items-center justify-center bg-white rounded-2xl shadow-lg p-4 gap-4'
+          className='w-full md:max-w-[300px] md:w-auto flex items-center justify-center bg-white rounded-2xl shadow-lg p-4 gap-4'
           data-aos='fade-left'>
           <div className='flex items-center gap-4'>
             <div className='flex items-center gap-2'>

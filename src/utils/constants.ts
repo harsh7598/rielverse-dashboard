@@ -620,3 +620,24 @@ export const REVIEWS = [
       'I am so grateful for their support. They made buying insurance so simple and stress-free.',
   },
 ];
+
+
+export const vehicleRisk = {
+    Make: 'Toyota',
+    Model: 'Camry',
+    ManufactureDate: '2020-01-01',
+    ChassisNo: 'ABC123XYZ',
+    EngineNo: 'ENG456789',
+    RegistrationNo: 'REG7890',
+    EngineCapacity: 2000,
+    PrevInsuranceList: [{ PrevPolicyNCB: 20 }],
+  };
+
+  export const coustomerDetails = {
+    startDate: "2025-02-01",
+    quoteNo: "Q123456789",
+    name: "John Doe",
+    address: "123 Main St, Springfield, USA",
+    occupation: "Software Engineer",
+    scope: "Full Coverage",
+  };

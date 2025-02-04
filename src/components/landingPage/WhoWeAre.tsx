@@ -16,21 +16,21 @@ const WhoWeAre: React.FC = () => {
         }>
         <div
           className={
-            'w-[400px] max-[1300px]:w-auto max-[1150px]:w-full max-[1150px]:items-center h-auto flex flex-col items-start'
+            'w-[400px] max-[1300px]:w-auto max-[1150px]:w-full max-[1150px]:items-center h-auto flex flex-col gap-2 md:gap-4 items-start'
           }>
           <span
-            className='text-[18px] font-[600] bg-clip-text'>
+            className='text-[12px] md:text-[14px] lg:text-[18px] font-[600] bg-clip-text'>
             WHO WE ARE ?
           </span>
           <span
-            className='bg-clip-text text-[34px] tracking-widest leading-[50px] max-[1300px]:leading-[30px] font-[600]'>
+            className='bg-clip-text text-[22px] md:text-[28px] lg:text-[34px] tracking-widest leading-[50px] max-[1300px]:leading-[30px] font-[600]'>
             Always there for our users
           </span>
         </div>
         <span
           style={{ fontWeight: '400', fontFamily: 'Arboria-Book' }}
           className={
-            'text-[14px] max-w-[350px] max-[1300px]:text-[15px] font-semibold mt-3 max-[1300px]:leading-7 leading-10'
+            'text-[12px] lg:text-[14px] max-w-[350px]  mt-3 max-[1300px]:leading-7 leading-10'
           }>
           We are committed to serve our customers during or after the purchase
           of your policy, handover all your insurance related worries to us and
@@ -58,12 +58,12 @@ const WhoWeAre: React.FC = () => {
                 alt={value.title}
               />
               <span
-                className={'text-[22px] max-[1300px]:text-xl font-[400] mt-4'}>
+                className={'text-[18px] lg:text-xl font-[400] mt-4'}>
                 {value.title}
               </span>
               <span
                 style={{ fontWeight: '400', fontFamily: 'Arboria-Book' }}
-                className={'text-[14px] font-[400] max-[1300px]:mt-2 mt-4'}>
+                className={'text-[12px] lg:text-[14px] font-[400] max-[1300px]:mt-2 mt-4'}>
                 {value.description}
               </span>
             </div>

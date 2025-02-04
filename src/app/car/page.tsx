@@ -129,10 +129,10 @@ export default function page() {
         alt='righthead'
       />
       <Header />
-      <div className='w-full flex justify-center pt-40 px-4 md:px-8 sm:px-1 lg:px-16 min-h-screen'>
-        <div className='w-full md:w-3/4 flex flex-col z-10'>
-          <h1 className='text-3xl font-bold text-gray mb-6 pl-28'>Car</h1>
-          <div className='bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px] mx-20'>
+      <div className='w-full flex justify-center pt-40 px-4 md:px-8 lg:px-16 min-h-screen'>
+        <div className='w-full max-w-[860px] flex flex-col z-10'>
+          <h1 className='text-2xl md:text-3xl font-bold text-gray mb-6 pl-8'>Car</h1>
+          <div className='w-full bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]'>
             <div className='p-[30px] bg-white z-10 rounded-[11px]'>
               <h1 className='text-2xl font-medium text-gray-800 mb-2'>
                 You are looking for a car insurance for...
@@ -171,7 +171,7 @@ export default function page() {
                   {brands.map((brand) => (
                     <div
                       key={brand.name}
-                      className={`w-[150px] h-[100px] rounded-[10px] p-[1px] flex items-center justify-center ${
+                      className={`h-[100px] rounded-[10px] p-[1px] flex items-center justify-center ${
                         selectedBrand === brand.name
                           ? 'bg-gradient-to-b from-[#96aeff] to-white'
                           : 'bg-gradient-to-b from-[#1A45D6] to-white'
@@ -198,7 +198,7 @@ export default function page() {
 
           {/* Car Models Section */}
           {selectedBrand && (
-            <div className='bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px] mx-20 mt-16'>
+            <div className=' w-full bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px] mt-16'>
               <div className='p-[20px] bg-white z-10 rounded-[11px]'>
                 <div className='p-[10px] bg-white z-10 rounded-[11px]'>
                   <h1 className='text-2xl font-medium text-gray-800 mb-2'>

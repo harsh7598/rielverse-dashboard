@@ -13,21 +13,21 @@ const OffersSection = () => {
       />
 
       {/* Section Header */}
-      <div data-aos="fade-down" className="w-full flex flex-col items-center">
+      <div data-aos="fade-down" className="w-full flex flex-col items-center text-center">
         <span
-          className="text-transparent bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-[18px] font-[500] py-[30px]"
+          className="text-transparent bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-[14px] md:text-[16px] lg:text-[18px] font-[500] py-[30px]"
         >
           WHY RIELVERSE.COM ?
         </span>
         <span
-          className="text-transparent bg-gradient-to-b from-[#2983D3] to-[#005ABB] bg-clip-text text-[36px] tracking-widest leading-[50px] max-[1300px]:leading-[30px] font-[600]"
+          className="text-transparent bg-gradient-to-b from-[#2983D3] to-[#005ABB] bg-clip-text text-[24px] md:text-[30px] lg:text-[36px] tracking-widest leading-[50px] max-[1300px]:leading-[30px] font-[600]"
         >
           Insurance Has Never Been So Simple & <br /> We Are Trying To Make It
           Even More!
         </span>
         <span
           style={{ fontWeight: "400", fontFamily: "Arboria-Book" }}
-          className="text-[14px] max-[800px]:text-[16px] max-[800px]:leading-7 leading-10 mt-4 text-center"
+          className="text-[12px] md:text-[14px] max-[800px]:text-[16px] max-[800px]:leading-7 leading-10 mt-4 text-center"
         >
           Be it the Comparisons, Helping you find the best plan for your needs,
           Making changes to your existing policy or even claims - We are with
