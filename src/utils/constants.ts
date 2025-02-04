@@ -623,15 +623,15 @@ export const REVIEWS = [
 
 
 export const vehicleRisk = {
-    Make: 'Toyota',
-    Model: 'Camry',
-    ManufactureDate: '2020-01-01',
-    ChassisNo: 'ABC123XYZ',
-    EngineNo: 'ENG456789',
-    RegistrationNo: 'REG7890',
-    EngineCapacity: 2000,
-    PrevInsuranceList: [{ PrevPolicyNCB: 20 }],
-  };
+  makeAndModel: "Toyota Camry",
+  manufactureDate: "2020-01-01",
+  chassisNo: "ABC123XYZ",
+  engineNo: "ENG456789",
+  registrationNo: "REG7890",
+  engineCapacity: 2000,
+  prevInsuranceList: [{ prevPolicyNCB: 20 }],
+};
+
 
   export const coustomerDetails = {
     startDate: "2025-02-01",

@@ -44,13 +44,13 @@ const CarFooter: React.FC = () => {
 
         {/* Copyright and Design Info */}
         <div className='text-center md:text-left'>
-          <p className='text-sm'>
+          <p className='text-[12px] md:text-sm'>
             Copyright 2024 Rielverse All Rights Reserved. |{' '}
             <a href='/privacy-policy' className='hover:underline'>
               Privacy Policy
             </a>
           </p>
-          <p className='text-sm'>
+          <p className='text-[12px] md:text-sm'>
             Designed by{' '}
             <a
               href='https://konaxtechnologies.com'

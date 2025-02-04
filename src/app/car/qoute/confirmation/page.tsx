@@ -25,6 +25,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { coustomerDetails, vehicleRisk } from '@/utils/constants';
 import { title } from 'process';
+import { DialogClose } from '@radix-ui/react-dialog';
 
 const ConfirmationPage = () => {
   const [formData, setFormData] = useState({});
@@ -33,21 +34,21 @@ const ConfirmationPage = () => {
 
   const sumInsured = 10000;
   const vehicleDetails = [
-    { title: 'Make', value: vehicleRisk.Make },
-    { title: 'Model', value: vehicleRisk.Model },
-    { title: 'Manufacture Date', value: vehicleRisk.ManufactureDate },
-    { title: 'Chassis No', value: vehicleRisk.ChassisNo },
-    { title: 'Engine No', value: vehicleRisk.EngineNo },
-    { title: 'Registration No', value: vehicleRisk.RegistrationNo },
-    { title: 'Engine Capacity', value: `${vehicleRisk.EngineCapacity} CC` },
+    { title: 'Make & Model', value: vehicleRisk.makeAndModel },
+    { title: 'Manufacture Date', value: vehicleRisk.manufactureDate },
+    { title: 'Chassis No', value: vehicleRisk.chassisNo },
+    { title: 'Engine No', value: vehicleRisk.engineNo },
+    { title: 'Registration No', value: vehicleRisk.registrationNo },
+    { title: 'Engine Capacity', value: `${vehicleRisk.engineCapacity} CC` },
     {
       title: 'Previous Policy NCB',
-      value: `${vehicleRisk.PrevInsuranceList[0]?.PrevPolicyNCB || 0}%`,
+      value: `${vehicleRisk.prevInsuranceList[0]?.prevPolicyNCB || 0}%`,
     },
     { title: 'Sum Insured', value: `$${sumInsured}` },
   ];
 
-  const { startDate, quoteNo, name, address, occupation, scope } = coustomerDetails;
+  const { startDate, quoteNo, name, address, occupation, scope } =
+    coustomerDetails;
 
   return (
     <div className='w-full bg-gradient-to-b from-[#BCCEE4] to-transparent h-96 to bg-white'>
@@ -221,93 +222,87 @@ const ConfirmationPage = () => {
                       Confirm and pay
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className='flex  font-[Arboria-Medium] md:flex-nowrap flex-wrap bg-[#FFFFFF] max-w-[1200px] h-[700px] rounded flex-col'>
+                  <DialogContent className='relative [&>button]:hidden flex font-[Arboria-Medium] md:flex-nowrap flex-wrap bg-[#FFFFFF] max-w-[1200px] h-auto rounded flex-col'>
                     <DialogHeader>
                       <DialogTitle>
-                        <div className='flex w-[1144px] h-[77px] justify-between mx-7 items-center'>
-                          <div
-                            className={
-                              'w-[200px] h-[77px] rounded-b-xl bg-gradient-to-t from-[#13519C] to-transparent p-[1.5px]'
-                            }>
-                            <div
-                              className={
-                                'flex items-center w-full h-full rounded-b-xl bg-white overflow-hidden'
-                              }>
+                        <div className='relative flex justify-between'>
+                          {/* Logo Section */}
+                          <div className='w-[200px] h-[77px] rounded-b-xl bg-gradient-to-t from-[#13519C] to-transparent p-[1.5px]'>
+                            <div className='flex items-center w-full h-full rounded-b-xl bg-white overflow-hidden'>
                               <Image
                                 src={insurance}
                                 alt='forteimage'
-                                className={'w-11/12'}
+                                className='w-11/12'
                               />
                             </div>
                           </div>
-                          {/* <img
-                  src={closeIcon}
-                  alt=""
-                  className="w-7 h-7 cursor-pointer"
-                  onClick={() => setValidate(false)}
-                /> */}
+                          <DialogClose asChild>
+                            <button onClick={() => setValidate(false)}>
+                              <Image
+                                src={closeIcon}
+                                alt='close'
+                                className='w-7 h-7 cursor-pointer'
+                              />
+                            </button>
+                          </DialogClose>
                         </div>
                       </DialogTitle>
                       <DialogDescription></DialogDescription>
                     </DialogHeader>
-                    <div className='flex justify-between mx-7 my-8 '>
-                      <div className='flex flex-col text-left gap-2'>
-                        <span className='text-lg font-semibold'>
-                          PERIOD OF INSURANCE :
-                        </span>
-                        <span className='text-lg font-semibold text-[#13519C]'>
-                          {startDate}
-                        </span>
+                    <div className='w-full flex justify-between my-8 '>
+                      <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                        <span>PERIOD OF INSURANCE :</span>
+                        <span className='text-[#13519C]'>{startDate}</span>
                       </div>
-                      <div className='flex flex-col text-right justify-end gap-2'>
-                        <span className='text-lg font-semibold'>
-                          Quote No :{''}
-                          <span className='text-[#13519C]'>{quoteNo}</span>{' '}
-                        </span>
-                        <button className='w-[136px] h-8 rounded-md border border-[#13519C] text-[#13519C] flex items-center ml-[80px]  '>
-                          <FileUp className='w-4 h-4 mx-2' />
+                      <div className='flex flex-col items-center gap-2'>
+                        <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                          <span>Quote No :</span>
+                          <span className='text-[#13519C]'>{quoteNo}</span>
+                        </div>
+                        <button className='text-[14px] font-medium max-w-[136px] rounded-md border border-[#13519C] text-[#13519C] flex items-center justify-center gap-3 px-2 py-1'>
+                          <FileUp className='w-4 h-4' />
                           Share Quote
                         </button>
                       </div>
                     </div>
-                    <div className='flex flex-col justify-start font-semibold text-lg w-[600px] mx-7 text-left gap-5'>
-                      <div className='flex '>
-                        <span className='w-[170px]'>INSURED NAME :</span>
+                    <div className='flex flex-col gap-5'>
+                      <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                        <span>INSURED NAME :</span>
                         <span className='text-[#13519c]'>{name}</span>
                       </div>
-                      <div className='flex '>
-                        <span className='w-[170px]'>ADDRESS:</span>
+                      <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                        <span>ADDRESS:</span>
                         <span className='text-[#13519c] text-left'>
                           {address}
                         </span>
                       </div>
-                      <div className='flex'>
-                        <span className='w-[170px]'>OCCUPATION :</span>
+                      <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                        <span>OCCUPATION :</span>
                         <span className='text-[#13519c]'>{occupation}</span>
                       </div>
-                      <div className='flex'>
-                        <span className='w-[170px]'>SCOPE OF COVER : </span>
+                      <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                        <span>SCOPE OF COVER : </span>
                         <span className='text-[#13519c]'>{scope}</span>
                       </div>
-                      <span className='w-[170px] font-semibold text-lg'>
-                        VEHICLE(S) :
-                      </span>
+                      <div className='flex gap-2 text-[11px] md:text-[12px] lg:text-[14px] font-semibold'>
+                        <span>VEHICLE(S) :</span>
+                      </div>
                     </div>
                     <div
                       className={
-                        'w-full min-[1800px]:max-w-[1140px] max-w-[1144px] px-[3px] pt-[3px] rounded-xl h-auto bg-gradient-to-t from-transparent to-[#13519C]  max-[800px]:mt-6 mx-7 my-2  '
+                        'w-full rounded-xl bg-gradient-to-b from-[#13519C] to-transparent p-[1.5px]'
                       }>
                       <div
                         className={
-                          'w-full min-[1800px]:max-w-[1140px] max-w-[1144px] h-auto bg-white flex max-[650px]:flex-col max-[650px]:items-center max-[650px]:gap-3 items-start max-[800px]:pt-3 pt-6 rounded-xl'
+                          'w-full bg-white flex flex-col md:flex-row items-center gap-3 rounded-xl'
                         }>
                         {vehicleDetails.map((item, index) => (
                           <div
                             key={index}
-                            className='w-1/8 max-[650px]:w-full h-[100px] flex items-center mx-1 text-lg'>
-                            <div className='w-full p-2 h-auto flex flex-col justify-center font-semibold'>
+                            className='w-full h-auto flex items-center text-[12px] md:text-[13px] lg:text-[14px] font-semibold'>
+                            <div className='w-full p-2 h-auto flex flex-wrap gap-2 items-center justify-center text-center'>
                               <span>{item.title}</span>
-                              <span className='max-[800px]:text-lg text-[#13519C] font-[400] mt-2'>
+                              <span className='text-[#13519C]'>
                                 {item.value}
                               </span>
                             </div>
@@ -319,7 +314,20 @@ const ConfirmationPage = () => {
                       </div>
                     </div>
                     <DialogFooter>
-                      <Button type='submit'>Save changes</Button>
+                    <div className='w-full flex flex-col gap-1 items-end text-center'>
+                    <Button
+                      className='flex items-center justify-between w-[175px] h-[40px] px-4 py-2 bg-[#13519C] text-white text-[12px] rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2'
+                      style={{
+                        backgroundImage: `url(${vectorright.src})`,
+                        backgroundPosition: 'right 10px center',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: '16px',
+                      }}>
+                      Confirm and pay
+                    </Button>
+                    <p className='text-[10px]'>Terms & Conditions*</p>
+                    </div>
+                    
                     </DialogFooter>
                   </DialogContent>
                 </Dialog>
