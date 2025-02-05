@@ -4,10 +4,11 @@ import TableLayout from '@/components/table/TableLayout';
 import { ColumnRenderers } from '@/utils/tableRenderers';
 import Avatar2 from '../../../assets/icons/icon_avatar2.svg';
 import Avatar3 from '../../../assets/icons/icon_avatar3.svg';
-import { Button } from '@/components/ui/button';
+import Download from '../../../assets/icons/icon_download.svg';
+import Pending from '../../../assets/icons/icon_pending.svg';
 import Drawer from '@/components/ui/drawer';
-import { Card } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import Image from 'next/image';
 
 type RowData = {
   name: { text: string; avatar: string; otherData: string };
@@ -148,8 +149,9 @@ const PoliciesPage = () => {
                     <h2 className='text-sm font-semibold text-[#2C9739]'>
                       Policy Status
                     </h2>
-                    <button className='px-3 py-1 bg-green-100 text-green-700 rounded-md text-xs font-semibold h-[25px] w-[108px] mt-2'>
-                      {selectedRow.status}
+                    <button className='px-3 py-1 bg-green-100 text-green-700 rounded-md text-xs font-semibold h-[25px] w-[108px] mt-2 flex justify-center items-center gap-2'>
+                      <p>{selectedRow.status}</p>
+                      <Image src={Pending} alt='Pending' />
                     </button>
                   </div>
                 </div>
@@ -157,71 +159,41 @@ const PoliciesPage = () => {
               <div className='bg-gradient-to-b from-[#1A45D6] to-white rounded-[9px] p-[1px] mt-6'>
                 <div className='p-4 px-6 bg-white z-10 rounded-[8px]'>
                   <div className='text-lg font-semibold'>Policy info</div>
-                  <div className='grid grid-cols-3 gap-4 text-sm mt-3'>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780] '>
-                        Operating Company
-                      </h3>
-                      <p className='text-[#7B7B7B]'>Forte General Insurance</p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Transaction Type
-                      </h3>
-                      <p className='text-[#7B7B7B]'>New Business</p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Brokerage Name
-                      </h3>
-                      <p className='text-[#7B7B7B]'>
-                        {selectedRow.brokerageName}
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Plan Type
-                      </h3>
-                      <p className='text-[#7B7B7B]'>Third Party</p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Insured Name
-                      </h3>
-                      <p className='text-[#7B7B7B]'>{selectedRow.name.text}</p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Occupation
-                      </h3>
-                      <p className='text-[#7B7B7B]'>{selectedRow.occupation}</p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Make & Model
-                      </h3>
-                      <p className='text-[#7B7B7B]'>
-                        {selectedRow.modelandmake.name}
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Engine Size
-                      </h3>
-                      <p className='text-[#7B7B7B]'>
-                        {selectedRow.modelandmake.engineSize}
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>
-                        Sum Insured
-                      </h3>
-                      <p className='text-[#7B7B7B]'>{selectedRow.sumInsured}</p>
-                    </div>
-                    <div>
-                      <h3 className='font-semibold  text-[#003780]'>Premium</h3>
-                      <p className='text-[#7B7B7B]'>{selectedRow.premium}</p>
-                    </div>
+                  <div className='grid grid-cols-3 gap-4 text-sm mt-3 relative'>
+                    {[
+                      {
+                        title: 'Operating Company',
+                        value: 'Forte General Insurance',
+                      },
+                      { title: 'Transaction Type', value: 'New Business' },
+                      {
+                        title: 'Brokerage Name',
+                        value: selectedRow.brokerageName,
+                      },
+                      { title: 'Plan Type', value: 'Third Party' },
+                      { title: 'Insured Name', value: selectedRow.name.text },
+                      { title: 'Occupation', value: selectedRow.occupation },
+                      {
+                        title: 'Make & Model',
+                        value: selectedRow.modelandmake.name,
+                      },
+                      {
+                        title: 'Engine Size',
+                        value: selectedRow.modelandmake.engineSize,
+                      },
+                      { title: 'Sum Insured', value: selectedRow.sumInsured },
+                      { title: 'Premium', value: selectedRow.premium },
+                    ].map((item, index) => (
+                      <div key={index} className='px-4'>
+                        <h3 className='font-semibold text-[#003780]'>
+                          {item.title}
+                        </h3>
+                        <p className='text-[#7B7B7B]'>{item.value}</p>
+                      </div>
+                    ))}
+
+                    <div className='absolute top-0 left-1/3 h-full w-[1.5px] bg-gradient-to-t from-[#003780] to-transparent'></div>
+                    <div className='absolute top-0 left-2/3 h-full w-[1.5px] bg-gradient-to-t from-[#003780] to-transparent'></div>
                   </div>
                 </div>
               </div>
@@ -232,7 +204,7 @@ const PoliciesPage = () => {
                 <div className='text-lg font-semibold'>Documents</div>
                 <table className='w-full mt-3 text-xs'>
                   <thead className=' bg-indigo-100 h-[35px]'>
-                    <tr >
+                    <tr>
                       <th className='p-2 pl-6 text-left text-[#003780] first:rounded-l-lg'>
                         Document Name
                       </th>
@@ -250,11 +222,15 @@ const PoliciesPage = () => {
 
                   <tbody>
                     <tr className='text-xs'>
-                      <td className='p-2 pl-6 text-left font-semibold'>Policy.pdf</td>
-                      <td className='p-2 text-left font-semibold'>23/12/2024, 21:52</td>
+                      <td className='p-2 pl-6 text-left font-semibold'>
+                        Policy.pdf
+                      </td>
+                      <td className='p-2 text-left font-semibold'>
+                        23/12/2024, 21:52
+                      </td>
                       <td className='p-2 text-left font-semibold'>394 KB</td>
-                      <td className='p-2 font-semibold text-center'>
-                          ⬇ 
+                      <td className='p-2 font-semibold text-center flex items-center justify-center'>
+                        <Image src={Download} alt='Download' />
                       </td>
                     </tr>
                   </tbody>
