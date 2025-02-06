@@ -31,22 +31,22 @@ export default function page() {
     {
       name: 'Audi',
       logo: audi,
-      models: ['Audi A3', 'Audi A4', 'Audi Q3', 'Audi Q5', 'Audi A6'],
+      models: ['A3', 'A4', 'Q3', 'Q5', 'A6'],
     },
     {
       name: 'Baic',
       logo: baic,
-      models: ['Baic M50', 'Baic BJ40', 'Baic Senova', 'Baic X25', 'Baic X55'],
+      models: ['M50', 'BJ40', 'Senova', 'X25', 'X55'],
     },
     {
       name: 'Chevrolet',
       logo: chevrolet,
       models: [
-        'Chevy Camaro',
-        'Chevy Malibu',
-        'Chevy Spark',
-        'Chevy Equinox',
-        'Chevy Traverse',
+        'Camaro',
+        'Malibu',
+        'Spark',
+        'Equinox',
+        'Traverse',
       ],
     },
     {
@@ -58,22 +58,22 @@ export default function page() {
       name: 'Cadillac',
       logo: cadillac,
       models: [
-        'Cadillac CT5',
-        'Cadillac XT4',
-        'Cadillac XT6',
-        'Cadillac Escalade',
-        'Cadillac CT4',
+        'CT5',
+        'XT4',
+        'XT6',
+        'Escalade',
+        'CT4',
       ],
     },
     {
       name: 'Ford',
       logo: ford,
       models: [
-        'Ford F-150',
-        'Ford Escape',
-        'Ford Explorer',
-        'Ford Edge',
-        'Ford Mustang',
+        'F-150',
+        'Escape',
+        'Explorer',
+        'Edge',
+        'Mustang',
       ],
     },
     {
@@ -85,11 +85,11 @@ export default function page() {
       name: 'Hyundai',
       logo: hyundai,
       models: [
-        'Hyundai Elantra',
-        'Hyundai Tucson',
-        'Hyundai Sonata',
-        'Hyundai Kona',
-        'Hyundai Santa Fe',
+        'Elantra',
+        'Tucson',
+        'Sonata',
+        'Kona',
+        'Santa Fe',
       ],
     },
     {
@@ -107,11 +107,11 @@ export default function page() {
       name: 'Toyota',
       logo: toyota,
       models: [
-        'Toyota Corolla',
-        'Toyota Camry',
-        'Toyota RAV4',
-        'Toyota Prius',
-        'Toyota Highlander',
+        'Corolla',
+        'Camry',
+        'RAV4',
+        'Prius',
+        'Highlander',
       ],
     },
   ];
@@ -229,7 +229,7 @@ export default function page() {
                     {carModels.map((model, index) => (
                       <div
                         key={index}
-                        className='p-[1px] rounded-lg bg-gradient-to-b from-[rgba(26,69,214,0.6)] to-[#1A45D6]'>
+                        className='h-fit p-[1px] rounded-lg bg-gradient-to-b from-[rgba(26,69,214,0.6)] to-[#1A45D6]'>
                         <div className='text-[13px] md:text-[15px] lg:text-[17px] bg-white text-center rounded-lg p-2'>
                           {model}
                         </div>

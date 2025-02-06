@@ -8,6 +8,7 @@ import lefthead from '../../../public/Icons/Reilverse_Assets/bg_left.svg';
 import righthead from '../../../public/Icons/Reilverse_Assets/bg_right.svg';
 import React from 'react';
 import Image from 'next/image';
+import Footer from '@/components/footer/Footer';
 
 const About: React.FC = () => {
   return (
@@ -22,9 +23,7 @@ const About: React.FC = () => {
       <div className='w-full h-auto flex flex-col items-center pt-40 z-10 overflow-x-clip'>
         <FirstSection />
         <CallbackForm />
-        <LogoSection />
-        <SupportSection />
-        <RemarkSection />
+        <Footer />
       </div>
     </>
   );
