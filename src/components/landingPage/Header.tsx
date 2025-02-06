@@ -85,7 +85,7 @@ const Header: React.FC = () => {
 
   return (
     <div className='w-full flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
-      <div className='w-full flex flex-col items-center justify-center relative bg-gradient-to-b p-4 from-white to-transparent'>
+      <div className='w-full flex flex-col items-center justify-center relative bg-gradient-to-b py-4 from-white to-transparent'>
         <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10'>
           <div className="border-r-2 border-[#C6C6C6] pr-8">
             <Link href='/'>
@@ -243,7 +243,7 @@ const Header: React.FC = () => {
           <div
             className={`${
               isOpen ? 'top-[-24px]' : 'top-[-250vh]'
-            } min-[1150px]:hidden pt-28 px-10 w-full pb-4 bg-white absolute left-0 duration-700 ease-in-out -z-10 flex flex-col items-end max-[500px]:items-start`}>
+            } min-[1150px]:hidden pt-28 px-10 w-full pb-4 bg-white shadow-lg shadow-slate-400 absolute left-0 duration-700 ease-in-out -z-10 flex flex-col items-end max-[500px]:items-start`}>
             {/* <div className='p-2 min-[500px]:hidden self-start rounded-full bg-white mb-3'>
               <FiSearch className='text-3xl' />
             </div> */}

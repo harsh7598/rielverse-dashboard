@@ -42,7 +42,7 @@ export default function HeroSection() {
     router.push(href);
   };
   return (
-    <div className='bg-hero-gradient w-full pt-14 pb-20'>
+    <div className='bg-hero-gradient w-full pt-12 pb-20'>
       <div
         className={
           'w-full  px-2 md:px-4 flex flex-col lg:flex-row items-center justify-center  mt-0 relative top-14 '
@@ -126,9 +126,7 @@ export default function HeroSection() {
                           alt='Car logo'
                         />
                         <span
-                          className={`text-[12px] md:text-[14px] font-[500] ${
-                            index === 0 ? 'translate-y-3' : ''
-                          }`}>
+                          className={`text-[12px] md:text-[14px] font-[500]`}>
                           {value.card_title}
                         </span>
                       </div>
