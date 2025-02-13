@@ -130,7 +130,7 @@ export default function page() {
       />
       <Header />
       <div className='w-full flex justify-center pt-20 md:pt-30 lg:pt-40 px-4 md:px-8 lg:px-16 min-h-screen'>
-        <div className='w-full max-w-[860px] flex flex-col z-10'>
+        <div className='w-full max-w-[1300px] flex flex-col z-10'>
           <h1 className='text-2xl md:text-3xl font-bold text-gray mb-6 pl-8'>
             Car
           </h1>
@@ -139,7 +139,7 @@ export default function page() {
               <h1 className='text-xl md:text-2xl font-medium text-gray-800 mb-2'>
                 You are looking for a car insurance for...
               </h1>
-              <p className='text-sm md:text-lg text-gray-600 mb-4'>
+              <p className='text-sm md:text-[15px] text-gray-600 mb-4'>
                 Fill the questionnaire to get your personalized car insurance
                 quote.
               </p>
@@ -165,7 +165,7 @@ export default function page() {
               </div>
 
               {/* Popular Brands Section */}
-              <div>
+              <div className='w-full max-w-[820px]'>
                 <h2 className='text-[#1A45D6] text-[15px] md:text-[18px] font-bold mb-4'>
                   Popular Brands
                 </h2>
@@ -225,7 +225,7 @@ export default function page() {
                       />
                     </div>
                   </div>
-                  <div className='grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5'>
+                  <div className='w-full max-w-[820px] grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5'>
                     {carModels.map((model, index) => (
                       <div
                         key={index}

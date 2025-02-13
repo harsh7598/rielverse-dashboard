@@ -6,7 +6,7 @@ import layer from "../../../public/Icons/Reilverse_Assets/about_layer.png";
 
 const FirstSection: React.FC = () => {
   return (
-    <div className="w-full px-2 flex justify-center">
+    <div className="w-full px-4 flex justify-center">
     <div
       className={
         "w-full max-[1300px]:max-w-[1150px] max-w-[1200px] min-[1600px]:max-w-[1400px] min-[1800px]:max-w-[1600px] h-auto flex flex-col items-center bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]"

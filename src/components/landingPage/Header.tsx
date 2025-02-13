@@ -219,7 +219,7 @@ const Header: React.FC = () => {
               <Link
                 onMouseEnter={() => setUnHide(true)}
                 href='#'
-                className="flex items-center justify-center gap-1 text-[14px] tracking-[1px] font-semibold text-primary bg-white px-7 py-3 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap">
+                className="flex items-center justify-center gap-1 text-[11px] tracking-[1px] font-semibold text-primary bg-white px-4 py-1 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap">
                 <Image className='w-8' src={userIcon} alt='user-icon' />
                 My account
               </Link>

@@ -31,7 +31,7 @@ export default function page() {
         alt='righthead'
       />
       <Header />
-      <div className='w-full max-w-[1100px] p-8 mx-auto'>
+      <div className='w-full max-w-[1300px] p-8 mx-auto'>
         {/* Main Container */}
         <div className='w-full mt-20 md:mt-40'>
           {/* Vehicle Information */}
@@ -59,7 +59,7 @@ export default function page() {
               <h6 className='text-[14px] font-medium pl-2'>
                 In Last 3 Years AnyLosses Or Claim
               </h6>
-              <div className='max-w-[300px] flex flex-row items-center justify-center h-[50px] rounded-[6px] bg-white p-4 gap-4'>
+              <div className='max-w-[300px] flex flex-row items-center justify-center h-[50px] rounded-[6px] bg-white p-4 gap-4 z-10'>
                 <div className='flex flex-row items-center justify-center gap-4'>
                   <label className='block text-[12px] font-medium'>NCB</label>
                   <select

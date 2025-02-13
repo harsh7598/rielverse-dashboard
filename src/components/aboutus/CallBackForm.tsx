@@ -19,7 +19,7 @@ const CallbackForm: React.FC = () => {
             src={getcallback}
             alt='getcallback'
           />
-          <div className='flex gap-4 items-center flex-wrap md:flex-nowrap'>
+          <div className='p-4 lg:p-0 flex gap-4 items-center flex-wrap md:flex-nowrap'>
             <span className='w-[220px] text-[13px] md:text-[15px] lg:text-[17px] font-normal leading-9'>
               Need Insurance? Request <br /> Call Back
             </span>

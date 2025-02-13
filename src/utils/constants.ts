@@ -121,22 +121,22 @@ export const CATEGORIES = [
     category_href: '',
     description: 'Don’t let unexpected events ruin a well deserved vacations.',
   },
-  // {
-  //   card_image: health,
-  //   card_title: 'Health and Medical ',
-  //   card_href: '/health_insurance',
-  //   category: 'Travel',
-  //   category_href: '/insurance',
-  //   description:
-  //     'When illness strikes, we can take your mind off hospital bills and outpatient fees so that you can concentrate on getting better.',
-  // },
-  // {
-  //   card_image: life,
-  //   card_title: 'Life ',
-  //   card_href: '/life_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  // },
+  {
+    card_image: health,
+    card_title: 'Health and Medical ',
+    card_href: '/health_insurance',
+    category: 'Travel',
+    category_href: '/insurance',
+    description:
+      'When illness strikes, we can take your mind off hospital bills and outpatient fees so that you can concentrate on getting better.',
+  },
+  {
+    card_image: life,
+    card_title: 'Life ',
+    card_href: '/life_insurance',
+    category: 'Travel',
+    category_href: '',
+  },
 ];
 
 export const BUSINESS_CATEGORIES = [
@@ -226,78 +226,78 @@ export const BUSINESS_CATEGORIES = [
     description:
       'Construction is an essential industry for the global economy and activity in the sector is constant. There will always be a need for the renewal of existing and the creation of new infrastructure. But as the build cycle is often driven by socio-economic factors, it can be quite volatile. Construction companies need to have an acute awareness of current and emerging risk issues and be able to respond quickly to changing circumstances.',
   },
-  // {
-  //   card_image: logistics,
-  //   card_title: 'Logistics',
-  //   card_href: '/Logistics_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'Whether you’re an international freight forwarder, or a home moving company, logistics companies need insurance to protect themselves.',
-  // },
-  // {
-  //   card_image: manufacturing,
-  //   card_title: 'Manufacturing and Storage',
-  //   card_href: '/Manufacturing_and_Storage_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'The manufacturing landscape has become increasingly globalized as a result of digitization and the adoption of a more customer-centric mindset.We know that the manufacturing industry faces a host of common and emerging risk exposures daily.',
-  // },
-  // {
-  //   card_image: welness,
-  //   card_title: 'Wellness And Fitness',
-  //   card_href: '/Wellness_And_Fitness_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'Whether you run a gym, yoga/pilates studio, martial arts centre, or a sports coaching business, it’s important to have insurance to protect yourself. If you have a physical premises, you’ll need to ensure your capital investment is protected against major risks like fire or vandalism. If you have wellness/fitness employees, they can be prone to injuries, so you’ll to cover them for their medical expenses.',
-  // },
-  // {
-  //   card_image: healthcare,
-  //   card_title: 'Health Care Services',
-  //   card_href: '/Health_Care_Services_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'Healthcare organizations are challenged by risk on many fronts.',
-  // },
-  // {
-  //   card_image: education,
-  //   card_title: 'Education',
-  //   card_href: '/education_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'Education nurtures our future generations of leaders, engineers, scientists and artists. As today’s educational institutions face increasingly complex and diverse challenges, educators insurance programs must adapt to support these institutions. From kindergarten to university, we help education institutions of all levels create customised educators insurance solutions to safeguard your balance sheets, attract and retain your talent, and protect your students.',
-  // },
-  // {
-  //   card_image: charity,
-  //   card_title: 'Charity',
-  //   card_href: '/Charity_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'Management is a key element of governance.We offer tailored policies for non-profit organisations like charities, NGOs, and more.',
-  // },
-  // {
-  //   card_image: RealState,
-  //   card_title: 'Real Estate',
-  //   card_href: '/RealState_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'Property owners, operators, managers, and developers need to stay competitive in the dynamic world of real estate.',
-  // },
-  // {
-  //   card_image: entertainment,
-  //   card_title: 'Entertainment',
-  //   card_href: '/entertainment_insurance',
-  //   category: 'Travel',
-  //   category_href: '',
-  //   description:
-  //     'In an age of changing media consumption habits and options, We can structure  risk management strategies to help entertainment organizations and promotors balance taking bold chances with minimizing and mitigating risk',
-  // },
+  {
+    card_image: logistics,
+    card_title: 'Logistics',
+    card_href: '/Logistics_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'Whether you’re an international freight forwarder, or a home moving company, logistics companies need insurance to protect themselves.',
+  },
+  {
+    card_image: manufacturing,
+    card_title: 'Manufacturing and Storage',
+    card_href: '/Manufacturing_and_Storage_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'The manufacturing landscape has become increasingly globalized as a result of digitization and the adoption of a more customer-centric mindset.We know that the manufacturing industry faces a host of common and emerging risk exposures daily.',
+  },
+  {
+    card_image: welness,
+    card_title: 'Wellness And Fitness',
+    card_href: '/Wellness_And_Fitness_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'Whether you run a gym, yoga/pilates studio, martial arts centre, or a sports coaching business, it’s important to have insurance to protect yourself. If you have a physical premises, you’ll need to ensure your capital investment is protected against major risks like fire or vandalism. If you have wellness/fitness employees, they can be prone to injuries, so you’ll to cover them for their medical expenses.',
+  },
+  {
+    card_image: healthcare,
+    card_title: 'Health Care Services',
+    card_href: '/Health_Care_Services_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'Healthcare organizations are challenged by risk on many fronts.',
+  },
+  {
+    card_image: education,
+    card_title: 'Education',
+    card_href: '/education_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'Education nurtures our future generations of leaders, engineers, scientists and artists. As today’s educational institutions face increasingly complex and diverse challenges, educators insurance programs must adapt to support these institutions. From kindergarten to university, we help education institutions of all levels create customised educators insurance solutions to safeguard your balance sheets, attract and retain your talent, and protect your students.',
+  },
+  {
+    card_image: charity,
+    card_title: 'Charity',
+    card_href: '/Charity_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'Management is a key element of governance.We offer tailored policies for non-profit organisations like charities, NGOs, and more.',
+  },
+  {
+    card_image: RealState,
+    card_title: 'Real Estate',
+    card_href: '/RealState_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'Property owners, operators, managers, and developers need to stay competitive in the dynamic world of real estate.',
+  },
+  {
+    card_image: entertainment,
+    card_title: 'Entertainment',
+    card_href: '/entertainment_insurance',
+    category: 'Travel',
+    category_href: '',
+    description:
+      'In an age of changing media consumption habits and options, We can structure  risk management strategies to help entertainment organizations and promotors balance taking bold chances with minimizing and mitigating risk',
+  },
 ];
 
 export const NAV_LINKS = [
@@ -390,6 +390,7 @@ export const PERSONAL_LINKS = [
     classList:
       'py-3 px-2 rounded-br-md hover:text-[#000] flex font-semibold text-[12px] tracking-[1px]',
   },
+  
 ];
 
 export const BUSINESS_LINKS = [

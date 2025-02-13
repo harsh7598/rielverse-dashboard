@@ -46,8 +46,8 @@ const ContactUs = () => {
       />
       <Header />
       <div className='w-full flex justify-center pt-40 px-4 md:px-8 sm:px-2 lg:px-16 min-h-screen mb-44'>
-        <div className='w-full max-w-[1200px] bg-gradient-to-b from-[#1A45D6] to-white rounded-[10px] p-[1px]'>
-          <div className='flex w-full justify-between  flex-col gap-3 lg:flex-row h-full overflow-hidden p-6 bg-white z-10 rounded-[11px]'>
+        <div className='w-full max-w-[1200px] bg-gradient-to-b from-[#dbdfec] to-white rounded-[10px] p-[1px] z-10'>
+          <div className='flex w-full justify-between  flex-col gap-3 lg:flex-row h-full overflow-hidden p-6 bg-white rounded-[11px]'>
             {/* {Left Section} */}
             <div className='flex-3 min-w-[250px] flex flex-col items-start'>
               <p className='text-[#13519C] text-[24px] font-semibold'>
@@ -61,7 +61,7 @@ const ContactUs = () => {
                   <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                     <div className=''>
                       <input
-                        className='w-full border-b-2 border-[#1A45D6] outline-0 bg-transparent pl-4 pb-1 mt-2 rounded-b-md text-[#8D8D8D] placeholder-[#8D8D8D]'
+                        className='w-full border-b-2 border-[#1A45D6] outline-0 bg-transparent pl-4 pb-1 mt-2 rounded-b-md text-[#8D8D8D] placeholder-[#8D8D8D] '
                         type='text'
                         name='firstName'
                         placeholder='First Name'

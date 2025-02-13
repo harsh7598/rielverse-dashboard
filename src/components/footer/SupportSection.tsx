@@ -20,11 +20,12 @@ const SupportSection: React.FC = () => {
           className={'flex flex-col w-full max-w-[400px] min-w-[220px] p-4 z-10'}>
           <div
             className={
-              'w-full bg-white flex items-center rounded-2xl shadow-lg'
-            }>
+              'w-full bg-white flex items-center rounded-2xl'
+            }
+            style={{ boxShadow: 'inset 0px 0px 10px 4px rgba(0, 0, 0, 0.1)' }}>
             <Image
               className={
-                'w-auto h-[120px] max-[500px]:-translate-x-2 -translate-x-7 self-end object-contain'
+                'w-auto h-[80px] md:h-[100px] lg:h-[120px] max-[500px]:-translate-x-2 -translate-x-7 self-end object-contain'
               }
               src={supportGuy}
               alt='Support Guy'
@@ -47,7 +48,8 @@ const SupportSection: React.FC = () => {
           data-aos='fade-left'
           className={
             'w-full max-w-[400px] min-w-[220px] p-4 bg-white rounded-2xl shadow-lg z-10'
-          }>
+          }
+          style={{ boxShadow: 'inset 0px 0px 10px 4px rgba(0, 0, 0, 0.1)' }}>
           <div className={'w-full justify-around flex items-center gap-2'}>
             <div className='flex gap-3 items-center'>
             <Image
