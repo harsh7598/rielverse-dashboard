@@ -112,10 +112,10 @@ export default function HeroSection() {
                   data-aos='zoom-in'
                   onClick={() => handleClick(value)}
                   key={index}
-                  className='w-full flex flex-col items-center text-center'>
+                  className='w-full'>
                   <div className='w-full h-28 border-t-2 border-r-2 border-transparent rounded-2xl duration-300 hover:border-dashed hover:border-[#2983D399] cursor-pointer'>
-                    <div className='w-full h-28 flex flex-col items-center pt-4 pb-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
-                      <div className='flex h-28 justify-between flex-col items-center'>
+                    {/* <div className='w-full h-28 flex flex-col items-center pt-4 pb-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'> */}
+                      <div className='w-full flex h-full justify-between flex-col items-center text-center pt-4 pb-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
                         <Image
                           className={`w-fit h-10 object-contain`}
                           src={value.card_image}
@@ -127,7 +127,7 @@ export default function HeroSection() {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  {/* </div> */}
                 </div>
               ))}
             </div>
