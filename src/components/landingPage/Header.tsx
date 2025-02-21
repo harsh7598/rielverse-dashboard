@@ -7,10 +7,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import download from '../../../public/Icons/Reilverse_Assets/export-file 3.svg';
 import logo from '../../../public/Icons/Reilverse_Assets/Logo.svg';
+import call from '../../../public/Icons/Reilverse_Assets/Call.svg';
+import suppoer from '../../../public/Icons/Reilverse_Assets/Suppoer.svg';
 import arrow from '../../../public/Icons/Reilverse_Assets/ArrowDown.svg';
 import girl from '../../../public/Icons/Reilverse_Assets/image 20.svg';
 import myAccountImg from '../../../public/Icons/Reilverse_Assets/vectorMyAccount.svg';
 import myAccountImg2 from '../../../public/Icons/Reilverse_Assets/vectorMyAccount2.svg';
+import menu from '../../../public/Icons/Reilverse_Assets/menubar_icon.svg';
 import myAccountImg3 from '../../../public/Icons/Reilverse_Assets/vectorMyAccount3.svg';
 import helpIcon1 from '../../../public/Icons/Reilverse_Assets/helpIcon1.svg';
 import helpIcon2 from '../../../public/Icons/Reilverse_Assets/helpIcon2.svg';
@@ -18,12 +21,10 @@ import helpIcon3 from '../../../public/Icons/Reilverse_Assets/helpIcon3.svg';
 import helpIcon4 from '../../../public/Icons/Reilverse_Assets/helpIcon4.svg';
 import { NAV_LINKS, BUSINESS_LINKS, PERSONAL_LINKS } from '@/utils/constants';
 import GoogleTranslate from './GoogleTranslate';
-import { FiSearch } from 'react-icons/fi';
-import { LuMenu } from 'react-icons/lu';
-import { IoClose } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 interface NavLink {
   to: string;
@@ -51,7 +52,7 @@ const Header: React.FC = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownOpen2, setDropdownOpen2] = useState(false);
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [unHide, setUnHide] = useState(false);
   const [unHideMsg, setUnHideMsg] = useState(false);
 
@@ -87,7 +88,7 @@ const Header: React.FC = () => {
     <div className='w-full flex flex-col items-center absolute top-0 z-50 font-[Arboria-Book]'>
       <div className='w-full flex flex-col items-center justify-center relative bg-gradient-to-b py-4 from-white to-transparent'>
         <div className='w-full max-[1150px]:px-5 max-[1440px]:px-[80px] max-w-[1400px] min-[1800px]:max-w-[1600px] flex items-center justify-between relative z-10'>
-          <div className="border-r-2 border-[#C6C6C6] pr-8">
+          <div className='border-r-2 border-[#C6C6C6] pr-8 max-[1150px]:hidden'>
             <Link href='/'>
               <Image
                 src={logo}
@@ -156,8 +157,8 @@ const Header: React.FC = () => {
                 Business
                 <Image className='w-5' src={arrow} alt='arrow-icon' />
               </Link>
-              <div className="w-full flex justify-center shadow-2xl">
-              <div
+              <div className='w-full flex justify-center shadow-2xl'>
+                <div
                   onMouseEnter={dropdownOpenHandler2}
                   onMouseLeave={dropdownCloseHandler2}
                   className={`${
@@ -204,7 +205,7 @@ const Header: React.FC = () => {
                 {value.title}
               </Link>
             ))}
-            <GoogleTranslate/>
+            <GoogleTranslate />
           </div>
           <div className='w-auto flex items-center max-[1150px]:hidden gap-5'>
             <div onMouseLeave={() => setUnHideMsg(false)}>
@@ -219,7 +220,7 @@ const Header: React.FC = () => {
               <Link
                 onMouseEnter={() => setUnHide(true)}
                 href='#'
-                className="flex items-center justify-center gap-1 text-[11px] tracking-[1px] font-semibold text-primary bg-white px-4 py-1 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap">
+                className='flex items-center justify-center gap-1 text-[11px] tracking-[1px] font-semibold text-primary bg-white px-4 py-1 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap'>
                 <Image className='w-8' src={userIcon} alt='user-icon' />
                 My account
               </Link>
@@ -228,75 +229,211 @@ const Header: React.FC = () => {
               </span>
             </div>
           </div>
-
-          <div className='flex items-center justify-center min-[1150px]:hidden gap-8'>
-            <div className='p-2 rounded-full bg-primary max-[500px]:hidden'>
-              <FiSearch className='text-xl' />
+          <div className='relative flex items-center justify-between min-[1150px]:hidden gap-10'>
+            <div
+              onClick={() => setIsOpen(!isOpen)}
+              className='text-xl md:text-2xl text-primary flex-1 flex'>
+              {!isOpen ? <Image src={menu} alt='menu' /> : ''}
             </div>
 
+            <Link href='/' className='flex-1 flex justify-center'>
+              <Image
+                src={logo}
+                alt='Railverse Logo'
+                className='w-auto h-5 md:h-7 object-contain'
+              />
+            </Link>
             <div
-              onClick={() => setOpen(!isOpen)}
-              className='text-xl md:text-2xl text-primary '>
-              {!isOpen ? <LuMenu /> : <IoClose />}
+              onMouseLeave={() => setUnHide(false)}
+              className='text-center flex-1 flex justify-end'>
+              <Link
+                onMouseEnter={() => setUnHide(true)}
+                href='#'
+                className='flex items-center justify-center gap-1 text-[11px] tracking-[1px] font-semibold text-primary bg-white px-4 py-1 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap'>
+                <Image className='w-8' src={userIcon} alt='user-icon' />
+                My account
+              </Link>
             </div>
           </div>
-          <div
-            className={`${
-              isOpen ? 'top-[-24px]' : 'top-[-250vh]'
-            } min-[1150px]:hidden pt-28 px-10 w-full pb-4 bg-white shadow-lg shadow-slate-400 absolute left-0 duration-700 ease-in-out -z-10 flex flex-col items-end max-[500px]:items-start`}>
-            {/* <div className='p-2 min-[500px]:hidden self-start rounded-full bg-white mb-3'>
-              <FiSearch className='text-3xl' />
-            </div> */}
 
-            <div className='flex flex-col items-start gap-8 mb-4'>
-              <span className='cursor-pointer text-[16px] flex items-center gap-2 relative text-gray-700 font-semibold'>
-                Contact Us <FaArrowRight className='text-primary' />
-              </span>
-              <span className='text-[16px] flex items-center gap-2  text-gray-700 font-semibold'>
-                Login <FaArrowRight className='text-primary' />
-              </span>
-              <span className='text-[16px] flex items-center gap-2 text-gray-700 font-semibold'>
-                About Us <FaArrowRight className='text-primary' />
-              </span>
-              <Link
-                onClick={() => window.scrollTo(0, 0)}
-                href=''
-                className='text-[16px] tracking-[1px] flex items-center gap-2 text-gray-700 font-semibold'>
-                Products <FaArrowRight className='text-primary' />
-              </Link>
+          <div>
+            {isOpen && (
+              <div
+                className='fixed inset-0 bg-black bg-opacity-50 z-40'
+                onClick={() => setIsOpen(false)}></div>
+            )}
 
-              {NAV_LINKS.map((value, index) => (
-                <Link
-                  key={index}
-                  href={value.to}
-                  className='flex text-[16px] items-center tracking-[1px] font-semibold gap-1 text-gray-700'>
-                  {value.title}
-                  <FaArrowRight className='text-primary' />
-                </Link>
-              ))}
-            </div>
-
-            <div className='w-auto flex flex-col md:flex-row max-[500px]:gap-4 items-center'>
-              <div className='w-auto h-16 rounded-xl border-2 border-green-950 flex items-center px-4 py-0'>
-                <MdOutlinePhoneInTalk className='text-3xl' />
-                <div className='flex flex-col items-end leading-4'>
-                  <span className='text-[14px] font-semibold'>
-                    +91 11 4678 1000
-                  </span>
-                  <span className='font-bold text-[7px]'>24 Hours</span>
+            <div
+              className={`${
+                isOpen ? 'top-[-24px]' : 'top-[-250vh]'
+              } min-[1150px]:hidden flex flex-col items-end max-[500px]:items-start z-50`}>
+              <motion.div
+                initial={{ x: '-100%' }}
+                animate={{ x: isOpen ? '0%' : '-100%' }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                className='fixed top-0 left-0 h-full w-5/6 max-w-sm bg-white shadow-lg  z-50'
+                onClick={(e) => e.stopPropagation()}>
+                <div className='h-[140px] bg-gradient-to-r from-[#1E96FC73] to-[#F2F2F226] p-6 text-sm flex flex-col justify-center'>
+                  <Link href='/'>
+                    <Image
+                      src={logo}
+                      alt='Railverse Logo'
+                      className='w-auto h-5 md:h-7 object-contain'
+                    />
+                  </Link>
+                  <div className='flex justify-between p-2'>
+                    <div className='w-[120px]'>Track & Policy Download</div>
+                    <div className='w-[100px]  h-[35px] bg-[#1E96FC] text-white flex items-center justify-center rounded-sm'>
+                      Login
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className='w-auto px-4 py-2 rounded-2xl bg-white shadow flex items-center gap-3 min-[500px]:ml-8'>
+                <nav className='space-y-4 p-5'>
+                  <div>
+                    <Link
+                      onMouseEnter={dropdownOpenHandler}
+                      onMouseLeave={dropdownCloseHandler}
+                      onClick={() => window.scrollTo(0, 0)}
+                      href='/car'
+                      className='text-[14px] tracking-[1px] font-semibold flex items-center gap-2'>
+                      Personal
+                      <Image className='w-5' src={arrow} alt='arrow-icon' />
+                    </Link>
+                    <div className='w-full flex justify-center'>
+                      <div
+                        onMouseEnter={dropdownOpenHandler}
+                        onMouseLeave={dropdownCloseHandler}
+                        className={`${
+                          dropdownOpen
+                            ? 'bg-white flex absolute rounded-xl'
+                            : 'bg-white hidden absolute rounded-xl'
+                        }`}>
+                        <div className='flex justify-center gap-3 shadow-2xl border-t px-14 py-5 backdrop-blur-2xl rounded-xl'>
+                          <div>
+                            {PERSONAL_LINKS.slice(0, 6).map((item, index) => (
+                              <span
+                                key={index}
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => handleClick(item)}
+                                className={item.classList}>
+                                {item.linkName}
+                              </span>
+                            ))}
+                          </div>
+                          <div>
+                            {PERSONAL_LINKS.slice(6, 12).map((item, index) => (
+                              <span
+                                key={index}
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => handleClick(item)}
+                                className={item.classList}>
+                                {item.linkName}
+                              </span>
+                            ))}
+                          </div>
+                          <div>
+                            <Image
+                              src={girl}
+                              alt='Girl Icon'
+                              className='w-[285px]'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <Link
+                      onMouseEnter={dropdownOpenHandler2}
+                      onMouseLeave={dropdownCloseHandler2}
+                      onClick={() => window.scrollTo(0, 0)}
+                      href='/uat/health_insurance'
+                      className='text-[14px] tracking-[1px] font-medium flex items-center gap-2'>
+                      Business
+                      <Image className='w-5' src={arrow} alt='arrow-icon' />
+                    </Link>
+                    <div className='w-full flex justify-center shadow-2xl'>
+                      <div
+                        onMouseEnter={dropdownOpenHandler2}
+                        onMouseLeave={dropdownCloseHandler2}
+                        className={`${
+                          dropdownOpen2
+                            ? 'bg-white flex absolute rounded-2xl'
+                            : 'bg-white hidden absolute rounded-2xl'
+                        }`}>
+                        <div className='flex justify-center gap-4 shadow-2xl border-t px-14 py-5 backdrop-blur-2xl rounded-2xl'>
+                          <div>
+                            {BUSINESS_LINKS.slice(0, 9).map((item, index) => (
+                              <span
+                                key={index}
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => handleClick(item)}
+                                className={item.classList}>
+                                {item.linkName}
+                              </span>
+                            ))}
+                          </div>
+                          <div>
+                            {BUSINESS_LINKS.slice(9, 18).map((item, index) => (
+                              <span
+                                key={index}
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => handleClick(item)}
+                                className={item.classList}>
+                                {item.linkName}
+                              </span>
+                            ))}
+                          </div>
+                          <div>
+                            <Image
+                              src={girl}
+                              alt='Girl Icon'
+                              className='w-[350px]'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {NAV_LINKS.map((value, index) => (
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      key={index}
+                      href={value.to}
+                      className='flex text-[14px] tracking-[1px] font-medium'>
+                      {value.title}
+                    </Link>
+                  ))}
+                  <div className='flex text-[14px] tracking-[1px] font-medium'>
+                    Support
+                  </div>
+                  <div className='flex text-[14px] tracking-[1px] font-medium'>
+                    News
+                  </div>
+                  <div className='flex text-[14px] tracking-[1px] font-medium'>
+                    Contact us
+                  </div>
+                </nav>
                 <Image
-                  className='h-9 w-9 object-contain'
-                  src={download}
-                  alt='Download'
+                  src={suppoer}
+                  alt='logo'
+                  className='absolute bottom-[120px] left-4 z-10 object-contain'
                 />
-                <span className='text-[14px] font-semibold text-primary'>
-                  Get Quote
-                </span>
-              </div>
+                <div className='absolute bottom-0 w-full bg-[#FAFAFA] p-7'>
+                  <div className='flex items-center gap-2  bg-[#FAFAFA] rounded-lg'>
+                    <div>
+                      <p className='text-sm font-semibold'>ID Assistance</p>
+                      <p className='text-xs text-gray-500'>
+                        We are available 24/7 to serve you better
+                      </p>
+                    </div>
+                  </div>
+                  <button className='w-[125px] h-[40px] mt-2 flex items-center justify-center p-2 bg-white rounded-md border-slate-100 gap-2'>
+                    <Image src={call} alt='call' /> Call
+                  </button>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
