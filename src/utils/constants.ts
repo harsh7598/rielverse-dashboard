@@ -212,7 +212,7 @@ export const BUSINESS_CATEGORIES = [
   },
   {
     card_image: interior,
-    card_title: 'Interior Design And Renovation',
+    card_title: 'Interior Design & Renovation',
     card_href: '/Interior_Design_And_Renovation_insurance',
     category: 'Travel',
     category_href: '',

@@ -222,7 +222,7 @@ const ConfirmationPage = () => {
                       Confirm and pay
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className='relative [&>button]:hidden flex font-[Arboria-Medium] md:flex-nowrap flex-wrap bg-[#FFFFFF] max-w-[1200px] h-auto rounded flex-col'>
+                  <DialogContent className='relative [&>button]:hidden flex font-[Arboria-Medium] md:flex-nowrap flex-wrap bg-[#FFFFFF] max-w-[1200px] max-h-[80vh] rounded flex-col overflow-y-auto'>
                     <DialogHeader>
                       <DialogTitle>
                         <div className='relative flex justify-between'>

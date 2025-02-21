@@ -39,6 +39,28 @@ const LandingPage: React.FC = () => {
   return (
     <div className='py-[50px] w-full h-auto flex flex-col items-center max-[1400px]:px-4 '>
       <HeroSection />
+      {!isHeroVisible && (
+        <div
+          className='fixed bottom-0 left-0 w-full bg-white py-4 px-6 flex justify-around items-center z-50 shadow-[0px_0px_10px_5px_#00000040] rounded-t-[21px] min-[1150px]:hidden'>
+          {[
+            { icon: home_icon, label: 'Home' },
+            { icon: product_icon, label: 'Product' },
+            { icon: support_icon, label: 'Support' },
+            { icon: profile_icon, label: 'Profile' },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className='flex items-center gap-2'>
+              <Image
+                alt={item.label}
+                className='w-6 h-6 object-contain'
+                src={item.icon}
+              />
+              <p className='text-sm'>{item.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
       <BenefitsSection />
       <WhoWeAre />
       <OffersSection />

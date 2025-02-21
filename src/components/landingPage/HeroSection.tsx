@@ -51,25 +51,25 @@ export default function HeroSection() {
           data-aos='zoom-in'
           src={couple}
           className={
-            'w-auto h-25 md:h-35 object-contain'
+            'w-auto h-60 md:h-72 lg:h-80 object-contain'
           }
           alt=''
         />
         <div
           className={
-            'w-full max-[500px]:w-auto max-w-[800px] max-[500px]:max-w-[450px] flex flex-col items-end text-center md:text-start relative'
+            'w-full max-[500px]:w-auto max-w-[800px] max-[500px]:max-w-[450px] flex flex-col text-center md:text-start relative'
           }>
           <span
             data-aos='fade-left'
             className={
-              'max-[1150px]:self-center mt-4 md:mt-0 self-start max-[1150px]:text-center text-[20px] lg:text-[40px] md:text-[34px] font-[600] text-primary tracking-[-1px]'
+              'text-[20px] lg:text-[40px] md:text-[34px] font-[600] text-primary tracking-[-1px]'
             }>
             The #1 Trusted Platform For Your Insurance Needs
           </span>
           <span
             data-aos='fade-left'
             className={
-              'mb-2 max-[1150px]:self-center self-start text-[12px] md:text-[16px] lg:text-[18px] font-[400] text-[#000000]'
+              'mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-[400] text-[#000000]'
             }>
             Your financial literacy journey starts here
           </span>
@@ -114,7 +114,7 @@ export default function HeroSection() {
                   key={index}
                   className='w-full'>
                   <div className='w-full h-28 border-t-2 border-r-2 border-transparent rounded-2xl duration-300 hover:border-dashed hover:border-[#2983D399] cursor-pointer'>
-                      <div className='w-full flex h-full justify-between flex-col items-center text-center pt-4 pb-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
+                      <div className='w-full flex h-full justify-between flex-col gap-1 items-center text-center px-2 py-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
                         <Image
                           className={`w-fit h-10 object-contain`}
                           src={value.card_image}
@@ -140,7 +140,7 @@ export default function HeroSection() {
                   key={index}
                   className='w-full flex flex-col items-center text-center'>
                   <div className='w-full h-28 border-t-2 border-r-2 border-transparent rounded-2xl duration-300 hover:border-dashed hover:border-[#2983D399] cursor-pointer'>
-                      <div className='w-full flex h-full justify-between flex-col items-center text-center pt-4 pb-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
+                      <div className='w-full flex h-full justify-between flex-col gap-1 items-center text-center px-2 py-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
                         <Image
                           className={`w-fit h-10 object-contain`}
                           src={value.card_image}
