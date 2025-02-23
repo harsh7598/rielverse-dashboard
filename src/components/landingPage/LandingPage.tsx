@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import BenefitsSection from './BenefitsSection';
@@ -23,7 +22,7 @@ const LandingPage: React.FC = () => {
       ([entry]) => {
         setIsHeroVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 },
+      { threshold: 0.1 } // Adjust threshold if needed
     );
 
     if (heroRef.current) {
@@ -36,9 +35,12 @@ const LandingPage: React.FC = () => {
       }
     };
   }, []);
+
   return (
-    <div className='py-[50px] w-full h-auto flex flex-col items-center max-[1400px]:px-4 '>
-      <HeroSection />
+    <div className='py-[50px] w-full h-auto flex flex-col items-center max-[1400px]:px-4'>
+      <div ref={heroRef}>
+        <HeroSection />
+      </div>
       {!isHeroVisible && (
         <div
           className='fixed bottom-0 left-0 w-full bg-white py-4 px-6 flex justify-around items-center z-50 shadow-[0px_0px_10px_5px_#00000040] rounded-t-[21px] min-[1150px]:hidden'>
@@ -67,14 +69,10 @@ const LandingPage: React.FC = () => {
       <ReviewsSection />
       <div
         data-aos='zoom-out-up'
-        className={
-          'w-full max-w-[1200px] rounded-2xl py-8 md:py-12 lg:py-20'
-        }>
+        className='w-full max-w-[1200px] rounded-2xl py-8 md:py-12 lg:py-20'>
         <Image
           alt='Image'
-          className={
-            'w-full h-auto object-fill'
-          }
+          className='w-full h-auto object-fill'
           src={green_layer}
         />
       </div>
