@@ -17,7 +17,6 @@ interface Category {
   description?: string;
 }
 export default function HeroSection() {
-  const router = useRouter();
   const [currentVariant, setCurrentVariant] = useState<number>(0);
 
   const [width, setWidth] = useState(0);
@@ -31,16 +30,23 @@ export default function HeroSection() {
   }, []);
 
   const categoryNo1 = width <= 800 && width >= 500 ? 4 : 5;
-  const handleClick = (item: Category) => {
-    window.scrollTo(0, 0);
-    console.log(item.description);
-    // navigate(`/uat${item.card_href}`, {
-    //     state: {description: item.description},
-    // });
-  };
+  // const handleClick = (item: Category) => {
+  //   window.scrollTo(0, 0);
+  //   console.log(item.description);
+  //   // navigate(`/uat${item.card_href}`, {
+  //   //     state: {description: item.description},
+  //   // });
+  // };
   const navigateTo = (href: string) => {
     router.push(href);
   };
+
+  const router = useRouter();
+
+  const handleClick = (category: string) => {
+    router.push(`/product/${category.toLowerCase().replace(/\s+/g, "_")}`);
+  };
+
   return (
     <div className='bg-hero-gradient w-full pt-8 md:pt-20 pb-20'>
       <div
@@ -50,9 +56,7 @@ export default function HeroSection() {
         <Image
           data-aos='zoom-in'
           src={couple}
-          className={
-            'w-auto h-60 md:h-72 lg:h-80 object-contain'
-          }
+          className={'w-auto h-60 md:h-72 lg:h-80 object-contain'}
           alt=''
         />
         <div
@@ -106,29 +110,27 @@ export default function HeroSection() {
           </div>
 
           {currentVariant === 0 && (
-            <div className='w-full h-auto grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-4 md:gap-6 mt-4'>
-              {CATEGORIES.map((value, index) => (
-                <div
-                  data-aos='zoom-in'
-                  onClick={() => handleClick(value)}
-                  key={index}
-                  className='w-full'>
-                  <div className='w-full h-28 border-t-2 border-r-2 border-transparent rounded-2xl duration-300 hover:border-dashed hover:border-[#2983D399] cursor-pointer'>
-                      <div className='w-full flex h-full justify-between flex-col gap-1 items-center text-center px-2 py-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
-                        <Image
-                          className={`w-fit h-10 object-contain`}
-                          src={value.card_image}
-                          alt='Car logo'
-                        />
-                        <span
-                          className={`text-[12px] font-[500]`}>
-                          {value.card_title}
-                        </span>
-                      </div>
-                    </div>
+            <div className="w-full h-auto grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-4 md:gap-6 mt-4">
+            {CATEGORIES.map((value, index) => (
+              <div
+                data-aos="zoom-in"
+                onClick={() => handleClick(value.card_title)}
+                key={index}
+                className="w-full cursor-pointer"
+              >
+                <div className="w-full h-28 border-t-2 border-r-2 border-transparent rounded-2xl duration-300 hover:border-dashed hover:border-[#2983D399]">
+                  <div className="w-full flex h-full justify-between flex-col gap-1 items-center text-center px-2 py-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0">
+                    <Image
+                      className="w-fit h-10 object-contain"
+                      src={value.card_image}
+                      alt={value.card_title}
+                    />
+                    <span className="text-[12px] font-[500]">{value.card_title}</span>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
           )}
 
           {currentVariant === 1 && (
@@ -136,21 +138,20 @@ export default function HeroSection() {
               {BUSINESS_CATEGORIES.map((value, index) => (
                 <div
                   data-aos='zoom-in'
-                  onClick={() => handleClick(value)}
+                  onClick={() => handleClick(value.card_title)}
                   key={index}
                   className='w-full flex flex-col items-center text-center'>
                   <div className='w-full h-28 border-t-2 border-r-2 border-transparent rounded-2xl duration-300 hover:border-dashed hover:border-[#2983D399] cursor-pointer'>
-                      <div className='w-full flex h-full justify-between flex-col gap-1 items-center text-center px-2 py-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
-                        <Image
-                          className={`w-fit h-10 object-contain`}
-                          src={value.card_image}
-                          alt='Car logo'
-                        />
-                        <span
-                          className={`text-[12px] font-[500]`}>
-                          {value.card_title}
-                        </span>
-                      </div>
+                    <div className='w-full flex h-full justify-between flex-col gap-1 items-center text-center px-2 py-4 rounded-2xl bg-white shadow border border-[#2983D399] duration-300 hover:translate-y-2 hover:-translate-x-2 active:translate-y-0 active:translate-x-0'>
+                      <Image
+                        className={`w-fit h-10 object-contain`}
+                        src={value.card_image}
+                        alt='Car logo'
+                      />
+                      <span className={`text-[12px] font-[500]`}>
+                        {value.card_title}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}

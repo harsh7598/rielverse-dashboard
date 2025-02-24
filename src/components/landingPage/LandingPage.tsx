@@ -49,13 +49,13 @@ const LandingPage: React.FC = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className='flex items-center gap-2'>
+              className='flex items-center gap-1 md:gap-2'>
               <Image
                 alt={item.label}
-                className='w-6 h-6 object-contain'
+                className='w-5 md:w-7 h-5 md:h-7 object-contain'
                 src={item.icon}
               />
-              <p className='text-sm'>{item.label}</p>
+              <p className='text-[12px] md:text-[14px]'>{item.label}</p>
             </div>
           ))}
         </div>

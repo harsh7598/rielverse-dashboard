@@ -229,14 +229,14 @@ const Header: React.FC = () => {
               </span>
             </div>
           </div>
-          <div className='relative flex items-center justify-between min-[1150px]:hidden gap-10'>
+          <div className='w-full relative flex items-center justify-between min-[1150px]:hidden gap-2'>
             <div
               onClick={() => setIsOpen(!isOpen)}
-              className='text-xl md:text-2xl text-primary flex-1 flex'>
+              className='text-xl md:text-2xl text-primary'>
               {!isOpen ? <Image src={menu} alt='menu' /> : ''}
             </div>
 
-            <Link href='/' className='flex-1 flex justify-center'>
+            <Link href='/'>
               <Image
                 src={logo}
                 alt='Railverse Logo'
@@ -245,12 +245,12 @@ const Header: React.FC = () => {
             </Link>
             <div
               onMouseLeave={() => setUnHide(false)}
-              className='text-center flex-1 flex justify-end'>
+              className='text-center'>
               <Link
                 onMouseEnter={() => setUnHide(true)}
                 href='#'
-                className='flex items-center justify-center gap-1 text-[11px] tracking-[1px] font-semibold text-primary bg-white px-4 py-1 uppercase w-fit rounded-xl shadow-md border-2 whitespace-nowrap'>
-                <Image className='w-8' src={userIcon} alt='user-icon' />
+                className='flex items-center justify-center gap-1 text-[8px] tracking-[1px] font-semibold text-primary bg-white px-2 py-1 uppercase w-fit rounded-lg shadow-md border-2 whitespace-nowrap'>
+                <Image className='w-6' src={userIcon} alt='user-icon' />
                 My account
               </Link>
             </div>
@@ -288,7 +288,6 @@ const Header: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <nav className='space-y-4 p-5'>
                   <div>
                     <Link
@@ -349,7 +348,7 @@ const Header: React.FC = () => {
                       onMouseLeave={dropdownCloseHandler2}
                       onClick={() => window.scrollTo(0, 0)}
                       href='/uat/health_insurance'
-                      className='text-[14px] tracking-[1px] font-medium flex items-center gap-2'>
+                      className='text-[14px] tracking-[1px] font-semibold flex items-center gap-2'>
                       Business
                       <Image className='w-5' src={arrow} alt='arrow-icon' />
                     </Link>
@@ -401,17 +400,17 @@ const Header: React.FC = () => {
                       onClick={() => window.scrollTo(0, 0)}
                       key={index}
                       href={value.to}
-                      className='flex text-[14px] tracking-[1px] font-medium'>
+                      className='flex text-[14px] tracking-[1px] font-semibold'>
                       {value.title}
                     </Link>
                   ))}
-                  <div className='flex text-[14px] tracking-[1px] font-medium'>
+                  <div className='flex text-[14px] tracking-[1px] font-semibold'>
                     Support
                   </div>
-                  <div className='flex text-[14px] tracking-[1px] font-medium'>
+                  <div className='flex text-[14px] tracking-[1px] font-semibold'>
                     News
                   </div>
-                  <div className='flex text-[14px] tracking-[1px] font-medium'>
+                  <div className='flex text-[14px] tracking-[1px] font-semibold'>
                     Contact us
                   </div>
                 </nav>
@@ -421,13 +420,11 @@ const Header: React.FC = () => {
                   className='absolute bottom-[120px] left-4 z-10 object-contain'
                 />
                 <div className='absolute bottom-0 w-full bg-[#FAFAFA] p-7'>
-                  <div className='flex items-center gap-2  bg-[#FAFAFA] rounded-lg'>
-                    <div>
+                  <div className='flex flex-col gap-2  bg-[#FAFAFA] rounded-lg'>
                       <p className='text-sm font-semibold'>ID Assistance</p>
                       <p className='text-xs text-gray-500'>
                         We are available 24/7 to serve you better
                       </p>
-                    </div>
                   </div>
                   <button className='w-[125px] h-[40px] mt-2 flex items-center justify-center p-2 bg-white rounded-md border-slate-100 gap-2'>
                     <Image src={call} alt='call' /> Call
@@ -447,7 +444,7 @@ const Header: React.FC = () => {
         <div
           onMouseMove={() => setUnHide(true)}
           onMouseLeave={() => setUnHide(false)}
-          className='bg-white flex gap-2 pr-8 py-8 w-[40%] rounded-xl shadow-2xl border-t'>
+          className='bg-white flex flex-col md:flex-row gap-2 md:pr-8 md:py-8 w-[40%] rounded-xl shadow-2xl border-t'>
           <div className='w-[30%] flex items-center overflow-hidden'>
             <Image
               className='scale-125 w-[300px] ml-[-20%]'
@@ -457,8 +454,7 @@ const Header: React.FC = () => {
               height={300}
             />
           </div>
-
-          <div className='w-[35%] '>
+          <div className='w-full flex flex-col gap-1 md:w-[35%] p-3 md:p-0'>
             <Image
               className='w-full'
               src={myAccountImg2}
@@ -476,11 +472,11 @@ const Header: React.FC = () => {
               </p>
             </div>
             <div className='overflow-hidden cursor-pointer z-0 w-28 h-7 flex pl-7 max-[630px]:text-start items-center rounded-md text-white font-semibold bg-primary bg-gradient-to-tl from-primary to-[#1E96FC86] relative'>
-              <span className='font-[400] text-[14px]'>LOGIN</span>
+              <span className='font-[400] text-[12px] lg:text-[14px]'>LOGIN</span>
               <IoIosArrowForward className='text-[50px] absolute right-0 opacity-40' />
             </div>
           </div>
-          <div className='w-[35%]'>
+          <div className='w-full flex flex-col gap-1 md:w-[35%] p-3 md:p-0'>
             <Image
               className='w-full'
               src={myAccountImg3}
@@ -500,7 +496,7 @@ const Header: React.FC = () => {
             <div
               onClick={showLoginModal}
               className='overflow-hidden cursor-pointer z-0 w-28 h-7 flex pl-7 max-[630px]:text-start items-center rounded-md text-white font-semibold bg-primary bg-gradient-to-tl from-primary to-[#1E96FC86] relative'>
-              <span className='font-[400] text-[14px]'>LOGIN</span>
+              <span className='font-[400] text-[12px] lg:text-[14px]'>LOGIN</span>
               <IoIosArrowForward className='text-[50px] absolute right-0 opacity-40' />
             </div>
           </div>
