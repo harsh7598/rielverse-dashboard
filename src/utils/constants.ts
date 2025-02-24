@@ -302,7 +302,7 @@ export const BUSINESS_CATEGORIES = [
 
 export const NAV_LINKS = [
   { title: 'About', to: '/about' },
-  { title: 'Blogs', to: '/contact' },
+  { title: 'Blogs', to: '/contact-us' },
 ];
 
 export const PERSONAL_LINKS = [
