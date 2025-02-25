@@ -7,12 +7,12 @@ const BenefitsSection: React.FC = () => {
     <div
       data-aos="zoom-in"
       className={
-        "w-full max-w-[1000px] px-[3px] pt-[3px] rounded-3xl h-auto bg-gradient-to-t from-transparent to-primary mt-12"
+        "w-full max-w-[1000px] px-[3px] pt-[3px] rounded-3xl h-auto bg-gradient-to-t from-transparent to-primary mt-12 max-[1400px]:w-[95%]"
       }
     >
       <div
         className={
-          "w-full h-48 max-[800px]:h-40 max-[650px]:h-auto bg-white flex max-[650px]:flex-wrap items-center rounded-3xl"
+          "w-full h-48 max-[800px]:h-40 max-[650px]:h-auto bg-white flex max-[650px]:flex-wrap items-center rounded-3xl "
         }
       >
         {BENEFITS.map((value, index) => (

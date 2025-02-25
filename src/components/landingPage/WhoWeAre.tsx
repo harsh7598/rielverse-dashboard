@@ -6,7 +6,7 @@ const WhoWeAre: React.FC = () => {
   return (
     <div
       className={
-        'w-full flex max-[1150px]:flex-col max-[1150px]:items-center items-start mt-16 justify-center py-[50px]'
+        'w-full flex max-[1150px]:flex-col max-[1150px]:items-center items-start mt-16 justify-center py-[50px] max-[1400px]:px-4'
       }>
       {/* Left Section */}
       <div

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import style from './style.module.css';
 import { CATEGORIES, BUSINESS_CATEGORIES } from '../../utils/constants';
 import { useRouter } from 'next/navigation';
@@ -16,9 +16,9 @@ interface Category {
   card_title: string;
   description?: string;
 }
-export default function HeroSection() {
-  const [currentVariant, setCurrentVariant] = useState<number>(0);
 
+const HeroSection = forwardRef<HTMLDivElement>((props, ref) => {
+  const [currentVariant, setCurrentVariant] = useState<number>(0);
   const [width, setWidth] = useState(0);
   const VARIANTS = ['PERSONAL', 'BUSINESS'];
 
@@ -48,33 +48,25 @@ export default function HeroSection() {
   };
 
   return (
-    <div className='bg-hero-gradient w-full pt-8 md:pt-20 pb-20'>
-      <div
-        className={
-          'w-full  px-2 md:px-4 flex flex-col lg:flex-row items-center justify-center'
-        }>
+    <div ref={ref} className="bg-hero-gradient w-full pt-8 md:pt-20 pb-20">
+      <div className="w-full px-2 md:px-4 flex flex-col lg:flex-row items-center justify-center max-[1400px]:px-4">
         <Image
-          data-aos='zoom-in'
+          data-aos="zoom-in"
           src={couple}
-          className={'w-auto h-60 md:h-72 lg:h-80 object-contain'}
-          alt=''
+          className="w-auto h-60 md:h-72 lg:h-80 object-contain"
+          alt=""
         />
-        <div
-          className={
-            'w-full max-[500px]:w-auto max-w-[800px] max-[500px]:max-w-[450px] flex flex-col text-center md:text-start relative'
-          }>
+        <div className="w-full max-[500px]:w-auto max-w-[800px] max-[500px]:max-w-[450px] flex flex-col text-center md:text-start relative">
           <span
-            data-aos='fade-left'
-            className={
-              'text-[20px] lg:text-[40px] md:text-[34px] font-[600] text-primary tracking-[-1px]'
-            }>
+            data-aos="fade-left"
+            className="text-[20px] lg:text-[40px] md:text-[34px] font-[600] text-primary tracking-[-1px]"
+          >
             The #1 Trusted Platform For Your Insurance Needs
           </span>
           <span
-            data-aos='fade-left'
-            className={
-              'mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-[400] text-[#000000]'
-            }>
+            data-aos="fade-left"
+            className="mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-[400] text-[#000000]"
+          >
             Your financial literacy journey starts here
           </span>
 
@@ -161,4 +153,7 @@ export default function HeroSection() {
       </div>
     </div>
   );
-}
+});
+
+HeroSection.displayName = 'HeroSection';
+export default HeroSection;

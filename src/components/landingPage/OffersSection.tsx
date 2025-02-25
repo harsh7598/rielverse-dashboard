@@ -4,7 +4,7 @@ import finger from "../../../public/Icons/Reilverse_Assets/finger.svg";
 
 const OffersSection = () => {
   return (
-    <div className="w-full h-auto flex flex-col items-center relative mt-20">
+    <div className="w-full h-auto flex flex-col items-center relative mt-20 max-[1400px]:px-4">
       {/* Background Image */}
       <Image
         className="w-fit h-[600px] absolute top-0 -z-10"

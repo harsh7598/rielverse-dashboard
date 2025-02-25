@@ -21,7 +21,7 @@ interface Review {
 
 const ReviewsSection = () => {
   return (
-    <div className='w-full flex max-[1150px]:flex-col max-[1150px]:items-center items-start mt-24'>
+    <div className='w-full flex max-[1150px]:flex-col max-[1150px]:items-center items-start mt-24 max-[1400px]:px-4'>
       {/* Left Side - Image */}
       <div
         data-aos='zoom-out-right'
