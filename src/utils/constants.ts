@@ -201,7 +201,6 @@ export const BUSINESS_CATEGORIES = [
     card_title: 'Retail',
     card_href: '/retail_insurance',
     heading: 'Retail insurance',
-    card_href: '/retail_insurance',
     category: 'Life',
     category_href: '',
     description:
@@ -308,7 +307,6 @@ export const BUSINESS_CATEGORIES = [
     card_title: 'Charity',
     card_href: '/Charity_insurance',
     heading: 'Charity insurance',
-    card_href: '/Charity_insurance',
     category: 'Travel',
     category_href: '',
     description:
