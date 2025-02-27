@@ -30,13 +30,7 @@ const HeroSection = forwardRef<HTMLDivElement>((props, ref) => {
   }, []);
 
   const categoryNo1 = width <= 800 && width >= 500 ? 4 : 5;
-  // const handleClick = (item: Category) => {
-  //   window.scrollTo(0, 0);
-  //   console.log(item.description);
-  //   // navigate(`/uat${item.card_href}`, {
-  //   //     state: {description: item.description},
-  //   // });
-  // };
+
   const navigateTo = (href: string) => {
     router.push(href);
   };

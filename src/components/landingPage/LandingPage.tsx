@@ -40,40 +40,75 @@ const LandingPage: React.FC = () => {
     <div className="py-[50px] w-full h-auto flex flex-col items-center ">
       <HeroSection ref={heroRef} />
       {!isHeroVisible && (
-        <div className="fixed bottom-0 w-full bg-white py-4 px-6 -mb-1 flex justify-around items-center z-50 shadow-[0px_0px_10px_5px_#00000040] rounded-t-[21px] min-[1150px]:hidden">
+        <motion.div
+          className="fixed bottom-0 w-full bg-white py-4 px-6 -mb-1 flex justify-around items-center z-50 shadow-[0px_0px_10px_5px_#00000040] rounded-t-[21px] min-[1150px]:hidden"
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          exit={{ y: 100 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+        >
           {[
             { icon: home_icon, label: 'Home' },
             { icon: product_icon, label: 'Product' },
             { icon: support_icon, label: 'Support' },
             { icon: profile_icon, label: 'Profile' },
           ].map((item, index) => (
-            <div key={index} className="flex items-center gap-1 md:gap-2">
+            <motion.div
+              key={index}
+              className="flex items-center gap-1 md:gap-2"
+              whileHover={{ scale: 1.1 }}
+            >
               <Image
                 alt={item.label}
                 className="w-5 md:w-7 h-5 md:h-7 object-contain"
                 src={item.icon}
               />
               <p className="text-[12px] md:text-[14px]">{item.label}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
-      <BenefitsSection />
-      <WhoWeAre />
-      <OffersSection />
-      <ReviewsSection />
-      <div
+        <BenefitsSection />
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
+        <WhoWeAre />
+      </motion.div>
+      <motion.div
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
+        <OffersSection />
+      </motion.div>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
+        <ReviewsSection />
+      </motion.div>
+      <motion.div
         data-aos="zoom-out-up"
         className="w-full max-w-[1200px] rounded-2xl py-8 md:py-12 lg:py-20 max-[1400px]:px-4"
+        initial={{ scale: 0.9, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <Image
           alt="Image"
           className="w-full h-auto object-fill"
           src={green_layer}
         />
+      </motion.div>
       </div>
-    </div>
-  );
+      );
 };
 
 export default LandingPage;
