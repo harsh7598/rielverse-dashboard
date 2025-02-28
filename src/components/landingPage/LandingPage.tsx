@@ -40,12 +40,8 @@ const LandingPage: React.FC = () => {
     <div className="py-[50px] w-full h-auto flex flex-col items-center ">
       <HeroSection ref={heroRef} />
       {!isHeroVisible && (
-        <motion.div
+        <div
           className="fixed bottom-0 w-full bg-white py-4 px-6 -mb-1 flex justify-around items-center z-50 shadow-[0px_0px_10px_5px_#00000040] rounded-t-[21px] min-[1150px]:hidden"
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
-          exit={{ y: 100 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
         >
           {[
             { icon: home_icon, label: 'Home' },
@@ -66,47 +62,21 @@ const LandingPage: React.FC = () => {
               <p className="text-[12px] md:text-[14px]">{item.label}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       )}
         <BenefitsSection />
-      <motion.div
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-      >
+ 
         <WhoWeAre />
-      </motion.div>
-      <motion.div
-        initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-      >
+
         <OffersSection />
-      </motion.div>
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-      >
+
         <ReviewsSection />
-      </motion.div>
-      <motion.div
-        data-aos="zoom-out-up"
-        className="w-full max-w-[1200px] rounded-2xl py-8 md:py-12 lg:py-20 max-[1400px]:px-4"
-        initial={{ scale: 0.9, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
+
         <Image
           alt="Image"
           className="w-full h-auto object-fill"
           src={green_layer}
         />
-      </motion.div>
       </div>
       );
 };
