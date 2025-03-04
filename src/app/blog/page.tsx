@@ -41,7 +41,7 @@ const Blog = () => {
               {posts.map((post) => (
                 <div
                   key={post.id}
-                  className='bg-white p-6 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform duration-300 h-[300px] flex flex-col justify-between'
+                  className='bg-white p-6 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform duration-300 h-[400px] flex flex-col justify-between'
                   onClick={() => setSelectedPost(post)}>
                   <div>
                     <h2 className='text-2xl font-semibold mb-2 text-gray-900'>
