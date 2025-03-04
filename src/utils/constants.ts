@@ -336,7 +336,7 @@ export const BUSINESS_CATEGORIES = [
 
 export const NAV_LINKS = [
   { title: 'About', to: '/about' },
-  { title: 'Blogs', to: '/contact-us' },
+  { title: 'Blogs', to: '/blog' },
 ];
 
 export const PERSONAL_LINKS = [
@@ -676,3 +676,258 @@ export const vehicleRisk = {
     occupation: "Software Engineer",
     scope: "Full Coverage",
   };
+interface BlogPost {
+  id: number;
+  title: string;
+  description: string;
+  fullDescription: string;
+  date: string;
+}
+  export const blogPosts: BlogPost[] = [
+    {
+      id: 1,
+      title: 'Compulsory Motor Third-Party Insurance to be Introduced by 2025',
+      description: `
+  The insurance industry has grown steadily over the past decade, with a 25% growth rate. However, this has slowed to around 7% in recent years as the market matures. The year 2023 was particularly challenging for both banking and insurance sectors.
+  
+  In Cambodia, the National Social Security Fund (NSSF) ensures workers are protected during medical emergencies or the loss of a loved one. All companies are required to enroll their workers in this scheme, which now covers millions of people.
+  
+  For those seeking more extensive coverage, private insurance companies offer tailored solutions to meet individual and corporate needs. While the NSSF provides a safety net, additional life and health insurance can offer enhanced security for families.
+  
+  Cambodia’s insurance sector has been evolving since the 1990s, with key legislation introduced in 2000 and regulations for life insurance in 2012. As incomes rise and financial literacy improves, regulators plan to introduce compulsory automobile insurance to enhance driver safety and vehicle protection.
+      `,
+      fullDescription: `
+      <h4>What Is Private Motor Car Insurance?</h2>
+       <p>Private Motor Car Insurance protects vehicles used for personal or business purposes against financial losses from accidents, theft, fire, or unforeseen events. It acts as a safety net to prevent huge repair bills or liabilities.</p>
+       <p>Imagine buying your first car — the excitement of choosing the model, color, and features. But with that excitement comes responsibility, including securing proper insurance. Many buyers take the dealership’s insurance plan for convenience, but this may not always be the best choice in the long run.</p>
+       <h4>The Importance of Reviewing Your Plan</h2>
+       <p>Insurance isn't just a legal requirement — it’s a financial shield. As your car ages or your circumstances change, your coverage may need adjustments. Consulting your provider can help you explore better options.</p>
+       <h4>Understanding No-Claim Bonus (NCB)</h2>
+       <p>If you haven't made any claims, you could qualify for a No-Claim Bonus, lowering your renewal premium significantly over time. Always check your NCB status to maximize your savings.</p>
+       <h4>Additional Coverage for Peace of Mind</h2>
+       <p>Besides comprehensive coverage, some insurers offer extras like key loss protection and personal belongings cover. These add-ons can be invaluable, especially in high-risk areas.</p>
+     `,
+      date: '2025-03-01',
+    },
+    {
+      id: 2,
+      title:
+        'HEINEKEN Cambodia and Grab Train 200 Tuk Tuk Drivers on Road Safety',
+      description: `
+  In a collaborative effort to improve road safety, HEINEKEN Cambodia and Grab partnered with the National Road Safety Committee to train 200 Tuk Tuk drivers in Phnom Penh. The workshop covered traffic accident statistics, dangers of drunk driving, and safe driving practices.
+  
+  Ms. IV Thounleakhena, from the Road Traffic Safety Department, emphasized the importance of compliance with road regulations to prevent accidents. Grab’s initiative highlights their commitment to safety, ensuring drivers are well-trained and motivated.
+  
+  HEINEKEN Cambodia reinforced the message of responsible consumption with their campaign: "When You Drive, Never Drink." This initiative aligns with their mission to foster a culture of responsibility and contribute to a safer Cambodia.
+      `,
+      fullDescription: `
+      <h4>What Is Private Motor Car Insurance?</h2>
+       <p>Private Motor Car Insurance protects vehicles used for personal or business purposes against financial losses from accidents, theft, fire, or unforeseen events. It acts as a safety net to prevent huge repair bills or liabilities.</p>
+       <p>Imagine buying your first car — the excitement of choosing the model, color, and features. But with that excitement comes responsibility, including securing proper insurance. Many buyers take the dealership’s insurance plan for convenience, but this may not always be the best choice in the long run.</p>
+       <h4>The Importance of Reviewing Your Plan</h2>
+       <p>Insurance isn't just a legal requirement — it’s a financial shield. As your car ages or your circumstances change, your coverage may need adjustments. Consulting your provider can help you explore better options.</p>
+       <h4>Understanding No-Claim Bonus (NCB)</h2>
+       <p>If you haven't made any claims, you could qualify for a No-Claim Bonus, lowering your renewal premium significantly over time. Always check your NCB status to maximize your savings.</p>
+       <h4>Additional Coverage for Peace of Mind</h2>
+       <p>Besides comprehensive coverage, some insurers offer extras like key loss protection and personal belongings cover. These add-ons can be invaluable, especially in high-risk areas.</p>
+     `,
+      date: '2025-03-01',
+    },
+    {
+      id: 3,
+      title: 'Things You May Not Know About Your Car Insurance',
+      description: `
+  **What Is Private Motor Car Insurance?**
+  Private Motor Car Insurance covers vehicles used for personal and business purposes, protecting owners against losses from accidents, theft, and damage. 
+  
+  **Understanding Excess**
+  Excess is the amount policyholders must pay before receiving an insurance payout. For instance, with a $400 excess on a $1,200 claim, the insured pays $400, and the insurer covers the remaining $800.
+  
+  **Coverage Details**
+  - **Accidental Loss or Damage:** Includes malicious damage, collisions, and overturning. Factory-fitted accessories and spare parts are also covered.
+  - **Vehicle Repairs:** The insurer covers towing costs to the nearest authorized repair center, and repairs can start once an estimate is submitted.
+  - **Replacement Parts:** Covered, but with limits.
+  
+  **Third-Party Liability**
+  Insurance covers the insured, named drivers, and authorized drivers for:
+  - Death or injury to third parties
+  - Damage to third-party property
+  
+  **Key Documents to Keep**
+  - **Proposal Form:** Essential for risk assessment.
+  - **Certificate of Insurance:** Proof of coverage for law enforcement.
+  - **Cover Note:** Interim proof of insurance.
+  - **Policy Document:** Contains contract terms, conditions, and claim procedures.
+      `,
+      fullDescription: `
+      <h4>What Is Private Motor Car Insurance?</h2>
+       <p>Private Motor Car Insurance protects vehicles used for personal or business purposes against financial losses from accidents, theft, fire, or unforeseen events. It acts as a safety net to prevent huge repair bills or liabilities.</p>
+       <p>Imagine buying your first car — the excitement of choosing the model, color, and features. But with that excitement comes responsibility, including securing proper insurance. Many buyers take the dealership’s insurance plan for convenience, but this may not always be the best choice in the long run.</p>
+       <h4>The Importance of Reviewing Your Plan</h2>
+       <p>Insurance isn't just a legal requirement — it’s a financial shield. As your car ages or your circumstances change, your coverage may need adjustments. Consulting your provider can help you explore better options.</p>
+       <h4>Understanding No-Claim Bonus (NCB)</h2>
+       <p>If you haven't made any claims, you could qualify for a No-Claim Bonus, lowering your renewal premium significantly over time. Always check your NCB status to maximize your savings.</p>
+       <h4>Additional Coverage for Peace of Mind</h2>
+       <p>Besides comprehensive coverage, some insurers offer extras like key loss protection and personal belongings cover. These add-ons can be invaluable, especially in high-risk areas.</p>
+     `,
+      date: '2025-03-01',
+    },
+    {
+      id: 4,
+      title:
+        'Understanding Private Motor Car Insurance — Why It’s Essential for Every Car Owner',
+      description:
+        'Discover why private motor car insurance is a must-have, its benefits, and how to choose the best plan.',
+      fullDescription: `
+       <h4>What Is Private Motor Car Insurance?</h2>
+        <p>Private Motor Car Insurance protects vehicles used for personal or business purposes against financial losses from accidents, theft, fire, or unforeseen events. It acts as a safety net to prevent huge repair bills or liabilities.</p>
+        <p>Imagine buying your first car — the excitement of choosing the model, color, and features. But with that excitement comes responsibility, including securing proper insurance. Many buyers take the dealership’s insurance plan for convenience, but this may not always be the best choice in the long run.</p>
+        <h4>The Importance of Reviewing Your Plan</h2>
+        <p>Insurance isn't just a legal requirement — it’s a financial shield. As your car ages or your circumstances change, your coverage may need adjustments. Consulting your provider can help you explore better options.</p>
+        <h4>Understanding No-Claim Bonus (NCB)</h2>
+        <p>If you haven't made any claims, you could qualify for a No-Claim Bonus, lowering your renewal premium significantly over time. Always check your NCB status to maximize your savings.</p>
+        <h4>Additional Coverage for Peace of Mind</h2>
+        <p>Besides comprehensive coverage, some insurers offer extras like key loss protection and personal belongings cover. These add-ons can be invaluable, especially in high-risk areas.</p>
+      `,
+      date: '2025-03-01',
+    },
+    {
+      id: 5,
+      title:
+        'Understanding Private Motor Car Insurance — Why It’s Essential for Every Car Owner',
+      description:
+        'Private Motor Car Insurance is designed to protect vehicles used for personal or business purposes against financial losses resulting from accidents, theft, fire, or unforeseen events. Think of it as a safety net that ensures you’re not burdened with huge repair bills or liabilities if things go wrong',
+      fullDescription: `
+       What Is Private Motor Car Insurance?
+  
+  Private Motor Car Insurance is designed to protect vehicles used for personal or business purposes against financial losses resulting from accidents, theft, fire, or unforeseen events. Think of it as a safety net that ensures you’re not burdened with huge repair bills or liabilities if things go wrong.
+  
+  Imagine the excitement of buying your first car — choosing the model, color, and features. But alongside that excitement comes responsibility. One crucial step is securing car insurance, which many people either overlook or rush through without understanding its true value.
+  
+  Many buyers opt for the dealership’s insurance plan, lured by discounts and convenience. But this may not always be the best choice long-term. Comprehensive coverage, claim processes, and hidden exclusions can make a huge difference when you actually need to file a claim. If your insurance renewal is approaching, consider shopping around for a better plan instead of renewing out of habit.
+  
+  The Importance of Reviewing Your Plan
+  
+  Car insurance is not just a legal requirement — it's a financial shield. But as your car ages or your driving habits change, your coverage might need an update. Maybe you’re driving less, or perhaps you’ve moved to an area with a higher accident rate. Either way, staying informed helps you make smarter decisions.
+  
+  Tip: Talk to your insurance provider or customer engagement team to understand your options. They can walk you through available plans, helping you find one that suits your needs.
+  
+  Understanding No-Claim Bonus (NCB)
+  
+  If you’ve been a cautious driver and haven’t made any claims during your policy period, you might be eligible for a No-Claim Bonus (NCB). This is a discount on your premium during renewal, which can accumulate over years and save you a significant amount of money. Always check your NCB status and ensure it’s factored into your renewal cost.
+  
+  Additional Coverage for Peace of Mind
+  
+  Besides the standard comprehensive coverage, some insurers offer extras like windshield replacement, key loss protection, and personal belongings cover. These add-ons may seem minor but can be incredibly useful, especially if you live in an area prone to theft or natural disasters.
+      `,
+      date: '2025-03-01',
+    },
+    {
+      id: 6,
+      title:
+        'What Does Your Car Insurance Actually Cover? A Breakdown of Key Features and Exclusions',
+      description:
+        'Knowing what your policy covers can prevent unpleasant surprises during claims. Typically, comprehensive car insurance',
+      fullDescription: `
+       Understanding Coverage: What’s Included?
+  
+  Knowing what your policy covers can prevent unpleasant surprises during claims. Typically, comprehensive car insurance includes:
+  
+  Accidental Loss or Damage: Covers repairs or replacement costs for damage caused by accidents, vandalism, or natural disasters.
+  
+  Factory-Fitted Accessories & Spare Parts: Your insurance extends to standard accessories and spare parts, though limits might apply.
+  
+  Vehicle Towing & Repairs: If your car is undrivable, the insurer often covers towing costs to the nearest repair center (up to $500).
+  
+  Personal Accident Cover: Many policies offer coverage for injuries to the driver and passengers, including medical expenses and, in severe cases, compensation for disability or death.
+  
+  For example, if you’re in an accident and your car needs $5,000 in repairs, your insurance will cover the amount minus your policy excess.
+  
+  Exclusions to Watch Out For:
+  
+  Insurance doesn’t cover everything. Common exclusions include:
+  
+  Depreciation and wear & tear
+  
+  Mechanical or electrical failures
+  
+  Damage to tires (unless part of a larger accident)
+  
+  Driving under the influence of alcohol or drugs
+  
+  Unapproved modifications to the vehicle
+  
+  Understanding these exclusions helps set realistic expectations, so you’re not caught off guard.
+  
+  Liability to Third Parties:
+  
+  If your car accident injures someone or damages their property, your insurance covers:
+  
+  Medical expenses or compensation for injury or death
+  
+  Repair or replacement costs for damaged third-party property
+  
+  Even unnamed drivers (those not listed on your policy but authorized to drive your car) are covered, which is especially useful if you lend your car to friends or family.
+  
+  Add-On Covers for Extra Protection:
+  
+  You can enhance your policy with add-ons like:
+  
+  Zero Depreciation Cover: Ensures you get the full claim amount without deductions for depreciation.
+  
+  Engine Protection Cover: Covers damage to your engine due to waterlogging or oil leaks.
+  
+  Roadside Assistance: Provides on-the-spot help for breakdowns, flat tires, or fuel emergencies.
+  
+  Return to Invoice (RTI) Cover: In case of total loss, this add-on ensures you receive the full invoice amount of your car instead of just the insured declared value (IDV).
+  
+  These add-ons may slightly increase your premium but can save you from hefty expenses later.
+      `,
+      date: '2025-03-01',
+    },
+    {
+      id: 7,
+      title:
+        'The Essential Car Insurance Documents You Should Always Have on Hand',
+      description:
+        'Car insurance paperwork isn’t just administrative clutter — it’s your lifeline during claims and legal situations. Keeping your documents organized ensures you’re ready for anything.',
+      fullDescription: `
+       Why Your Insurance Documents Matter
+  
+  Car insurance paperwork isn’t just administrative clutter — it’s your lifeline during claims and legal situations. Keeping your documents organized ensures you’re ready for anything.
+  
+  Key Documents to Keep:
+  
+  Proposal Form: Details your personal information, driving history, and vehicle details. Insurers use this to assess risk and determine premiums.
+  
+  Certificate of Insurance: Legally required proof of insurance. You’ll need to show this to the police or transport authorities when asked.
+  
+  Cover Note: A temporary document that provides coverage while your policy is being finalized.
+  
+  Policy Document: The official contract outlining coverage, exclusions, and claims procedures.
+  
+  Additional Documents:
+  
+  Endorsements: Record policy changes, like adding flood coverage or changing drivers.
+  
+  Renewal Notices: Reminders that your policy is about to expire, often with renewal options.
+  
+  Claim Forms: Essential for filing a claim — make sure you understand how to fill these out to avoid delays.
+  
+  Inspection Reports: Sometimes required for claims, especially for theft or total loss scenarios.
+  
+  Pro Tip: Store digital copies of all documents for easy access during emergencies. Apps like Google Drive or Dropbox can be lifesavers!
+  
+  How to Stay Organized:
+  
+  Create a dedicated folder (physical or digital) for all your insurance paperwork. Label each section clearly and review your documents annually to ensure everything is up to date.
+  
+  What to Do During a Claim:
+  
+  In case of an accident or damage, document everything — take photos, gather witness statements, and file a police report if necessary. Submit all this information along with your claim form to speed up the approval process.
+  
+  By staying organized and understanding your coverage, you’ll be well-prepared for any situation on the road.
+      `,
+      date: '2025-03-01',
+    },
+  ];
